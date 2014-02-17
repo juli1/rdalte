@@ -108,10 +108,26 @@ public class CoreValidator extends EObjectValidator {
 				return validateIdentifiedElement((IdentifiedElement)value, diagnostics, context);
 			case CorePackage.CONTRACTUAL_ELEMENT:
 				return validateContractualElement((ContractualElement)value, diagnostics, context);
+			case CorePackage.UNCERTAINTY:
+				return validateUncertainty((Uncertainty)value, diagnostics, context);
 			case CorePackage.VERIFIABLE_ELEMENT:
 				return validateVerifiableElement((VerifiableElement)value, diagnostics, context);
 			case CorePackage.SPECIFICATION:
 				return validateSpecification((Specification)value, diagnostics, context);
+			case CorePackage.SYSTEM_OVERVIEW:
+				return validateSystemOverview((SystemOverview)value, diagnostics, context);
+			case CorePackage.SYSTEM_CONTEXT:
+				return validateSystemContext((SystemContext)value, diagnostics, context);
+			case CorePackage.ACTOR:
+				return validateActor((Actor)value, diagnostics, context);
+			case CorePackage.INTERACTION:
+				return validateInteraction((Interaction)value, diagnostics, context);
+			case CorePackage.GOAL:
+				return validateGoal((Goal)value, diagnostics, context);
+			case CorePackage.CONFLICT:
+				return validateConflict((Conflict)value, diagnostics, context);
+			case CorePackage.STAKE_HOLDER:
+				return validateStakeHolder((StakeHolder)value, diagnostics, context);
 			case CorePackage.REQUIREMENTS_GROUP:
 				return validateRequirementsGroup((RequirementsGroup)value, diagnostics, context);
 			case CorePackage.ABSTRACT_REQUIREMENT:
@@ -122,16 +138,12 @@ public class CoreValidator extends EObjectValidator {
 				return validateAssumption((Assumption)value, diagnostics, context);
 			case CorePackage.VERIFICATION_ACTIVITY:
 				return validateVerificationActivity((VerificationActivity)value, diagnostics, context);
-			case CorePackage.STAKE_HOLDER:
-				return validateStakeHolder((StakeHolder)value, diagnostics, context);
 			case CorePackage.REF_EXPRESSION_COLLECTED_MODEL_ELEMENTS:
 				return validateRefExpressionCollectedModelElements((RefExpressionCollectedModelElements)value, diagnostics, context);
 			case CorePackage.REF_USER_SELECTED_MODEL_ELEMENTS:
 				return validateRefUserSelectedModelElements((RefUserSelectedModelElements)value, diagnostics, context);
 			case CorePackage.REFERENCED_MODEL_ELEMENTS:
 				return validateReferencedModelElements((ReferencedModelElements)value, diagnostics, context);
-			case CorePackage.CONTRACT_REFERENCED_MODEL_ELEMENTS:
-				return validateContractReferencedModelElements((ContractReferencedModelElements)value, diagnostics, context);
 			case CorePackage.MODEL_ELEMENT_REFERENCE:
 				return validateModelElementReference((ModelElementReference)value, diagnostics, context);
 			case CorePackage.TRACE:
@@ -140,32 +152,32 @@ public class CoreValidator extends EObjectValidator {
 				return validateTraceModelElementReference((TraceModelElementReference)value, diagnostics, context);
 			case CorePackage.REQUIREMENTS_COVERAGE_DATA:
 				return validateRequirementsCoverageData((RequirementsCoverageData)value, diagnostics, context);
-			case CorePackage.GOAL:
-				return validateGoal((Goal)value, diagnostics, context);
-			case CorePackage.UNCERTAINTY:
-				return validateUncertainty((Uncertainty)value, diagnostics, context);
-			case CorePackage.SYSTEM_OVERVIEW:
-				return validateSystemOverview((SystemOverview)value, diagnostics, context);
-			case CorePackage.SYSTEM_CONTEXT:
-				return validateSystemContext((SystemContext)value, diagnostics, context);
-			case CorePackage.ACTOR:
-				return validateActor((Actor)value, diagnostics, context);
-			case CorePackage.INTERACTION:
-				return validateInteraction((Interaction)value, diagnostics, context);
-			case CorePackage.CONFLICT:
-				return validateConflict((Conflict)value, diagnostics, context);
-			case CorePackage.ENUM_RISK_KIND:
-				return validateEnumRiskKind((EnumRiskKind)value, diagnostics, context);
-			case CorePackage.ENUM_VERIFICATION_METHOD:
-				return validateEnumVerificationMethod((EnumVerificationMethod)value, diagnostics, context);
-			case CorePackage.ENUM_ASSUMPTION_TYPE:
-				return validateEnumAssumptionType((EnumAssumptionType)value, diagnostics, context);
-			case CorePackage.ENUM_FUNCTIONAL_REQUIREMENT_TYPE:
-				return validateEnumFunctionalRequirementType((EnumFunctionalRequirementType)value, diagnostics, context);
+			case CorePackage.VARIABLE:
+				return validateVariable((Variable)value, diagnostics, context);
+			case CorePackage.REF_DERIVED_MODEL_ELEMENTS:
+				return validateRefDerivedModelElements((RefDerivedModelElements)value, diagnostics, context);
+			case CorePackage.RATIONALE:
+				return validateRationale((Rationale)value, diagnostics, context);
+			case CorePackage.REQUIREMENTS_CONTAINER:
+				return validateRequirementsContainer((RequirementsContainer)value, diagnostics, context);
 			case CorePackage.DIRECTION:
 				return validateDirection((Direction)value, diagnostics, context);
+			case CorePackage.ASSUMPTION_TYPE:
+				return validateAssumptionType((AssumptionType)value, diagnostics, context);
+			case CorePackage.RISK_KIND:
+				return validateRiskKind((RiskKind)value, diagnostics, context);
+			case CorePackage.VERIFICATION_METHOD:
+				return validateVerificationMethod((VerificationMethod)value, diagnostics, context);
+			case CorePackage.AGREGATION_TYPE:
+				return validateAgregationType((AgregationType)value, diagnostics, context);
+			case CorePackage.VARIABLE_TYPE:
+				return validateVariableType((VariableType)value, diagnostics, context);
+			case CorePackage.CONTAINER_TYPE:
+				return validateContainerType((ContainerType)value, diagnostics, context);
 			case CorePackage.RATIO:
 				return validateRatio((Float)value, diagnostics, context);
+			case CorePackage.POSITIVE_FACTOR:
+				return validatePositiveFactor((Float)value, diagnostics, context);
 			case CorePackage.DATE:
 				return validateDate((Date)value, diagnostics, context);
 			default:
@@ -322,15 +334,6 @@ public class CoreValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateContractReferencedModelElements(ContractReferencedModelElements contractReferencedModelElements, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(contractReferencedModelElements, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean validateModelElementReference(ModelElementReference modelElementReference, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		if (!validate_NoCircularContainment(modelElementReference, diagnostics, context)) return false;
 		boolean result = validate_EveryMultiplicityConforms(modelElementReference, diagnostics, context);
@@ -418,6 +421,42 @@ public class CoreValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateVariable(Variable variable, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(variable, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateRefDerivedModelElements(RefDerivedModelElements refDerivedModelElements, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(refDerivedModelElements, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateRationale(Rationale rationale, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(rationale, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateRequirementsContainer(RequirementsContainer requirementsContainer, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(requirementsContainer, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateGoal(Goal goal, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(goal, diagnostics, context);
 	}
@@ -490,43 +529,61 @@ public class CoreValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateEnumRiskKind(EnumRiskKind enumRiskKind, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return true;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateEnumVerificationMethod(EnumVerificationMethod enumVerificationMethod, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return true;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateEnumAssumptionType(EnumAssumptionType enumAssumptionType, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return true;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateEnumFunctionalRequirementType(EnumFunctionalRequirementType enumFunctionalRequirementType, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return true;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean validateDirection(Direction direction, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateAssumptionType(AssumptionType assumptionType, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateRiskKind(RiskKind riskKind, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateVerificationMethod(VerificationMethod verificationMethod, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateAgregationType(AgregationType agregationType, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateVariableType(VariableType variableType, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateContainerType(ContainerType containerType, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 
@@ -565,6 +622,15 @@ public class CoreValidator extends EObjectValidator {
 			}
 		}
 		
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validatePositiveFactor(Float positiveFactor, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 

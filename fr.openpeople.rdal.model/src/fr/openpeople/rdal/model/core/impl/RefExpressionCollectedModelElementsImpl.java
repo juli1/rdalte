@@ -40,7 +40,7 @@ import fr.openpeople.rdal.model.core.RefExpressionCollectedModelElements;
  *
  * @generated
  */
-public class RefExpressionCollectedModelElementsImpl extends ContractReferencedModelElementsImpl implements RefExpressionCollectedModelElements {
+public class RefExpressionCollectedModelElementsImpl extends ReferencedModelElementsImpl implements RefExpressionCollectedModelElements {
 	/**
 	 * The cached value of the '{@link #getQueryExpression() <em>Query Expression</em>}' containment reference.
 	 * <!-- begin-user-doc -->

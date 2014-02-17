@@ -28,5 +28,5 @@ package fr.openpeople.rdal.model.core;
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='modelElementsCardinality'"
  * @generated
  */
-public interface RefUserSelectedModelElements extends ContractReferencedModelElements {
+public interface RefUserSelectedModelElements extends ReferencedModelElements {
 } // RefUserSelectedModelElements

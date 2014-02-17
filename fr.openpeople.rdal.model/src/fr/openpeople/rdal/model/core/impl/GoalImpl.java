@@ -23,6 +23,7 @@ import fr.openpeople.rdal.model.core.Goal;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -31,6 +32,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -42,24 +44,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link fr.openpeople.rdal.model.core.impl.GoalImpl#getAchievedBy <em>Achieved By</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.impl.GoalImpl#getConflicts <em>Conflicts</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.impl.GoalImpl#getPriority <em>Priority</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class GoalImpl extends ContractualElementImpl implements Goal {
-	/**
-	 * The cached value of the '{@link #getAchievedBy() <em>Achieved By</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAchievedBy()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<EObject> achievedBy;
-
 	/**
 	 * The cached value of the '{@link #getConflicts() <em>Conflicts</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -69,6 +61,26 @@ public class GoalImpl extends ContractualElementImpl implements Goal {
 	 * @ordered
 	 */
 	protected EList<Conflict> conflicts;
+
+	/**
+	 * The default value of the '{@link #getPriority() <em>Priority</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPriority()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Float PRIORITY_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getPriority() <em>Priority</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPriority()
+	 * @generated
+	 * @ordered
+	 */
+	protected Float priority = PRIORITY_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -94,11 +106,11 @@ public class GoalImpl extends ContractualElementImpl implements Goal {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<EObject> getAchievedBy() {
-		if (achievedBy == null) {
-			achievedBy = new EObjectResolvingEList<EObject>(EObject.class, this, CorePackage.GOAL__ACHIEVED_BY);
+	public EList<Conflict> getConflicts() {
+		if (conflicts == null) {
+			conflicts = new EObjectWithInverseResolvingEList.ManyInverse<Conflict>(Conflict.class, this, CorePackage.GOAL__CONFLICTS, CorePackage.CONFLICT__GOALS);
 		}
-		return achievedBy;
+		return conflicts;
 	}
 
 	/**
@@ -106,11 +118,20 @@ public class GoalImpl extends ContractualElementImpl implements Goal {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Conflict> getConflicts() {
-		if (conflicts == null) {
-			conflicts = new EObjectWithInverseResolvingEList.ManyInverse<Conflict>(Conflict.class, this, CorePackage.GOAL__CONFLICTS, CorePackage.CONFLICT__GOALS);
-		}
-		return conflicts;
+	public Float getPriority() {
+		return priority;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPriority(Float newPriority) {
+		Float oldPriority = priority;
+		priority = newPriority;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CorePackage.GOAL__PRIORITY, oldPriority, priority));
 	}
 
 	/**
@@ -150,10 +171,10 @@ public class GoalImpl extends ContractualElementImpl implements Goal {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CorePackage.GOAL__ACHIEVED_BY:
-				return getAchievedBy();
 			case CorePackage.GOAL__CONFLICTS:
 				return getConflicts();
+			case CorePackage.GOAL__PRIORITY:
+				return getPriority();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -167,13 +188,12 @@ public class GoalImpl extends ContractualElementImpl implements Goal {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CorePackage.GOAL__ACHIEVED_BY:
-				getAchievedBy().clear();
-				getAchievedBy().addAll((Collection<? extends EObject>)newValue);
-				return;
 			case CorePackage.GOAL__CONFLICTS:
 				getConflicts().clear();
 				getConflicts().addAll((Collection<? extends Conflict>)newValue);
+				return;
+			case CorePackage.GOAL__PRIORITY:
+				setPriority((Float)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -187,11 +207,11 @@ public class GoalImpl extends ContractualElementImpl implements Goal {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CorePackage.GOAL__ACHIEVED_BY:
-				getAchievedBy().clear();
-				return;
 			case CorePackage.GOAL__CONFLICTS:
 				getConflicts().clear();
+				return;
+			case CorePackage.GOAL__PRIORITY:
+				setPriority(PRIORITY_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -205,12 +225,28 @@ public class GoalImpl extends ContractualElementImpl implements Goal {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CorePackage.GOAL__ACHIEVED_BY:
-				return achievedBy != null && !achievedBy.isEmpty();
 			case CorePackage.GOAL__CONFLICTS:
 				return conflicts != null && !conflicts.isEmpty();
+			case CorePackage.GOAL__PRIORITY:
+				return PRIORITY_EDEFAULT == null ? priority != null : !PRIORITY_EDEFAULT.equals(priority);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (priority: ");
+		result.append(priority);
+		result.append(')');
+		return result.toString();
 	}
 
 } //GoalImpl

@@ -73,8 +73,9 @@ public class SpecificationItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addSpecifiesPropertyDescriptor(object);
 			addConstraintLanguagesSpecificationPropertyDescriptor(object);
+			addSpecifiesPropertyDescriptor(object);
+			addPrimaryActorsPropertyDescriptor(object);
 			addVersionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -105,6 +106,28 @@ public class SpecificationItemProvider
 //			 null,
 //			 null,
 //			 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Primary Actors feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPrimaryActorsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Specification_primaryActors_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Specification_primaryActors_feature", "_UI_Specification_type"),
+				 CorePackage.Literals.SPECIFICATION__PRIMARY_ACTORS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -164,9 +187,9 @@ public class SpecificationItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(CorePackage.Literals.SPECIFICATION__ACTORS);
-			childrenFeatures.add(CorePackage.Literals.SPECIFICATION__VERIFICATION_ACTIVITIES);
-			childrenFeatures.add(CorePackage.Literals.SPECIFICATION__REQUIREMENT_GROUPS);
 			childrenFeatures.add(CorePackage.Literals.SPECIFICATION__SYST_OVERVIEW);
+			childrenFeatures.add(CorePackage.Literals.SPECIFICATION__REQUIREMENT_GROUPS);
+			childrenFeatures.add(CorePackage.Literals.SPECIFICATION__VERIFICATION_ACTIVITIES);
 			childrenFeatures.add(CorePackage.Literals.SPECIFICATION__CONFLICTS);
 		}
 		return childrenFeatures;
@@ -226,9 +249,9 @@ public class SpecificationItemProvider
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case CorePackage.SPECIFICATION__ACTORS:
-			case CorePackage.SPECIFICATION__VERIFICATION_ACTIVITIES:
-			case CorePackage.SPECIFICATION__REQUIREMENT_GROUPS:
 			case CorePackage.SPECIFICATION__SYST_OVERVIEW:
+			case CorePackage.SPECIFICATION__REQUIREMENT_GROUPS:
+			case CorePackage.SPECIFICATION__VERIFICATION_ACTIVITIES:
 			case CorePackage.SPECIFICATION__CONFLICTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -259,8 +282,8 @@ public class SpecificationItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CorePackage.Literals.SPECIFICATION__VERIFICATION_ACTIVITIES,
-				 CoreFactory.eINSTANCE.createVerificationActivity()));
+				(CorePackage.Literals.SPECIFICATION__SYST_OVERVIEW,
+				 CoreFactory.eINSTANCE.createSystemOverview()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -269,13 +292,36 @@ public class SpecificationItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CorePackage.Literals.SPECIFICATION__SYST_OVERVIEW,
-				 CoreFactory.eINSTANCE.createSystemOverview()));
+				(CorePackage.Literals.SPECIFICATION__VERIFICATION_ACTIVITIES,
+				 CoreFactory.eINSTANCE.createVerificationActivity()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(CorePackage.Literals.SPECIFICATION__CONFLICTS,
 				 CoreFactory.eINSTANCE.createConflict()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == CorePackage.Literals.CONTRACTUAL_ELEMENT__EXPRESSION ||
+			childFeature == CorePackage.Literals.CONTRACTUAL_ELEMENT__CONDITION;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

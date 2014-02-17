@@ -31,7 +31,7 @@ package fr.openpeople.rdal.model.core;
  * </p>
  *
  * @see fr.openpeople.rdal.model.core.CorePackage#getVerifiableElement()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface VerifiableElement extends ContractualElement {

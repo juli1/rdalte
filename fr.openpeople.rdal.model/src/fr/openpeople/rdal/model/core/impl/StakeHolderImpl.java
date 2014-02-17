@@ -23,11 +23,13 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import fr.openpeople.rdal.model.core.ContractualElement;
 import fr.openpeople.rdal.model.core.CorePackage;
+import fr.openpeople.rdal.model.core.Rationale;
 import fr.openpeople.rdal.model.core.StakeHolder;
 
 /**
@@ -38,6 +40,7 @@ import fr.openpeople.rdal.model.core.StakeHolder;
  * The following features are implemented:
  * <ul>
  *   <li>{@link fr.openpeople.rdal.model.core.impl.StakeHolderImpl#getContractualElements <em>Contractual Elements</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.impl.StakeHolderImpl#getRationales <em>Rationales</em>}</li>
  * </ul>
  * </p>
  *
@@ -53,6 +56,15 @@ public class StakeHolderImpl extends ActorImpl implements StakeHolder {
 	 * @ordered
 	 */
 	protected EList<ContractualElement> contractualElements;
+	/**
+	 * The cached value of the '{@link #getRationales() <em>Rationales</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRationales()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Rationale> rationales;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -79,9 +91,21 @@ public class StakeHolderImpl extends ActorImpl implements StakeHolder {
 	 */
 	public EList<ContractualElement> getContractualElements() {
 		if (contractualElements == null) {
-			contractualElements = new EObjectWithInverseResolvingEList.ManyInverse<ContractualElement>(ContractualElement.class, this, CorePackage.STAKE_HOLDER__CONTRACTUAL_ELEMENTS, CorePackage.CONTRACTUAL_ELEMENT__STAKE_HOLDERS);
+			contractualElements = new EObjectWithInverseResolvingEList.ManyInverse<ContractualElement>(ContractualElement.class, this, CorePackage.STAKE_HOLDER__CONTRACTUAL_ELEMENTS, CorePackage.CONTRACTUAL_ELEMENT__STAKEHOLDERS);
 		}
 		return contractualElements;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Rationale> getRationales() {
+		if (rationales == null) {
+			rationales = new EObjectResolvingEList<Rationale>(Rationale.class, this, CorePackage.STAKE_HOLDER__RATIONALES);
+		}
+		return rationales;
 	}
 
 	/**
@@ -123,6 +147,8 @@ public class StakeHolderImpl extends ActorImpl implements StakeHolder {
 		switch (featureID) {
 			case CorePackage.STAKE_HOLDER__CONTRACTUAL_ELEMENTS:
 				return getContractualElements();
+			case CorePackage.STAKE_HOLDER__RATIONALES:
+				return getRationales();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -140,6 +166,10 @@ public class StakeHolderImpl extends ActorImpl implements StakeHolder {
 				getContractualElements().clear();
 				getContractualElements().addAll((Collection<? extends ContractualElement>)newValue);
 				return;
+			case CorePackage.STAKE_HOLDER__RATIONALES:
+				getRationales().clear();
+				getRationales().addAll((Collection<? extends Rationale>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -155,6 +185,9 @@ public class StakeHolderImpl extends ActorImpl implements StakeHolder {
 			case CorePackage.STAKE_HOLDER__CONTRACTUAL_ELEMENTS:
 				getContractualElements().clear();
 				return;
+			case CorePackage.STAKE_HOLDER__RATIONALES:
+				getRationales().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -169,6 +202,8 @@ public class StakeHolderImpl extends ActorImpl implements StakeHolder {
 		switch (featureID) {
 			case CorePackage.STAKE_HOLDER__CONTRACTUAL_ELEMENTS:
 				return contractualElements != null && !contractualElements.isEmpty();
+			case CorePackage.STAKE_HOLDER__RATIONALES:
+				return rationales != null && !rationales.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

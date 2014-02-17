@@ -30,14 +30,15 @@ import fr.labsticc.framework.constraints.model.constraints.ConstraintLanguagesSp
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link fr.openpeople.rdal.model.core.Specification#getSpecifies <em>Specifies</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.Specification#getActors <em>Actors</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.Specification#getVerificationActivities <em>Verification Activities</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.Specification#getRequirementGroups <em>Requirement Groups</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.Specification#getConstraintLanguagesSpecification <em>Constraint Languages Specification</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.Specification#getVersion <em>Version</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.Specification#getSystOverview <em>Syst Overview</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.Specification#getRequirementGroups <em>Requirement Groups</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.Specification#getVerificationActivities <em>Verification Activities</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.Specification#getConflicts <em>Conflicts</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.Specification#getConstraintLanguagesSpecification <em>Constraint Languages Specification</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.Specification#getSpecifies <em>Specifies</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.Specification#getPrimaryActors <em>Primary Actors</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.Specification#getVersion <em>Version</em>}</li>
  * </ul>
  * </p>
  *
@@ -63,6 +64,22 @@ public interface Specification extends VerifiableElement {
 	EList<EObject> getSpecifies();
 
 	/**
+	 * Returns the value of the '<em><b>Primary Actors</b></em>' reference list.
+	 * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Primary Actors</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Primary Actors</em>' reference list.
+	 * @see fr.openpeople.rdal.model.core.CorePackage#getSpecification_PrimaryActors()
+	 * @model
+	 * @generated
+	 */
+	EList<EObject> getPrimaryActors();
+
+	/**
 	 * Returns the value of the '<em><b>Actors</b></em>' containment reference list.
 	 * The list contents are of type {@link fr.openpeople.rdal.model.core.Actor}.
 	 * <!-- begin-user-doc -->
@@ -73,7 +90,7 @@ public interface Specification extends VerifiableElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Actors</em>' containment reference list.
 	 * @see fr.openpeople.rdal.model.core.CorePackage#getSpecification_Actors()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Actor> getActors();
@@ -175,7 +192,7 @@ public interface Specification extends VerifiableElement {
 	 * @return the value of the '<em>Syst Overview</em>' containment reference.
 	 * @see #setSystOverview(SystemOverview)
 	 * @see fr.openpeople.rdal.model.core.CorePackage#getSpecification_SystOverview()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	SystemOverview getSystOverview();

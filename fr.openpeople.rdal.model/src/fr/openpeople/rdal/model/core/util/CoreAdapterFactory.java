@@ -91,12 +91,44 @@ public class CoreAdapterFactory extends AdapterFactoryImpl {
 				return createContractualElementAdapter();
 			}
 			@Override
+			public Adapter caseUncertainty(Uncertainty object) {
+				return createUncertaintyAdapter();
+			}
+			@Override
 			public Adapter caseVerifiableElement(VerifiableElement object) {
 				return createVerifiableElementAdapter();
 			}
 			@Override
 			public Adapter caseSpecification(Specification object) {
 				return createSpecificationAdapter();
+			}
+			@Override
+			public Adapter caseSystemOverview(SystemOverview object) {
+				return createSystemOverviewAdapter();
+			}
+			@Override
+			public Adapter caseSystemContext(SystemContext object) {
+				return createSystemContextAdapter();
+			}
+			@Override
+			public Adapter caseActor(Actor object) {
+				return createActorAdapter();
+			}
+			@Override
+			public Adapter caseInteraction(Interaction object) {
+				return createInteractionAdapter();
+			}
+			@Override
+			public Adapter caseGoal(Goal object) {
+				return createGoalAdapter();
+			}
+			@Override
+			public Adapter caseConflict(Conflict object) {
+				return createConflictAdapter();
+			}
+			@Override
+			public Adapter caseStakeHolder(StakeHolder object) {
+				return createStakeHolderAdapter();
 			}
 			@Override
 			public Adapter caseRequirementsGroup(RequirementsGroup object) {
@@ -119,10 +151,6 @@ public class CoreAdapterFactory extends AdapterFactoryImpl {
 				return createVerificationActivityAdapter();
 			}
 			@Override
-			public Adapter caseStakeHolder(StakeHolder object) {
-				return createStakeHolderAdapter();
-			}
-			@Override
 			public Adapter caseRefExpressionCollectedModelElements(RefExpressionCollectedModelElements object) {
 				return createRefExpressionCollectedModelElementsAdapter();
 			}
@@ -133,10 +161,6 @@ public class CoreAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseReferencedModelElements(ReferencedModelElements object) {
 				return createReferencedModelElementsAdapter();
-			}
-			@Override
-			public Adapter caseContractReferencedModelElements(ContractReferencedModelElements object) {
-				return createContractReferencedModelElementsAdapter();
 			}
 			@Override
 			public Adapter caseModelElementReference(ModelElementReference object) {
@@ -155,32 +179,20 @@ public class CoreAdapterFactory extends AdapterFactoryImpl {
 				return createRequirementsCoverageDataAdapter();
 			}
 			@Override
-			public Adapter caseGoal(Goal object) {
-				return createGoalAdapter();
+			public Adapter caseVariable(Variable object) {
+				return createVariableAdapter();
 			}
 			@Override
-			public Adapter caseUncertainty(Uncertainty object) {
-				return createUncertaintyAdapter();
+			public Adapter caseRefDerivedModelElements(RefDerivedModelElements object) {
+				return createRefDerivedModelElementsAdapter();
 			}
 			@Override
-			public Adapter caseSystemOverview(SystemOverview object) {
-				return createSystemOverviewAdapter();
+			public Adapter caseRationale(Rationale object) {
+				return createRationaleAdapter();
 			}
 			@Override
-			public Adapter caseSystemContext(SystemContext object) {
-				return createSystemContextAdapter();
-			}
-			@Override
-			public Adapter caseActor(Actor object) {
-				return createActorAdapter();
-			}
-			@Override
-			public Adapter caseInteraction(Interaction object) {
-				return createInteractionAdapter();
-			}
-			@Override
-			public Adapter caseConflict(Conflict object) {
-				return createConflictAdapter();
+			public Adapter caseRequirementsContainer(RequirementsContainer object) {
+				return createRequirementsContainerAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -371,20 +383,6 @@ public class CoreAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link fr.openpeople.rdal.model.core.ContractReferencedModelElements <em>Contract Referenced Model Elements</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see fr.openpeople.rdal.model.core.ContractReferencedModelElements
-	 * @generated
-	 */
-	public Adapter createContractReferencedModelElementsAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link fr.openpeople.rdal.model.core.ModelElementReference <em>Model Element Reference</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -437,6 +435,62 @@ public class CoreAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRequirementsCoverageDataAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fr.openpeople.rdal.model.core.Variable <em>Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fr.openpeople.rdal.model.core.Variable
+	 * @generated
+	 */
+	public Adapter createVariableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fr.openpeople.rdal.model.core.RefDerivedModelElements <em>Ref Derived Model Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fr.openpeople.rdal.model.core.RefDerivedModelElements
+	 * @generated
+	 */
+	public Adapter createRefDerivedModelElementsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fr.openpeople.rdal.model.core.Rationale <em>Rationale</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fr.openpeople.rdal.model.core.Rationale
+	 * @generated
+	 */
+	public Adapter createRationaleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fr.openpeople.rdal.model.core.RequirementsContainer <em>Requirements Container</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fr.openpeople.rdal.model.core.RequirementsContainer
+	 * @generated
+	 */
+	public Adapter createRequirementsContainerAdapter() {
 		return null;
 	}
 

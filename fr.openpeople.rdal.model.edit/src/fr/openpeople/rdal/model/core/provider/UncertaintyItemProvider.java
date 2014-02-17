@@ -75,7 +75,6 @@ public class UncertaintyItemProvider
 			addCostsImpactPropertyDescriptor(object);
 			addScheduleImpactPropertyDescriptor(object);
 			addPrecedencePropertyDescriptor(object);
-			addTimeCriticalityPropertyDescriptor(object);
 			addRiskIndexPropertyDescriptor(object);
 			addPropRiskIndexPropertyDescriptor(object);
 			addMaturityIndexPropertyDescriptor(object);
@@ -163,28 +162,6 @@ public class UncertaintyItemProvider
 				 getString("_UI_Uncertainty_precedence_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Uncertainty_precedence_feature", "_UI_Uncertainty_type"),
 				 CorePackage.Literals.UNCERTAINTY__PRECEDENCE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Time Criticality feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTimeCriticalityPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Uncertainty_timeCriticality_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Uncertainty_timeCriticality_feature", "_UI_Uncertainty_type"),
-				 CorePackage.Literals.UNCERTAINTY__TIME_CRITICALITY,
 				 true,
 				 false,
 				 false,
@@ -300,7 +277,6 @@ public class UncertaintyItemProvider
 			case CorePackage.UNCERTAINTY__COSTS_IMPACT:
 			case CorePackage.UNCERTAINTY__SCHEDULE_IMPACT:
 			case CorePackage.UNCERTAINTY__PRECEDENCE:
-			case CorePackage.UNCERTAINTY__TIME_CRITICALITY:
 			case CorePackage.UNCERTAINTY__RISK_INDEX:
 			case CorePackage.UNCERTAINTY__PROP_RISK_INDEX:
 			case CorePackage.UNCERTAINTY__MATURITY_INDEX:

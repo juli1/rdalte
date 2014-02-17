@@ -363,6 +363,98 @@ public class CoreItemProviderAdapterFactory extends CoreAdapterFactory implement
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link fr.openpeople.rdal.model.core.Variable} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected VariableItemProvider variableItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link fr.openpeople.rdal.model.core.Variable}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createVariableAdapter() {
+		if (variableItemProvider == null) {
+			variableItemProvider = new VariableItemProvider(this);
+		}
+
+		return variableItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link fr.openpeople.rdal.model.core.RefDerivedModelElements} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RefDerivedModelElementsItemProvider refDerivedModelElementsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link fr.openpeople.rdal.model.core.RefDerivedModelElements}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRefDerivedModelElementsAdapter() {
+		if (refDerivedModelElementsItemProvider == null) {
+			refDerivedModelElementsItemProvider = new RefDerivedModelElementsItemProvider(this);
+		}
+
+		return refDerivedModelElementsItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link fr.openpeople.rdal.model.core.Rationale} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RationaleItemProvider rationaleItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link fr.openpeople.rdal.model.core.Rationale}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRationaleAdapter() {
+		if (rationaleItemProvider == null) {
+			rationaleItemProvider = new RationaleItemProvider(this);
+		}
+
+		return rationaleItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link fr.openpeople.rdal.model.core.RequirementsContainer} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RequirementsContainerItemProvider requirementsContainerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link fr.openpeople.rdal.model.core.RequirementsContainer}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRequirementsContainerAdapter() {
+		if (requirementsContainerItemProvider == null) {
+			requirementsContainerItemProvider = new RequirementsContainerItemProvider(this);
+		}
+
+		return requirementsContainerItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link fr.openpeople.rdal.model.core.Goal} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -383,29 +475,6 @@ public class CoreItemProviderAdapterFactory extends CoreAdapterFactory implement
 		}
 
 		return goalItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link fr.openpeople.rdal.model.core.VerifiableElement} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected VerifiableElementItemProvider verifiableElementItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link fr.openpeople.rdal.model.core.VerifiableElement}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createVerifiableElementAdapter() {
-		if (verifiableElementItemProvider == null) {
-			verifiableElementItemProvider = new VerifiableElementItemProvider(this);
-		}
-
-		return verifiableElementItemProvider;
 	}
 
 	/**
@@ -645,26 +714,29 @@ public class CoreItemProviderAdapterFactory extends CoreAdapterFactory implement
 	 * @generated
 	 */
 	public void dispose() {
-		if (verifiableElementItemProvider != null) verifiableElementItemProvider.dispose();
+		if (uncertaintyItemProvider != null) uncertaintyItemProvider.dispose();
 		if (specificationItemProvider != null) specificationItemProvider.dispose();
+		if (systemOverviewItemProvider != null) systemOverviewItemProvider.dispose();
+		if (systemContextItemProvider != null) systemContextItemProvider.dispose();
+		if (actorItemProvider != null) actorItemProvider.dispose();
+		if (interactionItemProvider != null) interactionItemProvider.dispose();
+		if (goalItemProvider != null) goalItemProvider.dispose();
+		if (conflictItemProvider != null) conflictItemProvider.dispose();
+		if (stakeHolderItemProvider != null) stakeHolderItemProvider.dispose();
 		if (requirementsGroupItemProvider != null) requirementsGroupItemProvider.dispose();
 		if (requirementItemProvider != null) requirementItemProvider.dispose();
 		if (assumptionItemProvider != null) assumptionItemProvider.dispose();
 		if (verificationActivityItemProvider != null) verificationActivityItemProvider.dispose();
-		if (stakeHolderItemProvider != null) stakeHolderItemProvider.dispose();
 		if (refExpressionCollectedModelElementsItemProvider != null) refExpressionCollectedModelElementsItemProvider.dispose();
 		if (refUserSelectedModelElementsItemProvider != null) refUserSelectedModelElementsItemProvider.dispose();
 		if (modelElementReferenceItemProvider != null) modelElementReferenceItemProvider.dispose();
 		if (traceItemProvider != null) traceItemProvider.dispose();
 		if (traceModelElementReferenceItemProvider != null) traceModelElementReferenceItemProvider.dispose();
 		if (requirementsCoverageDataItemProvider != null) requirementsCoverageDataItemProvider.dispose();
-		if (goalItemProvider != null) goalItemProvider.dispose();
-		if (uncertaintyItemProvider != null) uncertaintyItemProvider.dispose();
-		if (systemOverviewItemProvider != null) systemOverviewItemProvider.dispose();
-		if (systemContextItemProvider != null) systemContextItemProvider.dispose();
-		if (actorItemProvider != null) actorItemProvider.dispose();
-		if (interactionItemProvider != null) interactionItemProvider.dispose();
-		if (conflictItemProvider != null) conflictItemProvider.dispose();
+		if (variableItemProvider != null) variableItemProvider.dispose();
+		if (refDerivedModelElementsItemProvider != null) refDerivedModelElementsItemProvider.dispose();
+		if (rationaleItemProvider != null) rationaleItemProvider.dispose();
+		if (requirementsContainerItemProvider != null) requirementsContainerItemProvider.dispose();
 	}
 
 }

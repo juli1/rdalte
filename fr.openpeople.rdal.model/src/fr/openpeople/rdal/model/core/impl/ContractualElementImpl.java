@@ -17,6 +17,9 @@
  */
 package fr.openpeople.rdal.model.core.impl;
 
+import fr.labsticc.framework.constraints.model.constraints.Expression;
+import fr.labsticc.framework.settings.model.settings.Category;
+import fr.openpeople.rdal.model.core.Actor;
 import java.util.Collection;
 import java.util.Date;
 
@@ -28,6 +31,8 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -35,6 +40,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import fr.openpeople.rdal.model.core.ContractReferencedModelElements;
 import fr.openpeople.rdal.model.core.ContractualElement;
 import fr.openpeople.rdal.model.core.CorePackage;
+import fr.openpeople.rdal.model.core.Rationale;
+import fr.openpeople.rdal.model.core.ReferencedModelElements;
 import fr.openpeople.rdal.model.core.StakeHolder;
 import fr.openpeople.rdal.model.core.Uncertainty;
 
@@ -45,45 +52,32 @@ import fr.openpeople.rdal.model.core.Uncertainty;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link fr.openpeople.rdal.model.core.impl.ContractualElementImpl#getSatisfactionLevel <em>Satisfaction Level</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.impl.ContractualElementImpl#getChangeUncertainty <em>Change Uncertainty</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.impl.ContractualElementImpl#getContactInformation <em>Contact Information</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.impl.ContractualElementImpl#getSources <em>Sources</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.impl.ContractualElementImpl#getOriginDate <em>Origin Date</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.impl.ContractualElementImpl#getScheduleDate <em>Schedule Date</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.impl.ContractualElementImpl#getStakeHolders <em>Stake Holders</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.impl.ContractualElementImpl#getPriority <em>Priority</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.impl.ContractualElementImpl#getSatisfiedBy <em>Satisfied By</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.impl.ContractualElementImpl#getStakeholders <em>Stakeholders</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.impl.ContractualElementImpl#getEvolvedTo <em>Evolved To</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.impl.ContractualElementImpl#isDropped <em>Dropped</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.impl.ContractualElementImpl#getTracedTo <em>Traced To</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.impl.ContractualElementImpl#getRationale <em>Rationale</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.impl.ContractualElementImpl#getSources <em>Sources</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.impl.ContractualElementImpl#getCategory <em>Category</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.impl.ContractualElementImpl#getSatisfiedBy <em>Satisfied By</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.impl.ContractualElementImpl#getAgents <em>Agents</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.impl.ContractualElementImpl#getDerivedFrom <em>Derived From</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.impl.ContractualElementImpl#isDropped <em>Dropped</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.impl.ContractualElementImpl#getDroppingReason <em>Dropping Reason</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.impl.ContractualElementImpl#getSatisfactionLevel <em>Satisfaction Level</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.impl.ContractualElementImpl#getRationales <em>Rationales</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.impl.ContractualElementImpl#getTimeCriticality <em>Time Criticality</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.impl.ContractualElementImpl#getContactInformation <em>Contact Information</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.impl.ContractualElementImpl#getExpression <em>Expression</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.impl.ContractualElementImpl#getCondition <em>Condition</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.impl.ContractualElementImpl#getModes <em>Modes</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public abstract class ContractualElementImpl extends IdentifiedElementImpl implements ContractualElement {
-	/**
-	 * The default value of the '{@link #getSatisfactionLevel() <em>Satisfaction Level</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSatisfactionLevel()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Float SATISFACTION_LEVEL_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getSatisfactionLevel() <em>Satisfaction Level</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSatisfactionLevel()
-	 * @generated
-	 * @ordered
-	 */
-	protected Float satisfactionLevel = SATISFACTION_LEVEL_EDEFAULT;
-
 	/**
 	 * The cached value of the '{@link #getChangeUncertainty() <em>Change Uncertainty</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -95,14 +89,14 @@ public abstract class ContractualElementImpl extends IdentifiedElementImpl imple
 	protected Uncertainty changeUncertainty;
 
 	/**
-	 * The cached value of the '{@link #getContactInformation() <em>Contact Information</em>}' attribute list.
+	 * The cached value of the '{@link #getSources() <em>Sources</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getContactInformation()
+	 * @see #getSources()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<String> contactInformation;
+	protected EList<String> sources;
 
 	/**
 	 * The default value of the '{@link #getOriginDate() <em>Origin Date</em>}' attribute.
@@ -145,47 +139,17 @@ public abstract class ContractualElementImpl extends IdentifiedElementImpl imple
 	protected Date scheduleDate = SCHEDULE_DATE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getStakeHolders() <em>Stake Holders</em>}' reference list.
+	 * The cached value of the '{@link #getStakeholders() <em>Stakeholders</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getStakeHolders()
+	 * @see #getStakeholders()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<StakeHolder> stakeHolders;
+	protected EList<StakeHolder> stakeholders;
 
 	/**
-	 * The default value of the '{@link #getPriority() <em>Priority</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPriority()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Float PRIORITY_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getPriority() <em>Priority</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPriority()
-	 * @generated
-	 * @ordered
-	 */
-	protected Float priority = PRIORITY_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getSatisfiedBy() <em>Satisfied By</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSatisfiedBy()
-	 * @generated
-	 * @ordered
-	 */
-	protected ContractReferencedModelElements satisfiedBy;
-
-	/**
-	 * The cached value of the '{@link #getEvolvedTo() <em>Evolved To</em>}' reference.
+	 * The cached value of the '{@link #getEvolvedTo() <em>Evolved To</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getEvolvedTo()
@@ -193,6 +157,46 @@ public abstract class ContractualElementImpl extends IdentifiedElementImpl imple
 	 * @ordered
 	 */
 	protected EList<ContractualElement> evolvedTo;
+
+	/**
+	 * The cached value of the '{@link #getTracedTo() <em>Traced To</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTracedTo()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<EObject> tracedTo;
+
+	/**
+	 * The cached value of the '{@link #getCategory() <em>Category</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCategory()
+	 * @generated
+	 * @ordered
+	 */
+	protected Category category;
+
+	/**
+	 * The cached value of the '{@link #getSatisfiedBy() <em>Satisfied By</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSatisfiedBy()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ReferencedModelElements> satisfiedBy;
+
+	/**
+	 * The cached value of the '{@link #getDerivedFrom() <em>Derived From</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDerivedFrom()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<EObject> derivedFrom;
 
 	/**
 	 * The default value of the '{@link #isDropped() <em>Dropped</em>}' attribute.
@@ -215,44 +219,114 @@ public abstract class ContractualElementImpl extends IdentifiedElementImpl imple
 	protected boolean dropped = DROPPED_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getTracedTo() <em>Traced To</em>}' reference list.
+	 * The default value of the '{@link #getDroppingReason() <em>Dropping Reason</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTracedTo()
+	 * @see #getDroppingReason()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<EObject> tracedTo;
+	protected static final String DROPPING_REASON_EDEFAULT = null;
 
 	/**
-	 * The default value of the '{@link #getRationale() <em>Rationale</em>}' attribute.
+	 * The cached value of the '{@link #getDroppingReason() <em>Dropping Reason</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRationale()
+	 * @see #getDroppingReason()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String RATIONALE_EDEFAULT = null;
+	protected String droppingReason = DROPPING_REASON_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getRationale() <em>Rationale</em>}' attribute.
+	 * The default value of the '{@link #getSatisfactionLevel() <em>Satisfaction Level</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRationale()
+	 * @see #getSatisfactionLevel()
 	 * @generated
 	 * @ordered
 	 */
-	protected String rationale = RATIONALE_EDEFAULT;
+	protected static final Float SATISFACTION_LEVEL_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getSources() <em>Sources</em>}' attribute list.
+	 * The cached value of the '{@link #getSatisfactionLevel() <em>Satisfaction Level</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSources()
+	 * @see #getSatisfactionLevel()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<String> sources;
+	protected Float satisfactionLevel = SATISFACTION_LEVEL_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getRationales() <em>Rationales</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRationales()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Rationale> rationales;
+
+	/**
+	 * The default value of the '{@link #getTimeCriticality() <em>Time Criticality</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTimeCriticality()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Float TIME_CRITICALITY_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getTimeCriticality() <em>Time Criticality</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTimeCriticality()
+	 * @generated
+	 * @ordered
+	 */
+	protected Float timeCriticality = TIME_CRITICALITY_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getContactInformation() <em>Contact Information</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getContactInformation()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Actor> contactInformation;
+
+	/**
+	 * The cached value of the '{@link #getExpression() <em>Expression</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getExpression()
+	 * @generated
+	 * @ordered
+	 */
+	protected Expression expression;
+
+	/**
+	 * The cached value of the '{@link #getCondition() <em>Condition</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCondition()
+	 * @generated
+	 * @ordered
+	 */
+	protected Expression condition;
+
+	/**
+	 * The cached value of the '{@link #getModes() <em>Modes</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getModes()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<EObject> modes;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -292,6 +366,39 @@ public abstract class ContractualElementImpl extends IdentifiedElementImpl imple
 		satisfactionLevel = newSatisfactionLevel;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CorePackage.CONTRACTUAL_ELEMENT__SATISFACTION_LEVEL, oldSatisfactionLevel, satisfactionLevel));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Rationale> getRationales() {
+		if (rationales == null) {
+			rationales = new EObjectContainmentWithInverseEList<Rationale>(Rationale.class, this, CorePackage.CONTRACTUAL_ELEMENT__RATIONALES, CorePackage.RATIONALE__CONTRACT);
+		}
+		return rationales;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Float getTimeCriticality() {
+		return timeCriticality;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTimeCriticality(Float newTimeCriticality) {
+		Float oldTimeCriticality = timeCriticality;
+		timeCriticality = newTimeCriticality;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CorePackage.CONTRACTUAL_ELEMENT__TIME_CRITICALITY, oldTimeCriticality, timeCriticality));
 	}
 
 	/**
@@ -342,11 +449,109 @@ public abstract class ContractualElementImpl extends IdentifiedElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getContactInformation() {
+	public EList<Actor> getContactInformation() {
 		if (contactInformation == null) {
-			contactInformation = new EDataTypeUniqueEList<String>(String.class, this, CorePackage.CONTRACTUAL_ELEMENT__CONTACT_INFORMATION);
+			contactInformation = new EObjectResolvingEList<Actor>(Actor.class, this, CorePackage.CONTRACTUAL_ELEMENT__CONTACT_INFORMATION);
 		}
 		return contactInformation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Expression getExpression() {
+		return expression;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetExpression(Expression newExpression, NotificationChain msgs) {
+		Expression oldExpression = expression;
+		expression = newExpression;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CorePackage.CONTRACTUAL_ELEMENT__EXPRESSION, oldExpression, newExpression);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setExpression(Expression newExpression) {
+		if (newExpression != expression) {
+			NotificationChain msgs = null;
+			if (expression != null)
+				msgs = ((InternalEObject)expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CorePackage.CONTRACTUAL_ELEMENT__EXPRESSION, null, msgs);
+			if (newExpression != null)
+				msgs = ((InternalEObject)newExpression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CorePackage.CONTRACTUAL_ELEMENT__EXPRESSION, null, msgs);
+			msgs = basicSetExpression(newExpression, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CorePackage.CONTRACTUAL_ELEMENT__EXPRESSION, newExpression, newExpression));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Expression getCondition() {
+		return condition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetCondition(Expression newCondition, NotificationChain msgs) {
+		Expression oldCondition = condition;
+		condition = newCondition;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CorePackage.CONTRACTUAL_ELEMENT__CONDITION, oldCondition, newCondition);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCondition(Expression newCondition) {
+		if (newCondition != condition) {
+			NotificationChain msgs = null;
+			if (condition != null)
+				msgs = ((InternalEObject)condition).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CorePackage.CONTRACTUAL_ELEMENT__CONDITION, null, msgs);
+			if (newCondition != null)
+				msgs = ((InternalEObject)newCondition).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CorePackage.CONTRACTUAL_ELEMENT__CONDITION, null, msgs);
+			msgs = basicSetCondition(newCondition, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CorePackage.CONTRACTUAL_ELEMENT__CONDITION, newCondition, newCondition));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<EObject> getModes() {
+		if (modes == null) {
+			modes = new EObjectResolvingEList<EObject>(EObject.class, this, CorePackage.CONTRACTUAL_ELEMENT__MODES);
+		}
+		return modes;
 	}
 
 	/**
@@ -396,20 +601,11 @@ public abstract class ContractualElementImpl extends IdentifiedElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getRationale() {
-		return rationale;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRationale(String newRationale) {
-		String oldRationale = rationale;
-		rationale = newRationale;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CorePackage.CONTRACTUAL_ELEMENT__RATIONALE, oldRationale, rationale));
+	public EList<StakeHolder> getStakeholders() {
+		if (stakeholders == null) {
+			stakeholders = new EObjectWithInverseResolvingEList.ManyInverse<StakeHolder>(StakeHolder.class, this, CorePackage.CONTRACTUAL_ELEMENT__STAKEHOLDERS, CorePackage.STAKE_HOLDER__CONTRACTUAL_ELEMENTS);
+		}
+		return stakeholders;
 	}
 
 	/**
@@ -429,40 +625,10 @@ public abstract class ContractualElementImpl extends IdentifiedElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<StakeHolder> getStakeHolders() {
-		if (stakeHolders == null) {
-			stakeHolders = new EObjectWithInverseResolvingEList.ManyInverse<StakeHolder>(StakeHolder.class, this, CorePackage.CONTRACTUAL_ELEMENT__STAKE_HOLDERS, CorePackage.STAKE_HOLDER__CONTRACTUAL_ELEMENTS);
+	public EList<ReferencedModelElements> getSatisfiedBy() {
+		if (satisfiedBy == null) {
+			satisfiedBy = new EObjectContainmentEList<ReferencedModelElements>(ReferencedModelElements.class, this, CorePackage.CONTRACTUAL_ELEMENT__SATISFIED_BY);
 		}
-		return stakeHolders;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Float getPriority() {
-		return priority;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPriority(Float newPriority) {
-		Float oldPriority = priority;
-		priority = newPriority;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CorePackage.CONTRACTUAL_ELEMENT__PRIORITY, oldPriority, priority));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ContractReferencedModelElements getSatisfiedBy() {
 		return satisfiedBy;
 	}
 
@@ -471,14 +637,12 @@ public abstract class ContractualElementImpl extends IdentifiedElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSatisfiedBy(ContractReferencedModelElements newSatisfiedBy, NotificationChain msgs) {
-		ContractReferencedModelElements oldSatisfiedBy = satisfiedBy;
-		satisfiedBy = newSatisfiedBy;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CorePackage.CONTRACTUAL_ELEMENT__SATISFIED_BY, oldSatisfiedBy, newSatisfiedBy);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public EList<EObject> getAgents() {
+		// TODO: implement this method to return the 'Agents' reference list
+		// Ensure that you remove @generated or mark it @generated NOT
+		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
+		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -486,18 +650,11 @@ public abstract class ContractualElementImpl extends IdentifiedElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSatisfiedBy(ContractReferencedModelElements newSatisfiedBy) {
-		if (newSatisfiedBy != satisfiedBy) {
-			NotificationChain msgs = null;
-			if (satisfiedBy != null)
-				msgs = ((InternalEObject)satisfiedBy).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CorePackage.CONTRACTUAL_ELEMENT__SATISFIED_BY, null, msgs);
-			if (newSatisfiedBy != null)
-				msgs = ((InternalEObject)newSatisfiedBy).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CorePackage.CONTRACTUAL_ELEMENT__SATISFIED_BY, null, msgs);
-			msgs = basicSetSatisfiedBy(newSatisfiedBy, msgs);
-			if (msgs != null) msgs.dispatch();
+	public EList<EObject> getDerivedFrom() {
+		if (derivedFrom == null) {
+			derivedFrom = new EObjectResolvingEList<EObject>(EObject.class, this, CorePackage.CONTRACTUAL_ELEMENT__DERIVED_FROM);
 		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CorePackage.CONTRACTUAL_ELEMENT__SATISFIED_BY, newSatisfiedBy, newSatisfiedBy));
+		return derivedFrom;
 	}
 
 	/**
@@ -559,6 +716,27 @@ public abstract class ContractualElementImpl extends IdentifiedElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getDroppingReason() {
+		return droppingReason;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDroppingReason(String newDroppingReason) {
+		String oldDroppingReason = droppingReason;
+		droppingReason = newDroppingReason;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CorePackage.CONTRACTUAL_ELEMENT__DROPPING_REASON, oldDroppingReason, droppingReason));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<EObject> getTracedTo() {
 		if (tracedTo == null) {
 			tracedTo = new EObjectResolvingEList<EObject>(EObject.class, this, CorePackage.CONTRACTUAL_ELEMENT__TRACED_TO);
@@ -571,12 +749,52 @@ public abstract class ContractualElementImpl extends IdentifiedElementImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Category getCategory() {
+		if (category != null && category.eIsProxy()) {
+			InternalEObject oldCategory = (InternalEObject)category;
+			category = (Category)eResolveProxy(oldCategory);
+			if (category != oldCategory) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CorePackage.CONTRACTUAL_ELEMENT__CATEGORY, oldCategory, category));
+			}
+		}
+		return category;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Category basicGetCategory() {
+		return category;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCategory(Category newCategory) {
+		Category oldCategory = category;
+		category = newCategory;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CorePackage.CONTRACTUAL_ELEMENT__CATEGORY, oldCategory, category));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case CorePackage.CONTRACTUAL_ELEMENT__STAKE_HOLDERS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getStakeHolders()).basicAdd(otherEnd, msgs);
+			case CorePackage.CONTRACTUAL_ELEMENT__STAKEHOLDERS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getStakeholders()).basicAdd(otherEnd, msgs);
+			case CorePackage.CONTRACTUAL_ELEMENT__RATIONALES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getRationales()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -591,10 +809,16 @@ public abstract class ContractualElementImpl extends IdentifiedElementImpl imple
 		switch (featureID) {
 			case CorePackage.CONTRACTUAL_ELEMENT__CHANGE_UNCERTAINTY:
 				return basicSetChangeUncertainty(null, msgs);
-			case CorePackage.CONTRACTUAL_ELEMENT__STAKE_HOLDERS:
-				return ((InternalEList<?>)getStakeHolders()).basicRemove(otherEnd, msgs);
+			case CorePackage.CONTRACTUAL_ELEMENT__STAKEHOLDERS:
+				return ((InternalEList<?>)getStakeholders()).basicRemove(otherEnd, msgs);
 			case CorePackage.CONTRACTUAL_ELEMENT__SATISFIED_BY:
-				return basicSetSatisfiedBy(null, msgs);
+				return ((InternalEList<?>)getSatisfiedBy()).basicRemove(otherEnd, msgs);
+			case CorePackage.CONTRACTUAL_ELEMENT__RATIONALES:
+				return ((InternalEList<?>)getRationales()).basicRemove(otherEnd, msgs);
+			case CorePackage.CONTRACTUAL_ELEMENT__EXPRESSION:
+				return basicSetExpression(null, msgs);
+			case CorePackage.CONTRACTUAL_ELEMENT__CONDITION:
+				return basicSetCondition(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -607,33 +831,47 @@ public abstract class ContractualElementImpl extends IdentifiedElementImpl imple
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CorePackage.CONTRACTUAL_ELEMENT__SATISFACTION_LEVEL:
-				return getSatisfactionLevel();
 			case CorePackage.CONTRACTUAL_ELEMENT__CHANGE_UNCERTAINTY:
 				return getChangeUncertainty();
-			case CorePackage.CONTRACTUAL_ELEMENT__CONTACT_INFORMATION:
-				return getContactInformation();
+			case CorePackage.CONTRACTUAL_ELEMENT__SOURCES:
+				return getSources();
 			case CorePackage.CONTRACTUAL_ELEMENT__ORIGIN_DATE:
 				return getOriginDate();
 			case CorePackage.CONTRACTUAL_ELEMENT__SCHEDULE_DATE:
 				return getScheduleDate();
-			case CorePackage.CONTRACTUAL_ELEMENT__STAKE_HOLDERS:
-				return getStakeHolders();
-			case CorePackage.CONTRACTUAL_ELEMENT__PRIORITY:
-				return getPriority();
-			case CorePackage.CONTRACTUAL_ELEMENT__SATISFIED_BY:
-				return getSatisfiedBy();
+			case CorePackage.CONTRACTUAL_ELEMENT__STAKEHOLDERS:
+				return getStakeholders();
 			case CorePackage.CONTRACTUAL_ELEMENT__EVOLVED_TO:
-				//if (resolve) return getEvolvedTo();
 				return getEvolvedTo();
-			case CorePackage.CONTRACTUAL_ELEMENT__DROPPED:
-				return isDropped();
 			case CorePackage.CONTRACTUAL_ELEMENT__TRACED_TO:
 				return getTracedTo();
-			case CorePackage.CONTRACTUAL_ELEMENT__RATIONALE:
-				return getRationale();
-			case CorePackage.CONTRACTUAL_ELEMENT__SOURCES:
-				return getSources();
+			case CorePackage.CONTRACTUAL_ELEMENT__CATEGORY:
+				if (resolve) return getCategory();
+				return basicGetCategory();
+			case CorePackage.CONTRACTUAL_ELEMENT__SATISFIED_BY:
+				return getSatisfiedBy();
+			case CorePackage.CONTRACTUAL_ELEMENT__AGENTS:
+				return getAgents();
+			case CorePackage.CONTRACTUAL_ELEMENT__DERIVED_FROM:
+				return getDerivedFrom();
+			case CorePackage.CONTRACTUAL_ELEMENT__DROPPED:
+				return isDropped();
+			case CorePackage.CONTRACTUAL_ELEMENT__DROPPING_REASON:
+				return getDroppingReason();
+			case CorePackage.CONTRACTUAL_ELEMENT__SATISFACTION_LEVEL:
+				return getSatisfactionLevel();
+			case CorePackage.CONTRACTUAL_ELEMENT__RATIONALES:
+				return getRationales();
+			case CorePackage.CONTRACTUAL_ELEMENT__TIME_CRITICALITY:
+				return getTimeCriticality();
+			case CorePackage.CONTRACTUAL_ELEMENT__CONTACT_INFORMATION:
+				return getContactInformation();
+			case CorePackage.CONTRACTUAL_ELEMENT__EXPRESSION:
+				return getExpression();
+			case CorePackage.CONTRACTUAL_ELEMENT__CONDITION:
+				return getCondition();
+			case CorePackage.CONTRACTUAL_ELEMENT__MODES:
+				return getModes();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -647,15 +885,12 @@ public abstract class ContractualElementImpl extends IdentifiedElementImpl imple
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CorePackage.CONTRACTUAL_ELEMENT__SATISFACTION_LEVEL:
-				setSatisfactionLevel((Float)newValue);
-				return;
 			case CorePackage.CONTRACTUAL_ELEMENT__CHANGE_UNCERTAINTY:
 				setChangeUncertainty((Uncertainty)newValue);
 				return;
-			case CorePackage.CONTRACTUAL_ELEMENT__CONTACT_INFORMATION:
-				getContactInformation().clear();
-				getContactInformation().addAll((Collection<? extends String>)newValue);
+			case CorePackage.CONTRACTUAL_ELEMENT__SOURCES:
+				getSources().clear();
+				getSources().addAll((Collection<? extends String>)newValue);
 				return;
 			case CorePackage.CONTRACTUAL_ELEMENT__ORIGIN_DATE:
 				setOriginDate((Date)newValue);
@@ -663,35 +898,62 @@ public abstract class ContractualElementImpl extends IdentifiedElementImpl imple
 			case CorePackage.CONTRACTUAL_ELEMENT__SCHEDULE_DATE:
 				setScheduleDate((Date)newValue);
 				return;
-			case CorePackage.CONTRACTUAL_ELEMENT__STAKE_HOLDERS:
-				getStakeHolders().clear();
-				getStakeHolders().addAll((Collection<? extends StakeHolder>)newValue);
-				return;
-			case CorePackage.CONTRACTUAL_ELEMENT__PRIORITY:
-				setPriority((Float)newValue);
-				return;
-			case CorePackage.CONTRACTUAL_ELEMENT__SATISFIED_BY:
-				setSatisfiedBy((ContractReferencedModelElements)newValue);
+			case CorePackage.CONTRACTUAL_ELEMENT__STAKEHOLDERS:
+				getStakeholders().clear();
+				getStakeholders().addAll((Collection<? extends StakeHolder>)newValue);
 				return;
 			case CorePackage.CONTRACTUAL_ELEMENT__EVOLVED_TO:
-//				setEvolvedTo((ContractualElement)newValue);
 				getEvolvedTo().clear();
 				getEvolvedTo().addAll((Collection<? extends ContractualElement>)newValue);
-				//return;
-				return;
-			case CorePackage.CONTRACTUAL_ELEMENT__DROPPED:
-				setDropped((Boolean)newValue);
 				return;
 			case CorePackage.CONTRACTUAL_ELEMENT__TRACED_TO:
 				getTracedTo().clear();
 				getTracedTo().addAll((Collection<? extends EObject>)newValue);
 				return;
-			case CorePackage.CONTRACTUAL_ELEMENT__RATIONALE:
-				setRationale((String)newValue);
+			case CorePackage.CONTRACTUAL_ELEMENT__CATEGORY:
+				setCategory((Category)newValue);
 				return;
-			case CorePackage.CONTRACTUAL_ELEMENT__SOURCES:
-				getSources().clear();
-				getSources().addAll((Collection<? extends String>)newValue);
+			case CorePackage.CONTRACTUAL_ELEMENT__SATISFIED_BY:
+				getSatisfiedBy().clear();
+				getSatisfiedBy().addAll((Collection<? extends ReferencedModelElements>)newValue);
+				return;
+			case CorePackage.CONTRACTUAL_ELEMENT__AGENTS:
+				getAgents().clear();
+				getAgents().addAll((Collection<? extends EObject>)newValue);
+				return;
+			case CorePackage.CONTRACTUAL_ELEMENT__DERIVED_FROM:
+				getDerivedFrom().clear();
+				getDerivedFrom().addAll((Collection<? extends EObject>)newValue);
+				return;
+			case CorePackage.CONTRACTUAL_ELEMENT__DROPPED:
+				setDropped((Boolean)newValue);
+				return;
+			case CorePackage.CONTRACTUAL_ELEMENT__DROPPING_REASON:
+				setDroppingReason((String)newValue);
+				return;
+			case CorePackage.CONTRACTUAL_ELEMENT__SATISFACTION_LEVEL:
+				setSatisfactionLevel((Float)newValue);
+				return;
+			case CorePackage.CONTRACTUAL_ELEMENT__RATIONALES:
+				getRationales().clear();
+				getRationales().addAll((Collection<? extends Rationale>)newValue);
+				return;
+			case CorePackage.CONTRACTUAL_ELEMENT__TIME_CRITICALITY:
+				setTimeCriticality((Float)newValue);
+				return;
+			case CorePackage.CONTRACTUAL_ELEMENT__CONTACT_INFORMATION:
+				getContactInformation().clear();
+				getContactInformation().addAll((Collection<? extends Actor>)newValue);
+				return;
+			case CorePackage.CONTRACTUAL_ELEMENT__EXPRESSION:
+				setExpression((Expression)newValue);
+				return;
+			case CorePackage.CONTRACTUAL_ELEMENT__CONDITION:
+				setCondition((Expression)newValue);
+				return;
+			case CorePackage.CONTRACTUAL_ELEMENT__MODES:
+				getModes().clear();
+				getModes().addAll((Collection<? extends EObject>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -705,14 +967,11 @@ public abstract class ContractualElementImpl extends IdentifiedElementImpl imple
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CorePackage.CONTRACTUAL_ELEMENT__SATISFACTION_LEVEL:
-				setSatisfactionLevel(SATISFACTION_LEVEL_EDEFAULT);
-				return;
 			case CorePackage.CONTRACTUAL_ELEMENT__CHANGE_UNCERTAINTY:
 				setChangeUncertainty((Uncertainty)null);
 				return;
-			case CorePackage.CONTRACTUAL_ELEMENT__CONTACT_INFORMATION:
-				getContactInformation().clear();
+			case CorePackage.CONTRACTUAL_ELEMENT__SOURCES:
+				getSources().clear();
 				return;
 			case CorePackage.CONTRACTUAL_ELEMENT__ORIGIN_DATE:
 				setOriginDate(ORIGIN_DATE_EDEFAULT);
@@ -720,29 +979,53 @@ public abstract class ContractualElementImpl extends IdentifiedElementImpl imple
 			case CorePackage.CONTRACTUAL_ELEMENT__SCHEDULE_DATE:
 				setScheduleDate(SCHEDULE_DATE_EDEFAULT);
 				return;
-			case CorePackage.CONTRACTUAL_ELEMENT__STAKE_HOLDERS:
-				getStakeHolders().clear();
-				return;
-			case CorePackage.CONTRACTUAL_ELEMENT__PRIORITY:
-				setPriority(PRIORITY_EDEFAULT);
-				return;
-			case CorePackage.CONTRACTUAL_ELEMENT__SATISFIED_BY:
-				setSatisfiedBy((ContractReferencedModelElements)null);
+			case CorePackage.CONTRACTUAL_ELEMENT__STAKEHOLDERS:
+				getStakeholders().clear();
 				return;
 			case CorePackage.CONTRACTUAL_ELEMENT__EVOLVED_TO:
 				getEvolvedTo().clear();
 				return;
-			case CorePackage.CONTRACTUAL_ELEMENT__DROPPED:
-				setDropped(DROPPED_EDEFAULT);
-				return;
 			case CorePackage.CONTRACTUAL_ELEMENT__TRACED_TO:
 				getTracedTo().clear();
 				return;
-			case CorePackage.CONTRACTUAL_ELEMENT__RATIONALE:
-				setRationale(RATIONALE_EDEFAULT);
+			case CorePackage.CONTRACTUAL_ELEMENT__CATEGORY:
+				setCategory((Category)null);
 				return;
-			case CorePackage.CONTRACTUAL_ELEMENT__SOURCES:
-				getSources().clear();
+			case CorePackage.CONTRACTUAL_ELEMENT__SATISFIED_BY:
+				getSatisfiedBy().clear();
+				return;
+			case CorePackage.CONTRACTUAL_ELEMENT__AGENTS:
+				getAgents().clear();
+				return;
+			case CorePackage.CONTRACTUAL_ELEMENT__DERIVED_FROM:
+				getDerivedFrom().clear();
+				return;
+			case CorePackage.CONTRACTUAL_ELEMENT__DROPPED:
+				setDropped(DROPPED_EDEFAULT);
+				return;
+			case CorePackage.CONTRACTUAL_ELEMENT__DROPPING_REASON:
+				setDroppingReason(DROPPING_REASON_EDEFAULT);
+				return;
+			case CorePackage.CONTRACTUAL_ELEMENT__SATISFACTION_LEVEL:
+				setSatisfactionLevel(SATISFACTION_LEVEL_EDEFAULT);
+				return;
+			case CorePackage.CONTRACTUAL_ELEMENT__RATIONALES:
+				getRationales().clear();
+				return;
+			case CorePackage.CONTRACTUAL_ELEMENT__TIME_CRITICALITY:
+				setTimeCriticality(TIME_CRITICALITY_EDEFAULT);
+				return;
+			case CorePackage.CONTRACTUAL_ELEMENT__CONTACT_INFORMATION:
+				getContactInformation().clear();
+				return;
+			case CorePackage.CONTRACTUAL_ELEMENT__EXPRESSION:
+				setExpression((Expression)null);
+				return;
+			case CorePackage.CONTRACTUAL_ELEMENT__CONDITION:
+				setCondition((Expression)null);
+				return;
+			case CorePackage.CONTRACTUAL_ELEMENT__MODES:
+				getModes().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -756,32 +1039,46 @@ public abstract class ContractualElementImpl extends IdentifiedElementImpl imple
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CorePackage.CONTRACTUAL_ELEMENT__SATISFACTION_LEVEL:
-				return SATISFACTION_LEVEL_EDEFAULT == null ? satisfactionLevel != null : !SATISFACTION_LEVEL_EDEFAULT.equals(satisfactionLevel);
 			case CorePackage.CONTRACTUAL_ELEMENT__CHANGE_UNCERTAINTY:
 				return changeUncertainty != null;
-			case CorePackage.CONTRACTUAL_ELEMENT__CONTACT_INFORMATION:
-				return contactInformation != null && !contactInformation.isEmpty();
+			case CorePackage.CONTRACTUAL_ELEMENT__SOURCES:
+				return sources != null && !sources.isEmpty();
 			case CorePackage.CONTRACTUAL_ELEMENT__ORIGIN_DATE:
 				return ORIGIN_DATE_EDEFAULT == null ? originDate != null : !ORIGIN_DATE_EDEFAULT.equals(originDate);
 			case CorePackage.CONTRACTUAL_ELEMENT__SCHEDULE_DATE:
 				return SCHEDULE_DATE_EDEFAULT == null ? scheduleDate != null : !SCHEDULE_DATE_EDEFAULT.equals(scheduleDate);
-			case CorePackage.CONTRACTUAL_ELEMENT__STAKE_HOLDERS:
-				return stakeHolders != null && !stakeHolders.isEmpty();
-			case CorePackage.CONTRACTUAL_ELEMENT__PRIORITY:
-				return PRIORITY_EDEFAULT == null ? priority != null : !PRIORITY_EDEFAULT.equals(priority);
-			case CorePackage.CONTRACTUAL_ELEMENT__SATISFIED_BY:
-				return satisfiedBy != null;
+			case CorePackage.CONTRACTUAL_ELEMENT__STAKEHOLDERS:
+				return stakeholders != null && !stakeholders.isEmpty();
 			case CorePackage.CONTRACTUAL_ELEMENT__EVOLVED_TO:
-				return evolvedTo != null;
-			case CorePackage.CONTRACTUAL_ELEMENT__DROPPED:
-				return dropped != DROPPED_EDEFAULT;
+				return evolvedTo != null && !evolvedTo.isEmpty();
 			case CorePackage.CONTRACTUAL_ELEMENT__TRACED_TO:
 				return tracedTo != null && !tracedTo.isEmpty();
-			case CorePackage.CONTRACTUAL_ELEMENT__RATIONALE:
-				return RATIONALE_EDEFAULT == null ? rationale != null : !RATIONALE_EDEFAULT.equals(rationale);
-			case CorePackage.CONTRACTUAL_ELEMENT__SOURCES:
-				return sources != null && !sources.isEmpty();
+			case CorePackage.CONTRACTUAL_ELEMENT__CATEGORY:
+				return category != null;
+			case CorePackage.CONTRACTUAL_ELEMENT__SATISFIED_BY:
+				return satisfiedBy != null && !satisfiedBy.isEmpty();
+			case CorePackage.CONTRACTUAL_ELEMENT__AGENTS:
+				return !getAgents().isEmpty();
+			case CorePackage.CONTRACTUAL_ELEMENT__DERIVED_FROM:
+				return derivedFrom != null && !derivedFrom.isEmpty();
+			case CorePackage.CONTRACTUAL_ELEMENT__DROPPED:
+				return dropped != DROPPED_EDEFAULT;
+			case CorePackage.CONTRACTUAL_ELEMENT__DROPPING_REASON:
+				return DROPPING_REASON_EDEFAULT == null ? droppingReason != null : !DROPPING_REASON_EDEFAULT.equals(droppingReason);
+			case CorePackage.CONTRACTUAL_ELEMENT__SATISFACTION_LEVEL:
+				return SATISFACTION_LEVEL_EDEFAULT == null ? satisfactionLevel != null : !SATISFACTION_LEVEL_EDEFAULT.equals(satisfactionLevel);
+			case CorePackage.CONTRACTUAL_ELEMENT__RATIONALES:
+				return rationales != null && !rationales.isEmpty();
+			case CorePackage.CONTRACTUAL_ELEMENT__TIME_CRITICALITY:
+				return TIME_CRITICALITY_EDEFAULT == null ? timeCriticality != null : !TIME_CRITICALITY_EDEFAULT.equals(timeCriticality);
+			case CorePackage.CONTRACTUAL_ELEMENT__CONTACT_INFORMATION:
+				return contactInformation != null && !contactInformation.isEmpty();
+			case CorePackage.CONTRACTUAL_ELEMENT__EXPRESSION:
+				return expression != null;
+			case CorePackage.CONTRACTUAL_ELEMENT__CONDITION:
+				return condition != null;
+			case CorePackage.CONTRACTUAL_ELEMENT__MODES:
+				return modes != null && !modes.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -796,22 +1093,20 @@ public abstract class ContractualElementImpl extends IdentifiedElementImpl imple
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (satisfactionLevel: ");
-		result.append(satisfactionLevel);
-		result.append(", contactInformation: ");
-		result.append(contactInformation);
+		result.append(" (sources: ");
+		result.append(sources);
 		result.append(", originDate: ");
 		result.append(originDate);
 		result.append(", scheduleDate: ");
 		result.append(scheduleDate);
-		result.append(", priority: ");
-		result.append(priority);
 		result.append(", dropped: ");
 		result.append(dropped);
-		result.append(", rationale: ");
-		result.append(rationale);
-		result.append(", sources: ");
-		result.append(sources);
+		result.append(", droppingReason: ");
+		result.append(droppingReason);
+		result.append(", satisfactionLevel: ");
+		result.append(satisfactionLevel);
+		result.append(", timeCriticality: ");
+		result.append(timeCriticality);
 		result.append(')');
 		return result.toString();
 	}

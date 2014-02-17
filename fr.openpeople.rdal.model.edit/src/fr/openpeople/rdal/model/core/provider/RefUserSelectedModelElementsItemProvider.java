@@ -40,7 +40,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * @generated
  */
 public class RefUserSelectedModelElementsItemProvider
-	extends ContractReferencedModelElementsItemProvider
+	extends ReferencedModelElementsItemProvider
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,

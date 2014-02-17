@@ -30,11 +30,11 @@ import fr.labsticc.framework.settings.model.settings.Category;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link fr.openpeople.rdal.model.core.Requirement#getDerivedFrom <em>Derived From</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.Requirement#getRefinedBy <em>Refined By</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.Requirement#getDerivations <em>Derivations</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.Requirement#getRefinedBY <em>Refined BY</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.Requirement#getAssumptions <em>Assumptions</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.Requirement#getCategory <em>Category</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.Requirement#getImageAssumption <em>Image Assumption</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.Requirement#getDerivations <em>Derivations</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.Requirement#getSubRequirements <em>Sub Requirements</em>}</li>
  * </ul>
  * </p>
  *
@@ -44,38 +44,20 @@ import fr.labsticc.framework.settings.model.settings.Category;
  */
 public interface Requirement extends AbstractRequirement {
 	/**
-	 * Returns the value of the '<em><b>Derived From</b></em>' reference list.
+	 * Returns the value of the '<em><b>Refined BY</b></em>' reference list.
 	 * The list contents are of type {@link fr.openpeople.rdal.model.core.Requirement}.
-	 * It is bidirectional and its opposite is '{@link fr.openpeople.rdal.model.core.Requirement#getDerivations <em>Derivations</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Derived From</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Refined BY</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Derived From</em>' reference list.
-	 * @see fr.openpeople.rdal.model.core.CorePackage#getRequirement_DerivedFrom()
-	 * @see fr.openpeople.rdal.model.core.Requirement#getDerivations
-	 * @model opposite="derivations"
-	 * @generated
-	 */
-	EList<Requirement> getDerivedFrom();
-
-	/**
-	 * Returns the value of the '<em><b>Refined By</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Refined By</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Refined By</em>' reference list.
-	 * @see fr.openpeople.rdal.model.core.CorePackage#getRequirement_RefinedBy()
+	 * @return the value of the '<em>Refined BY</em>' reference list.
+	 * @see fr.openpeople.rdal.model.core.CorePackage#getRequirement_RefinedBY()
 	 * @model
 	 * @generated
 	 */
-	EList<EObject> getRefinedBy();
+	EList<Requirement> getRefinedBY();
 
 	/**
 	 * Returns the value of the '<em><b>Assumptions</b></em>' reference list.
@@ -96,35 +78,36 @@ public interface Requirement extends AbstractRequirement {
 	EList<Assumption> getAssumptions();
 
 	/**
-	 * Returns the value of the '<em><b>Category</b></em>' reference.
+	 * Returns the value of the '<em><b>Image Assumption</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link fr.openpeople.rdal.model.core.Assumption#getImageRequirement <em>Image Requirement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Category</em>' reference isn't clear,
+	 * If the meaning of the '<em>Image Assumption</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Category</em>' reference.
-	 * @see #setCategory(Category)
-	 * @see fr.openpeople.rdal.model.core.CorePackage#getRequirement_Category()
-	 * @model
+	 * @return the value of the '<em>Image Assumption</em>' reference.
+	 * @see #setImageAssumption(Assumption)
+	 * @see fr.openpeople.rdal.model.core.CorePackage#getRequirement_ImageAssumption()
+	 * @see fr.openpeople.rdal.model.core.Assumption#getImageRequirement
+	 * @model opposite="imageRequirement"
 	 * @generated
 	 */
-	Category getCategory();
+	Assumption getImageAssumption();
 
 	/**
-	 * Sets the value of the '{@link fr.openpeople.rdal.model.core.Requirement#getCategory <em>Category</em>}' reference.
+	 * Sets the value of the '{@link fr.openpeople.rdal.model.core.Requirement#getImageAssumption <em>Image Assumption</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Category</em>' reference.
-	 * @see #getCategory()
+	 * @param value the new value of the '<em>Image Assumption</em>' reference.
+	 * @see #getImageAssumption()
 	 * @generated
 	 */
-	void setCategory(Category value);
+	void setImageAssumption(Assumption value);
 
 	/**
 	 * Returns the value of the '<em><b>Derivations</b></em>' reference list.
 	 * The list contents are of type {@link fr.openpeople.rdal.model.core.Requirement}.
-	 * It is bidirectional and its opposite is '{@link fr.openpeople.rdal.model.core.Requirement#getDerivedFrom <em>Derived From</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Derivations</em>' reference list isn't clear,
@@ -133,10 +116,35 @@ public interface Requirement extends AbstractRequirement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Derivations</em>' reference list.
 	 * @see fr.openpeople.rdal.model.core.CorePackage#getRequirement_Derivations()
-	 * @see fr.openpeople.rdal.model.core.Requirement#getDerivedFrom
-	 * @model opposite="derivedFrom"
+	 * @model
 	 * @generated
 	 */
 	EList<Requirement> getDerivations();
+
+	/**
+	 * Returns the value of the '<em><b>Sub Requirements</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Sub Requirements</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Sub Requirements</em>' containment reference.
+	 * @see #setSubRequirements(RequirementsContainer)
+	 * @see fr.openpeople.rdal.model.core.CorePackage#getRequirement_SubRequirements()
+	 * @model containment="true"
+	 * @generated
+	 */
+	RequirementsContainer getSubRequirements();
+
+	/**
+	 * Sets the value of the '{@link fr.openpeople.rdal.model.core.Requirement#getSubRequirements <em>Sub Requirements</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Sub Requirements</em>' containment reference.
+	 * @see #getSubRequirements()
+	 * @generated
+	 */
+	void setSubRequirements(RequirementsContainer value);
 
 } // Requirement

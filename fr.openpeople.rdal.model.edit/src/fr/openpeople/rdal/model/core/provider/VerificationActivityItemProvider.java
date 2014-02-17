@@ -18,6 +18,7 @@
 package fr.openpeople.rdal.model.core.provider;
 
 
+import fr.labsticc.framework.constraints.model.constraints.ConstraintsFactory;
 import fr.openpeople.rdal.model.core.CorePackage;
 import fr.openpeople.rdal.model.core.VerificationActivity;
 
@@ -27,6 +28,7 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -75,6 +77,7 @@ public class VerificationActivityItemProvider
 			addRequirementPropertyDescriptor(object);
 			addVerificationMethodPropertyDescriptor(object);
 			addExternalRefPropertyDescriptor(object);
+			addPassedPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -146,6 +149,58 @@ public class VerificationActivityItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Passed feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPassedPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_VerificationActivity_passed_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_VerificationActivity_passed_feature", "_UI_VerificationActivity_type"),
+				 CorePackage.Literals.VERIFICATION_ACTIVITY__PASSED,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+		if (childrenFeatures == null) {
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(CorePackage.Literals.VERIFICATION_ACTIVITY__EXPRESSION);
+		}
+		return childrenFeatures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EStructuralFeature getChildFeature(Object object, Object child) {
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
+
+		return super.getChildFeature(object, child);
+	}
+
+	/**
 	 * This returns VerificationActivity.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -183,7 +238,11 @@ public class VerificationActivityItemProvider
 
 		switch (notification.getFeatureID(VerificationActivity.class)) {
 			case CorePackage.VERIFICATION_ACTIVITY__VERIFICATION_METHOD:
+			case CorePackage.VERIFICATION_ACTIVITY__PASSED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+			case CorePackage.VERIFICATION_ACTIVITY__EXPRESSION:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
 		super.notifyChanged(notification);
@@ -199,6 +258,16 @@ public class VerificationActivityItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CorePackage.Literals.VERIFICATION_ACTIVITY__EXPRESSION,
+				 ConstraintsFactory.eINSTANCE.createFormalLanguageExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CorePackage.Literals.VERIFICATION_ACTIVITY__EXPRESSION,
+				 ConstraintsFactory.eINSTANCE.createNaturalLanguageExpression()));
 	}
 
 }

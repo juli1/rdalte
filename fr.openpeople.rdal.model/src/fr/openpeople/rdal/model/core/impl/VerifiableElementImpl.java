@@ -39,7 +39,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class VerifiableElementImpl extends ContractualElementImpl implements VerifiableElement {
+public abstract class VerifiableElementImpl extends ContractualElementImpl implements VerifiableElement {
 	/**
 	 * The default value of the '{@link #getVerified() <em>Verified</em>}' attribute.
 	 * <!-- begin-user-doc -->

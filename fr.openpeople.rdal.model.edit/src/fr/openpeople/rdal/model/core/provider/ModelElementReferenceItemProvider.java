@@ -73,7 +73,9 @@ public class ModelElementReferenceItemProvider
 			super.getPropertyDescriptors(object);
 
 			addModelElementPropertyDescriptor(object);
+			addWeightPropertyDescriptor(object);
 			addVerifiesPropertyDescriptor(object);
+			addSatisfactionLevelPropertyDescriptor(object);
 			addReasonPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -106,6 +108,28 @@ public class ModelElementReferenceItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Weight feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addWeightPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ModelElementReference_weight_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ModelElementReference_weight_feature", "_UI_ModelElementReference_type"),
+				 CorePackage.Literals.MODEL_ELEMENT_REFERENCE__WEIGHT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Verifies feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -119,6 +143,28 @@ public class ModelElementReferenceItemProvider
 				 getString("_UI_ModelElementReference_verifies_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelElementReference_verifies_feature", "_UI_ModelElementReference_type"),
 				 CorePackage.Literals.MODEL_ELEMENT_REFERENCE__VERIFIES,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Satisfaction Level feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSatisfactionLevelPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ModelElementReference_satisfactionLevel_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ModelElementReference_satisfactionLevel_feature", "_UI_ModelElementReference_type"),
+				 CorePackage.Literals.MODEL_ELEMENT_REFERENCE__SATISFACTION_LEVEL,
 				 true,
 				 false,
 				 false,
@@ -186,7 +232,9 @@ public class ModelElementReferenceItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ModelElementReference.class)) {
+			case CorePackage.MODEL_ELEMENT_REFERENCE__WEIGHT:
 			case CorePackage.MODEL_ELEMENT_REFERENCE__VERIFIES:
+			case CorePackage.MODEL_ELEMENT_REFERENCE__SATISFACTION_LEVEL:
 			case CorePackage.MODEL_ELEMENT_REFERENCE__REASON:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

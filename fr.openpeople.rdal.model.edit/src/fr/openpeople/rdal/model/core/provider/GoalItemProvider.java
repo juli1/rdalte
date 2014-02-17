@@ -1,19 +1,4 @@
-/*******************************************************************************
- * Copyright (c) 2011 Lab-STICC Universite de Bretagne Sud, Lorient.
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the CeCILL-B license available
- * at :
- * en : http://www.cecill.info/licences/Licence_CeCILL-B_V1-en.html
- * fr : http://www.cecill.info/licences/Licence_CeCILL-B_V1-fr.html
- * 
- * Contributors:
- * Dominique BLOUIN (Lab-STICC UBS), dominique.blouin@univ-ubs.fr
- ******************************************************************************/
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package fr.openpeople.rdal.model.core.provider;
 
@@ -34,6 +19,8 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link fr.openpeople.rdal.model.core.Goal} object.
@@ -70,37 +57,10 @@ public class GoalItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addAchievedByPropertyDescriptor(object);
 			addConflictsPropertyDescriptor(object);
+			addPriorityPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Achieved By feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	protected void addAchievedByPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add( new SettingsRefPropertyDescriptor( ( (ComposeableAdapterFactory) adapterFactory ).getRootAdapterFactory(),
-																		getResourceLocator(),
-																		getString("_UI_Goal_achievedBy_feature"),
-																		getString("_UI_PropertyDescriptor_description", "_UI_Goal_achievedBy_feature", "_UI_Goal_type" ),
-																		CorePackage.Literals.GOAL__ACHIEVED_BY ) );
-//		itemPropertyDescriptors.add
-//			(createItemPropertyDescriptor
-//				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-//				 getResourceLocator(),
-//				 getString("_UI_Goal_achievedBy_feature"),
-//				 getString("_UI_PropertyDescriptor_description", "_UI_Goal_achievedBy_feature", "_UI_Goal_type"),
-//				 CorePackage.Literals.GOAL__ACHIEVED_BY,
-//				 true,
-//				 false,
-//				 true,
-//				 null,
-//				 null,
-//				 null));
 	}
 
 	/**
@@ -121,6 +81,28 @@ public class GoalItemProvider
 				 false,
 				 true,
 				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Priority feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPriorityPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Goal_priority_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Goal_priority_feature", "_UI_Goal_type"),
+				 CorePackage.Literals.GOAL__PRIORITY,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -160,6 +142,12 @@ public class GoalItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(Goal.class)) {
+			case CorePackage.GOAL__PRIORITY:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 
@@ -173,6 +161,29 @@ public class GoalItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == CorePackage.Literals.CONTRACTUAL_ELEMENT__EXPRESSION ||
+			childFeature == CorePackage.Literals.CONTRACTUAL_ELEMENT__CONDITION;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

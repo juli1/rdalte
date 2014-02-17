@@ -28,6 +28,7 @@ package fr.openpeople.rdal.model.core;
  * <ul>
  *   <li>{@link fr.openpeople.rdal.model.core.Assumption#getRequirements <em>Requirements</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.Assumption#getType <em>Type</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.Assumption#getImageRequirement <em>Image Requirement</em>}</li>
  * </ul>
  * </p>
  *
@@ -66,7 +67,7 @@ public interface Assumption extends AbstractRequirement {
 
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
-	 * The literals are from the enumeration {@link fr.openpeople.rdal.model.core.EnumAssumptionType}.
+	 * The literals are from the enumeration {@link fr.openpeople.rdal.model.core.AssumptionType}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Type</em>' attribute isn't clear,
@@ -74,23 +75,51 @@ public interface Assumption extends AbstractRequirement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
-	 * @see fr.openpeople.rdal.model.core.EnumAssumptionType
-	 * @see #setType(EnumAssumptionType)
+	 * @see fr.openpeople.rdal.model.core.AssumptionType
+	 * @see #setType(AssumptionType)
 	 * @see fr.openpeople.rdal.model.core.CorePackage#getAssumption_Type()
 	 * @model
 	 * @generated
 	 */
-	EnumAssumptionType getType();
+	AssumptionType getType();
 
 	/**
 	 * Sets the value of the '{@link fr.openpeople.rdal.model.core.Assumption#getType <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Type</em>' attribute.
-	 * @see fr.openpeople.rdal.model.core.EnumAssumptionType
+	 * @see fr.openpeople.rdal.model.core.AssumptionType
 	 * @see #getType()
 	 * @generated
 	 */
-	void setType(EnumAssumptionType value);
+	void setType(AssumptionType value);
+
+	/**
+	 * Returns the value of the '<em><b>Image Requirement</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link fr.openpeople.rdal.model.core.Requirement#getImageAssumption <em>Image Assumption</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Image Requirement</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Image Requirement</em>' reference.
+	 * @see #setImageRequirement(Requirement)
+	 * @see fr.openpeople.rdal.model.core.CorePackage#getAssumption_ImageRequirement()
+	 * @see fr.openpeople.rdal.model.core.Requirement#getImageAssumption
+	 * @model opposite="imageAssumption"
+	 * @generated
+	 */
+	Requirement getImageRequirement();
+
+	/**
+	 * Sets the value of the '{@link fr.openpeople.rdal.model.core.Assumption#getImageRequirement <em>Image Requirement</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Image Requirement</em>' reference.
+	 * @see #getImageRequirement()
+	 * @generated
+	 */
+	void setImageRequirement(Requirement value);
 
 } // Assumption

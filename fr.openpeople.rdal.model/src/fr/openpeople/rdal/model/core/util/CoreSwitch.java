@@ -23,6 +23,8 @@ import java.util.List;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.util.Switch;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,7 +39,7 @@ import org.eclipse.emf.ecore.EObject;
  * @see fr.openpeople.rdal.model.core.CorePackage
  * @generated
  */
-public class CoreSwitch<T> {
+public class CoreSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
@@ -59,14 +61,16 @@ public class CoreSwitch<T> {
 	}
 
 	/**
-	 * Calls <code>caseXXX</code> for each class of the model until one returns a non null result; it yields that result.
+	 * Checks whether this is a switch for the given package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the first non-null result returned by a <code>caseXXX</code> call.
+	 * @parameter ePackage the package in question.
+	 * @return whether this is a switch for the given package.
 	 * @generated
 	 */
-	public T doSwitch(EObject theEObject) {
-		return doSwitch(theEObject.eClass(), theEObject);
+	@Override
+	protected boolean isSwitchFor(EPackage ePackage) {
+		return ePackage == modelPackage;
 	}
 
 	/**
@@ -76,26 +80,7 @@ public class CoreSwitch<T> {
 	 * @return the first non-null result returned by a <code>caseXXX</code> call.
 	 * @generated
 	 */
-	protected T doSwitch(EClass theEClass, EObject theEObject) {
-		if (theEClass.eContainer() == modelPackage) {
-			return doSwitch(theEClass.getClassifierID(), theEObject);
-		}
-		else {
-			List<EClass> eSuperTypes = theEClass.getESuperTypes();
-			return
-				eSuperTypes.isEmpty() ?
-					defaultCase(theEObject) :
-					doSwitch(eSuperTypes.get(0), theEObject);
-		}
-	}
-
-	/**
-	 * Calls <code>caseXXX</code> for each class of the model until one returns a non null result; it yields that result.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the first non-null result returned by a <code>caseXXX</code> call.
-	 * @generated
-	 */
+	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
 			case CorePackage.IDENTIFIED_ELEMENT: {
@@ -108,6 +93,13 @@ public class CoreSwitch<T> {
 				ContractualElement contractualElement = (ContractualElement)theEObject;
 				T result = caseContractualElement(contractualElement);
 				if (result == null) result = caseIdentifiedElement(contractualElement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CorePackage.UNCERTAINTY: {
+				Uncertainty uncertainty = (Uncertainty)theEObject;
+				T result = caseUncertainty(uncertainty);
+				if (result == null) result = caseIdentifiedElement(uncertainty);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -125,6 +117,58 @@ public class CoreSwitch<T> {
 				if (result == null) result = caseVerifiableElement(specification);
 				if (result == null) result = caseContractualElement(specification);
 				if (result == null) result = caseIdentifiedElement(specification);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CorePackage.SYSTEM_OVERVIEW: {
+				SystemOverview systemOverview = (SystemOverview)theEObject;
+				T result = caseSystemOverview(systemOverview);
+				if (result == null) result = caseContractualElement(systemOverview);
+				if (result == null) result = caseIdentifiedElement(systemOverview);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CorePackage.SYSTEM_CONTEXT: {
+				SystemContext systemContext = (SystemContext)theEObject;
+				T result = caseSystemContext(systemContext);
+				if (result == null) result = caseIdentifiedElement(systemContext);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CorePackage.ACTOR: {
+				Actor actor = (Actor)theEObject;
+				T result = caseActor(actor);
+				if (result == null) result = caseIdentifiedElement(actor);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CorePackage.INTERACTION: {
+				Interaction interaction = (Interaction)theEObject;
+				T result = caseInteraction(interaction);
+				if (result == null) result = caseIdentifiedElement(interaction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CorePackage.GOAL: {
+				Goal goal = (Goal)theEObject;
+				T result = caseGoal(goal);
+				if (result == null) result = caseContractualElement(goal);
+				if (result == null) result = caseIdentifiedElement(goal);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CorePackage.CONFLICT: {
+				Conflict conflict = (Conflict)theEObject;
+				T result = caseConflict(conflict);
+				if (result == null) result = caseIdentifiedElement(conflict);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CorePackage.STAKE_HOLDER: {
+				StakeHolder stakeHolder = (StakeHolder)theEObject;
+				T result = caseStakeHolder(stakeHolder);
+				if (result == null) result = caseActor(stakeHolder);
+				if (result == null) result = caseIdentifiedElement(stakeHolder);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -173,18 +217,9 @@ public class CoreSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CorePackage.STAKE_HOLDER: {
-				StakeHolder stakeHolder = (StakeHolder)theEObject;
-				T result = caseStakeHolder(stakeHolder);
-				if (result == null) result = caseActor(stakeHolder);
-				if (result == null) result = caseIdentifiedElement(stakeHolder);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case CorePackage.REF_EXPRESSION_COLLECTED_MODEL_ELEMENTS: {
 				RefExpressionCollectedModelElements refExpressionCollectedModelElements = (RefExpressionCollectedModelElements)theEObject;
 				T result = caseRefExpressionCollectedModelElements(refExpressionCollectedModelElements);
-				if (result == null) result = caseContractReferencedModelElements(refExpressionCollectedModelElements);
 				if (result == null) result = caseReferencedModelElements(refExpressionCollectedModelElements);
 				if (result == null) result = caseIdentifiedElement(refExpressionCollectedModelElements);
 				if (result == null) result = defaultCase(theEObject);
@@ -193,7 +228,6 @@ public class CoreSwitch<T> {
 			case CorePackage.REF_USER_SELECTED_MODEL_ELEMENTS: {
 				RefUserSelectedModelElements refUserSelectedModelElements = (RefUserSelectedModelElements)theEObject;
 				T result = caseRefUserSelectedModelElements(refUserSelectedModelElements);
-				if (result == null) result = caseContractReferencedModelElements(refUserSelectedModelElements);
 				if (result == null) result = caseReferencedModelElements(refUserSelectedModelElements);
 				if (result == null) result = caseIdentifiedElement(refUserSelectedModelElements);
 				if (result == null) result = defaultCase(theEObject);
@@ -203,14 +237,6 @@ public class CoreSwitch<T> {
 				ReferencedModelElements referencedModelElements = (ReferencedModelElements)theEObject;
 				T result = caseReferencedModelElements(referencedModelElements);
 				if (result == null) result = caseIdentifiedElement(referencedModelElements);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case CorePackage.CONTRACT_REFERENCED_MODEL_ELEMENTS: {
-				ContractReferencedModelElements contractReferencedModelElements = (ContractReferencedModelElements)theEObject;
-				T result = caseContractReferencedModelElements(contractReferencedModelElements);
-				if (result == null) result = caseReferencedModelElements(contractReferencedModelElements);
-				if (result == null) result = caseIdentifiedElement(contractReferencedModelElements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -245,52 +271,32 @@ public class CoreSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CorePackage.GOAL: {
-				Goal goal = (Goal)theEObject;
-				T result = caseGoal(goal);
-				if (result == null) result = caseContractualElement(goal);
-				if (result == null) result = caseIdentifiedElement(goal);
+			case CorePackage.VARIABLE: {
+				Variable variable = (Variable)theEObject;
+				T result = caseVariable(variable);
+				if (result == null) result = caseIdentifiedElement(variable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CorePackage.UNCERTAINTY: {
-				Uncertainty uncertainty = (Uncertainty)theEObject;
-				T result = caseUncertainty(uncertainty);
-				if (result == null) result = caseIdentifiedElement(uncertainty);
+			case CorePackage.REF_DERIVED_MODEL_ELEMENTS: {
+				RefDerivedModelElements refDerivedModelElements = (RefDerivedModelElements)theEObject;
+				T result = caseRefDerivedModelElements(refDerivedModelElements);
+				if (result == null) result = caseReferencedModelElements(refDerivedModelElements);
+				if (result == null) result = caseIdentifiedElement(refDerivedModelElements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CorePackage.SYSTEM_OVERVIEW: {
-				SystemOverview systemOverview = (SystemOverview)theEObject;
-				T result = caseSystemOverview(systemOverview);
-				if (result == null) result = caseIdentifiedElement(systemOverview);
+			case CorePackage.RATIONALE: {
+				Rationale rationale = (Rationale)theEObject;
+				T result = caseRationale(rationale);
+				if (result == null) result = caseIdentifiedElement(rationale);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CorePackage.SYSTEM_CONTEXT: {
-				SystemContext systemContext = (SystemContext)theEObject;
-				T result = caseSystemContext(systemContext);
-				if (result == null) result = caseIdentifiedElement(systemContext);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case CorePackage.ACTOR: {
-				Actor actor = (Actor)theEObject;
-				T result = caseActor(actor);
-				if (result == null) result = caseIdentifiedElement(actor);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case CorePackage.INTERACTION: {
-				Interaction interaction = (Interaction)theEObject;
-				T result = caseInteraction(interaction);
-				if (result == null) result = caseIdentifiedElement(interaction);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case CorePackage.CONFLICT: {
-				Conflict conflict = (Conflict)theEObject;
-				T result = caseConflict(conflict);
+			case CorePackage.REQUIREMENTS_CONTAINER: {
+				RequirementsContainer requirementsContainer = (RequirementsContainer)theEObject;
+				T result = caseRequirementsContainer(requirementsContainer);
+				if (result == null) result = caseIdentifiedElement(requirementsContainer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -479,21 +485,6 @@ public class CoreSwitch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Contract Referenced Model Elements</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Contract Referenced Model Elements</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseContractReferencedModelElements(ContractReferencedModelElements object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Model Element Reference</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -550,6 +541,66 @@ public class CoreSwitch<T> {
 	 * @generated
 	 */
 	public T caseRequirementsCoverageData(RequirementsCoverageData object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Variable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVariable(Variable object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Ref Derived Model Elements</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Ref Derived Model Elements</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRefDerivedModelElements(RefDerivedModelElements object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Rationale</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Rationale</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRationale(Rationale object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Requirements Container</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Requirements Container</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRequirementsContainer(RequirementsContainer object) {
 		return null;
 	}
 
@@ -684,6 +735,7 @@ public class CoreSwitch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject)
 	 * @generated
 	 */
+	@Override
 	public T defaultCase(EObject object) {
 		return null;
 	}

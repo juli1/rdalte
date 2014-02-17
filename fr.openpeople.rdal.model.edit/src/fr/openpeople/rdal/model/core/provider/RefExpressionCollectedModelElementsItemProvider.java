@@ -43,7 +43,7 @@ import fr.openpeople.rdal.model.core.RefExpressionCollectedModelElements;
  * @generated
  */
 public class RefExpressionCollectedModelElementsItemProvider
-	extends ContractReferencedModelElementsItemProvider
+	extends ReferencedModelElementsItemProvider
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,

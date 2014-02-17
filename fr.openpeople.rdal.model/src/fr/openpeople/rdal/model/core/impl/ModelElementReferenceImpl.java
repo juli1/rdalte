@@ -38,7 +38,9 @@ import fr.openpeople.rdal.model.core.ReferencedModelElements;
  * <ul>
  *   <li>{@link fr.openpeople.rdal.model.core.impl.ModelElementReferenceImpl#getModelElement <em>Model Element</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.impl.ModelElementReferenceImpl#getParent <em>Parent</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.impl.ModelElementReferenceImpl#getWeight <em>Weight</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.impl.ModelElementReferenceImpl#getVerifies <em>Verifies</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.impl.ModelElementReferenceImpl#getSatisfactionLevel <em>Satisfaction Level</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.impl.ModelElementReferenceImpl#getReason <em>Reason</em>}</li>
  * </ul>
  * </p>
@@ -55,6 +57,26 @@ public class ModelElementReferenceImpl extends IdentifiedElementImpl implements 
 	 * @ordered
 	 */
 	protected EObject modelElement;
+
+	/**
+	 * The default value of the '{@link #getWeight() <em>Weight</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getWeight()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Float WEIGHT_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getWeight() <em>Weight</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getWeight()
+	 * @generated
+	 * @ordered
+	 */
+	protected Float weight = WEIGHT_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getVerifies() <em>Verifies</em>}' attribute.
@@ -75,6 +97,26 @@ public class ModelElementReferenceImpl extends IdentifiedElementImpl implements 
 	 * @ordered
 	 */
 	protected Boolean verifies = VERIFIES_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSatisfactionLevel() <em>Satisfaction Level</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSatisfactionLevel()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Float SATISFACTION_LEVEL_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getSatisfactionLevel() <em>Satisfaction Level</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSatisfactionLevel()
+	 * @generated
+	 * @ordered
+	 */
+	protected Float satisfactionLevel = SATISFACTION_LEVEL_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getReason() <em>Reason</em>}' attribute.
@@ -179,6 +221,27 @@ public class ModelElementReferenceImpl extends IdentifiedElementImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Float getSatisfactionLevel() {
+		return satisfactionLevel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSatisfactionLevel(Float newSatisfactionLevel) {
+		Float oldSatisfactionLevel = satisfactionLevel;
+		satisfactionLevel = newSatisfactionLevel;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CorePackage.MODEL_ELEMENT_REFERENCE__SATISFACTION_LEVEL, oldSatisfactionLevel, satisfactionLevel));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getReason() {
 		return reason;
 	}
@@ -202,7 +265,7 @@ public class ModelElementReferenceImpl extends IdentifiedElementImpl implements 
 	 */
 	public ReferencedModelElements getParent() {
 		if (eContainerFeatureID() != CorePackage.MODEL_ELEMENT_REFERENCE__PARENT) return null;
-		return (ReferencedModelElements)eContainer();
+		return (ReferencedModelElements)eInternalContainer();
 	}
 
 	/**
@@ -234,6 +297,27 @@ public class ModelElementReferenceImpl extends IdentifiedElementImpl implements 
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CorePackage.MODEL_ELEMENT_REFERENCE__PARENT, newParent, newParent));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Float getWeight() {
+		return weight;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setWeight(Float newWeight) {
+		Float oldWeight = weight;
+		weight = newWeight;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CorePackage.MODEL_ELEMENT_REFERENCE__WEIGHT, oldWeight, weight));
 	}
 
 	/**
@@ -293,8 +377,12 @@ public class ModelElementReferenceImpl extends IdentifiedElementImpl implements 
 				return basicGetModelElement();
 			case CorePackage.MODEL_ELEMENT_REFERENCE__PARENT:
 				return getParent();
+			case CorePackage.MODEL_ELEMENT_REFERENCE__WEIGHT:
+				return getWeight();
 			case CorePackage.MODEL_ELEMENT_REFERENCE__VERIFIES:
 				return getVerifies();
+			case CorePackage.MODEL_ELEMENT_REFERENCE__SATISFACTION_LEVEL:
+				return getSatisfactionLevel();
 			case CorePackage.MODEL_ELEMENT_REFERENCE__REASON:
 				return getReason();
 		}
@@ -315,8 +403,14 @@ public class ModelElementReferenceImpl extends IdentifiedElementImpl implements 
 			case CorePackage.MODEL_ELEMENT_REFERENCE__PARENT:
 				setParent((ReferencedModelElements)newValue);
 				return;
+			case CorePackage.MODEL_ELEMENT_REFERENCE__WEIGHT:
+				setWeight((Float)newValue);
+				return;
 			case CorePackage.MODEL_ELEMENT_REFERENCE__VERIFIES:
 				setVerifies((Boolean)newValue);
+				return;
+			case CorePackage.MODEL_ELEMENT_REFERENCE__SATISFACTION_LEVEL:
+				setSatisfactionLevel((Float)newValue);
 				return;
 			case CorePackage.MODEL_ELEMENT_REFERENCE__REASON:
 				setReason((String)newValue);
@@ -339,8 +433,14 @@ public class ModelElementReferenceImpl extends IdentifiedElementImpl implements 
 			case CorePackage.MODEL_ELEMENT_REFERENCE__PARENT:
 				setParent((ReferencedModelElements)null);
 				return;
+			case CorePackage.MODEL_ELEMENT_REFERENCE__WEIGHT:
+				setWeight(WEIGHT_EDEFAULT);
+				return;
 			case CorePackage.MODEL_ELEMENT_REFERENCE__VERIFIES:
 				setVerifies(VERIFIES_EDEFAULT);
+				return;
+			case CorePackage.MODEL_ELEMENT_REFERENCE__SATISFACTION_LEVEL:
+				setSatisfactionLevel(SATISFACTION_LEVEL_EDEFAULT);
 				return;
 			case CorePackage.MODEL_ELEMENT_REFERENCE__REASON:
 				setReason(REASON_EDEFAULT);
@@ -361,8 +461,12 @@ public class ModelElementReferenceImpl extends IdentifiedElementImpl implements 
 				return modelElement != null;
 			case CorePackage.MODEL_ELEMENT_REFERENCE__PARENT:
 				return getParent() != null;
+			case CorePackage.MODEL_ELEMENT_REFERENCE__WEIGHT:
+				return WEIGHT_EDEFAULT == null ? weight != null : !WEIGHT_EDEFAULT.equals(weight);
 			case CorePackage.MODEL_ELEMENT_REFERENCE__VERIFIES:
 				return VERIFIES_EDEFAULT == null ? verifies != null : !VERIFIES_EDEFAULT.equals(verifies);
+			case CorePackage.MODEL_ELEMENT_REFERENCE__SATISFACTION_LEVEL:
+				return SATISFACTION_LEVEL_EDEFAULT == null ? satisfactionLevel != null : !SATISFACTION_LEVEL_EDEFAULT.equals(satisfactionLevel);
 			case CorePackage.MODEL_ELEMENT_REFERENCE__REASON:
 				return REASON_EDEFAULT == null ? reason != null : !REASON_EDEFAULT.equals(reason);
 		}
@@ -379,8 +483,12 @@ public class ModelElementReferenceImpl extends IdentifiedElementImpl implements 
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (verifies: ");
+		result.append(" (weight: ");
+		result.append(weight);
+		result.append(", verifies: ");
 		result.append(verifies);
+		result.append(", satisfactionLevel: ");
+		result.append(satisfactionLevel);
 		result.append(", reason: ");
 		result.append(reason);
 		result.append(')');

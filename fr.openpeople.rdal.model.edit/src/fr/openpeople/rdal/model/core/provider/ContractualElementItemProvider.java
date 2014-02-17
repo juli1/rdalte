@@ -1,22 +1,9 @@
-/*******************************************************************************
- * Copyright (c) 2011 Lab-STICC Universite de Bretagne Sud, Lorient.
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the CeCILL-B license available
- * at :
- * en : http://www.cecill.info/licences/Licence_CeCILL-B_V1-en.html
- * fr : http://www.cecill.info/licences/Licence_CeCILL-B_V1-fr.html
- * 
- * Contributors:
- * Dominique BLOUIN (Lab-STICC UBS), dominique.blouin@univ-ubs.fr
- ******************************************************************************/
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package fr.openpeople.rdal.model.core.provider;
 
+
+import fr.labsticc.framework.constraints.model.constraints.ConstraintsFactory;
 
 import fr.openpeople.rdal.model.core.ContractualElement;
 import fr.openpeople.rdal.model.core.CoreFactory;
@@ -68,67 +55,46 @@ public class ContractualElementItemProvider
 	 * This returns the property descriptors for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
 	@Override
 	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addSatisfactionLevelPropertyDescriptor(object);
-			addContactInformationPropertyDescriptor(object);
+			addSourcesPropertyDescriptor(object);
 			addOriginDatePropertyDescriptor(object);
 			addScheduleDatePropertyDescriptor(object);
-			addStakeHoldersPropertyDescriptor(object);
-			addPriorityPropertyDescriptor(object);
+			addStakeholdersPropertyDescriptor(object);
 			addEvolvedToPropertyDescriptor(object);
-			addDroppedPropertyDescriptor(object);
 			addTracedToPropertyDescriptor(object);
-
-			// DB added because needed to set the feature 
-			addSatisfiedByPropertyDescriptor(object);
-//			addRationalePropertyDescriptor(object);
-//			addSourcePropertyDescriptor(object);
+			addCategoryPropertyDescriptor(object);
+			addAgentsPropertyDescriptor(object);
+			addDerivedFromPropertyDescriptor(object);
+			addDroppedPropertyDescriptor(object);
+			addDroppingReasonPropertyDescriptor(object);
+			addSatisfactionLevelPropertyDescriptor(object);
+			addTimeCriticalityPropertyDescriptor(object);
+			addContactInformationPropertyDescriptor(object);
+			addModesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Satisfaction Level feature.
+	 * This adds a property descriptor for the Sources feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSatisfactionLevelPropertyDescriptor(Object object) {
+	protected void addSourcesPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ContractualElement_satisfactionLevel_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ContractualElement_satisfactionLevel_feature", "_UI_ContractualElement_type"),
-				 CorePackage.Literals.CONTRACTUAL_ELEMENT__SATISFACTION_LEVEL,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Contact Information feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addContactInformationPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ContractualElement_contactInformation_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ContractualElement_contactInformation_feature", "_UI_ContractualElement_type"),
-				 CorePackage.Literals.CONTRACTUAL_ELEMENT__CONTACT_INFORMATION,
+				 getString("_UI_ContractualElement_sources_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ContractualElement_sources_feature", "_UI_ContractualElement_type"),
+				 CorePackage.Literals.CONTRACTUAL_ELEMENT__SOURCES,
 				 true,
 				 false,
 				 false,
@@ -181,69 +147,24 @@ public class ContractualElementItemProvider
 				 null));
 	}
 
-
 	/**
-	 * This adds a property descriptor for the Satisfied By feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	protected void addSatisfiedByPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ContractualElement_satisfiedBy_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ContractualElement_satisfiedBy_feature", "_UI_ContractualElement_type"),
-				 CorePackage.Literals.CONTRACTUAL_ELEMENT__SATISFIED_BY,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Stake Holders feature.
+	 * This adds a property descriptor for the Stakeholders feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addStakeHoldersPropertyDescriptor(Object object) {
+	protected void addStakeholdersPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ContractualElement_stakeHolders_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ContractualElement_stakeHolders_feature", "_UI_ContractualElement_type"),
-				 CorePackage.Literals.CONTRACTUAL_ELEMENT__STAKE_HOLDERS,
+				 getString("_UI_ContractualElement_stakeholders_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ContractualElement_stakeholders_feature", "_UI_ContractualElement_type"),
+				 CorePackage.Literals.CONTRACTUAL_ELEMENT__STAKEHOLDERS,
 				 true,
 				 false,
 				 true,
 				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Priority feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPriorityPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ContractualElement_priority_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ContractualElement_priority_feature", "_UI_ContractualElement_type"),
-				 CorePackage.Literals.CONTRACTUAL_ELEMENT__PRIORITY,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -262,6 +183,94 @@ public class ContractualElementItemProvider
 				 getString("_UI_ContractualElement_evolvedTo_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ContractualElement_evolvedTo_feature", "_UI_ContractualElement_type"),
 				 CorePackage.Literals.CONTRACTUAL_ELEMENT__EVOLVED_TO,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Traced To feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTracedToPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ContractualElement_tracedTo_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ContractualElement_tracedTo_feature", "_UI_ContractualElement_type"),
+				 CorePackage.Literals.CONTRACTUAL_ELEMENT__TRACED_TO,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Category feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCategoryPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ContractualElement_category_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ContractualElement_category_feature", "_UI_ContractualElement_type"),
+				 CorePackage.Literals.CONTRACTUAL_ELEMENT__CATEGORY,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Agents feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAgentsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ContractualElement_agents_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ContractualElement_agents_feature", "_UI_ContractualElement_type"),
+				 CorePackage.Literals.CONTRACTUAL_ELEMENT__AGENTS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Derived From feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDerivedFromPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ContractualElement_derivedFrom_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ContractualElement_derivedFrom_feature", "_UI_ContractualElement_type"),
+				 CorePackage.Literals.CONTRACTUAL_ELEMENT__DERIVED_FROM,
 				 true,
 				 false,
 				 true,
@@ -293,50 +302,111 @@ public class ContractualElementItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Traced To feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	protected void addTracedToPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add( new SettingsRefPropertyDescriptor( ( (ComposeableAdapterFactory) adapterFactory ).getRootAdapterFactory(),
-																		 getResourceLocator(),
-																		 getString("_UI_ContractualElement_tracedTo_feature"),
-																		 getString("_UI_PropertyDescriptor_description", "_UI_ContractualElement_tracedTo_feature", "_UI_ContractualElement_type" ),
-																		 CorePackage.Literals.CONTRACTUAL_ELEMENT__TRACED_TO ) );
-//		itemPropertyDescriptors.add
-//			(createItemPropertyDescriptor
-//				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-//				 getResourceLocator(),
-//				 getString("_UI_ContractualElement_tracedTo_feature"),
-//				 getString("_UI_PropertyDescriptor_description", "_UI_ContractualElement_tracedTo_feature", "_UI_ContractualElement_type"),
-//				 CorePackage.Literals.CONTRACTUAL_ELEMENT__TRACED_TO,
-//				 true,
-//				 false,
-//				 true,
-//				 null,
-//				 null,
-//				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Sources feature.
+	 * This adds a property descriptor for the Dropping Reason feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSourcesPropertyDescriptor(Object object) {
+	protected void addDroppingReasonPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ContractualElement_sources_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ContractualElement_sources_feature", "_UI_ContractualElement_type"),
-				 CorePackage.Literals.CONTRACTUAL_ELEMENT__SOURCES,
+				 getString("_UI_ContractualElement_droppingReason_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ContractualElement_droppingReason_feature", "_UI_ContractualElement_type"),
+				 CorePackage.Literals.CONTRACTUAL_ELEMENT__DROPPING_REASON,
 				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Satisfaction Level feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSatisfactionLevelPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ContractualElement_satisfactionLevel_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ContractualElement_satisfactionLevel_feature", "_UI_ContractualElement_type"),
+				 CorePackage.Literals.CONTRACTUAL_ELEMENT__SATISFACTION_LEVEL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Time Criticality feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTimeCriticalityPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ContractualElement_timeCriticality_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ContractualElement_timeCriticality_feature", "_UI_ContractualElement_type"),
+				 CorePackage.Literals.CONTRACTUAL_ELEMENT__TIME_CRITICALITY,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Contact Information feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addContactInformationPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ContractualElement_contactInformation_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ContractualElement_contactInformation_feature", "_UI_ContractualElement_type"),
+				 CorePackage.Literals.CONTRACTUAL_ELEMENT__CONTACT_INFORMATION,
+				 true,
+				 false,
+				 false,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Modes feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addModesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ContractualElement_modes_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ContractualElement_modes_feature", "_UI_ContractualElement_type"),
+				 CorePackage.Literals.CONTRACTUAL_ELEMENT__MODES,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}
@@ -355,7 +425,9 @@ public class ContractualElementItemProvider
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(CorePackage.Literals.CONTRACTUAL_ELEMENT__CHANGE_UNCERTAINTY);
 			childrenFeatures.add(CorePackage.Literals.CONTRACTUAL_ELEMENT__SATISFIED_BY);
-			childrenFeatures.add(CorePackage.Literals.CONTRACTUAL_ELEMENT__RATIONALE);
+			childrenFeatures.add(CorePackage.Literals.CONTRACTUAL_ELEMENT__RATIONALES);
+			childrenFeatures.add(CorePackage.Literals.CONTRACTUAL_ELEMENT__EXPRESSION);
+			childrenFeatures.add(CorePackage.Literals.CONTRACTUAL_ELEMENT__CONDITION);
 		}
 		return childrenFeatures;
 	}
@@ -399,18 +471,21 @@ public class ContractualElementItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ContractualElement.class)) {
-			case CorePackage.CONTRACTUAL_ELEMENT__SATISFACTION_LEVEL:
-			case CorePackage.CONTRACTUAL_ELEMENT__CONTACT_INFORMATION:
+			case CorePackage.CONTRACTUAL_ELEMENT__SOURCES:
 			case CorePackage.CONTRACTUAL_ELEMENT__ORIGIN_DATE:
 			case CorePackage.CONTRACTUAL_ELEMENT__SCHEDULE_DATE:
-			case CorePackage.CONTRACTUAL_ELEMENT__PRIORITY:
 			case CorePackage.CONTRACTUAL_ELEMENT__DROPPED:
-			case CorePackage.CONTRACTUAL_ELEMENT__SOURCES:
+			case CorePackage.CONTRACTUAL_ELEMENT__DROPPING_REASON:
+			case CorePackage.CONTRACTUAL_ELEMENT__SATISFACTION_LEVEL:
+			case CorePackage.CONTRACTUAL_ELEMENT__TIME_CRITICALITY:
+			case CorePackage.CONTRACTUAL_ELEMENT__CONTACT_INFORMATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case CorePackage.CONTRACTUAL_ELEMENT__CHANGE_UNCERTAINTY:
 			case CorePackage.CONTRACTUAL_ELEMENT__SATISFIED_BY:
-			case CorePackage.CONTRACTUAL_ELEMENT__RATIONALE:
+			case CorePackage.CONTRACTUAL_ELEMENT__RATIONALES:
+			case CorePackage.CONTRACTUAL_ELEMENT__EXPRESSION:
+			case CorePackage.CONTRACTUAL_ELEMENT__CONDITION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -445,8 +520,61 @@ public class ContractualElementItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CorePackage.Literals.CONTRACTUAL_ELEMENT__RATIONALE,
-				 ""));
+				(CorePackage.Literals.CONTRACTUAL_ELEMENT__SATISFIED_BY,
+				 CoreFactory.eINSTANCE.createTrace()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CorePackage.Literals.CONTRACTUAL_ELEMENT__SATISFIED_BY,
+				 CoreFactory.eINSTANCE.createRefDerivedModelElements()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CorePackage.Literals.CONTRACTUAL_ELEMENT__RATIONALES,
+				 CoreFactory.eINSTANCE.createRationale()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CorePackage.Literals.CONTRACTUAL_ELEMENT__EXPRESSION,
+				 ConstraintsFactory.eINSTANCE.createFormalLanguageExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CorePackage.Literals.CONTRACTUAL_ELEMENT__EXPRESSION,
+				 ConstraintsFactory.eINSTANCE.createNaturalLanguageExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CorePackage.Literals.CONTRACTUAL_ELEMENT__CONDITION,
+				 ConstraintsFactory.eINSTANCE.createFormalLanguageExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CorePackage.Literals.CONTRACTUAL_ELEMENT__CONDITION,
+				 ConstraintsFactory.eINSTANCE.createNaturalLanguageExpression()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == CorePackage.Literals.CONTRACTUAL_ELEMENT__EXPRESSION ||
+			childFeature == CorePackage.Literals.CONTRACTUAL_ELEMENT__CONDITION;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

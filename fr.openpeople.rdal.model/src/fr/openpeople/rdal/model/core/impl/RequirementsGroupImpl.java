@@ -44,8 +44,6 @@ import fr.openpeople.rdal.model.core.Specification;
  * <ul>
  *   <li>{@link fr.openpeople.rdal.model.core.impl.RequirementsGroupImpl#getRequirements <em>Requirements</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.impl.RequirementsGroupImpl#getSpecification <em>Specification</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.impl.RequirementsGroupImpl#getSubGroups <em>Sub Groups</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.impl.RequirementsGroupImpl#getParent <em>Parent</em>}</li>
  * </ul>
  * </p>
  *
@@ -61,25 +59,6 @@ public class RequirementsGroupImpl extends VerifiableElementImpl implements Requ
 	 * @ordered
 	 */
 	protected EList<AbstractRequirement> requirements;
-
-	/**
-	 * The cached value of the '{@link #getSubGroups() <em>Sub Groups</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSubGroups()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<RequirementsGroup> subGroups;
-	/**
-	 * The cached value of the '{@link #getParent() <em>Parent</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getParent()
-	 * @generated
-	 * @ordered
-	 */
-	protected RequirementsGroup parent;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -119,7 +98,7 @@ public class RequirementsGroupImpl extends VerifiableElementImpl implements Requ
 	 */
 	public Specification getSpecification() {
 		if (eContainerFeatureID() != CorePackage.REQUIREMENTS_GROUP__SPECIFICATION) return null;
-		return (Specification)eContainer();
+		return (Specification)eInternalContainer();
 	}
 
 	/**
@@ -151,78 +130,6 @@ public class RequirementsGroupImpl extends VerifiableElementImpl implements Requ
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CorePackage.REQUIREMENTS_GROUP__SPECIFICATION, newSpecification, newSpecification));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<RequirementsGroup> getSubGroups() {
-		if (subGroups == null) {
-			subGroups = new EObjectWithInverseResolvingEList<RequirementsGroup>(RequirementsGroup.class, this, CorePackage.REQUIREMENTS_GROUP__SUB_GROUPS, CorePackage.REQUIREMENTS_GROUP__PARENT);
-		}
-		return subGroups;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public RequirementsGroup getParent() {
-		if (parent != null && parent.eIsProxy()) {
-			InternalEObject oldParent = (InternalEObject)parent;
-			parent = (RequirementsGroup)eResolveProxy(oldParent);
-			if (parent != oldParent) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CorePackage.REQUIREMENTS_GROUP__PARENT, oldParent, parent));
-			}
-		}
-		return parent;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public RequirementsGroup basicGetParent() {
-		return parent;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetParent(RequirementsGroup newParent, NotificationChain msgs) {
-		RequirementsGroup oldParent = parent;
-		parent = newParent;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CorePackage.REQUIREMENTS_GROUP__PARENT, oldParent, newParent);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setParent(RequirementsGroup newParent) {
-		if (newParent != parent) {
-			NotificationChain msgs = null;
-			if (parent != null)
-				msgs = ((InternalEObject)parent).eInverseRemove(this, CorePackage.REQUIREMENTS_GROUP__SUB_GROUPS, RequirementsGroup.class, msgs);
-			if (newParent != null)
-				msgs = ((InternalEObject)newParent).eInverseAdd(this, CorePackage.REQUIREMENTS_GROUP__SUB_GROUPS, RequirementsGroup.class, msgs);
-			msgs = basicSetParent(newParent, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CorePackage.REQUIREMENTS_GROUP__PARENT, newParent, newParent));
 	}
 
 	/**
@@ -264,12 +171,6 @@ public class RequirementsGroupImpl extends VerifiableElementImpl implements Requ
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetSpecification((Specification)otherEnd, msgs);
-			case CorePackage.REQUIREMENTS_GROUP__SUB_GROUPS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSubGroups()).basicAdd(otherEnd, msgs);
-			case CorePackage.REQUIREMENTS_GROUP__PARENT:
-				if (parent != null)
-					msgs = ((InternalEObject)parent).eInverseRemove(this, CorePackage.REQUIREMENTS_GROUP__SUB_GROUPS, RequirementsGroup.class, msgs);
-				return basicSetParent((RequirementsGroup)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -286,10 +187,6 @@ public class RequirementsGroupImpl extends VerifiableElementImpl implements Requ
 				return ((InternalEList<?>)getRequirements()).basicRemove(otherEnd, msgs);
 			case CorePackage.REQUIREMENTS_GROUP__SPECIFICATION:
 				return basicSetSpecification(null, msgs);
-			case CorePackage.REQUIREMENTS_GROUP__SUB_GROUPS:
-				return ((InternalEList<?>)getSubGroups()).basicRemove(otherEnd, msgs);
-			case CorePackage.REQUIREMENTS_GROUP__PARENT:
-				return basicSetParent(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -320,11 +217,6 @@ public class RequirementsGroupImpl extends VerifiableElementImpl implements Requ
 				return getRequirements();
 			case CorePackage.REQUIREMENTS_GROUP__SPECIFICATION:
 				return getSpecification();
-			case CorePackage.REQUIREMENTS_GROUP__SUB_GROUPS:
-				return getSubGroups();
-			case CorePackage.REQUIREMENTS_GROUP__PARENT:
-				if (resolve) return getParent();
-				return basicGetParent();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -345,13 +237,6 @@ public class RequirementsGroupImpl extends VerifiableElementImpl implements Requ
 			case CorePackage.REQUIREMENTS_GROUP__SPECIFICATION:
 				setSpecification((Specification)newValue);
 				return;
-			case CorePackage.REQUIREMENTS_GROUP__SUB_GROUPS:
-				getSubGroups().clear();
-				getSubGroups().addAll((Collection<? extends RequirementsGroup>)newValue);
-				return;
-			case CorePackage.REQUIREMENTS_GROUP__PARENT:
-				setParent((RequirementsGroup)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -370,12 +255,6 @@ public class RequirementsGroupImpl extends VerifiableElementImpl implements Requ
 			case CorePackage.REQUIREMENTS_GROUP__SPECIFICATION:
 				setSpecification((Specification)null);
 				return;
-			case CorePackage.REQUIREMENTS_GROUP__SUB_GROUPS:
-				getSubGroups().clear();
-				return;
-			case CorePackage.REQUIREMENTS_GROUP__PARENT:
-				setParent((RequirementsGroup)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -392,10 +271,6 @@ public class RequirementsGroupImpl extends VerifiableElementImpl implements Requ
 				return requirements != null && !requirements.isEmpty();
 			case CorePackage.REQUIREMENTS_GROUP__SPECIFICATION:
 				return getSpecification() != null;
-			case CorePackage.REQUIREMENTS_GROUP__SUB_GROUPS:
-				return subGroups != null && !subGroups.isEmpty();
-			case CorePackage.REQUIREMENTS_GROUP__PARENT:
-				return parent != null;
 		}
 		return super.eIsSet(featureID);
 	}

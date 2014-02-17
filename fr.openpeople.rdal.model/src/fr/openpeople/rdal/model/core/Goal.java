@@ -29,8 +29,8 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link fr.openpeople.rdal.model.core.Goal#getAchievedBy <em>Achieved By</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.Goal#getConflicts <em>Conflicts</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.Goal#getPriority <em>Priority</em>}</li>
  * </ul>
  * </p>
  *
@@ -39,22 +39,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Goal extends ContractualElement {
-	/**
-	 * Returns the value of the '<em><b>Achieved By</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Achieved By</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Achieved By</em>' reference list.
-	 * @see fr.openpeople.rdal.model.core.CorePackage#getGoal_AchievedBy()
-	 * @model
-	 * @generated
-	 */
-	EList<EObject> getAchievedBy();
-
 	/**
 	 * Returns the value of the '<em><b>Conflicts</b></em>' reference list.
 	 * The list contents are of type {@link fr.openpeople.rdal.model.core.Conflict}.
@@ -72,5 +56,31 @@ public interface Goal extends ContractualElement {
 	 * @generated
 	 */
 	EList<Conflict> getConflicts();
+
+	/**
+	 * Returns the value of the '<em><b>Priority</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Priority</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Priority</em>' attribute.
+	 * @see #setPriority(Float)
+	 * @see fr.openpeople.rdal.model.core.CorePackage#getGoal_Priority()
+	 * @model dataType="fr.openpeople.rdal.model.core.Ratio" required="true"
+	 * @generated
+	 */
+	Float getPriority();
+
+	/**
+	 * Sets the value of the '{@link fr.openpeople.rdal.model.core.Goal#getPriority <em>Priority</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Priority</em>' attribute.
+	 * @see #getPriority()
+	 * @generated
+	 */
+	void setPriority(Float value);
 
 } // Goal

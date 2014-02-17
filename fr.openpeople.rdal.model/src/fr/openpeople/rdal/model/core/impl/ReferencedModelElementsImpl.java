@@ -17,12 +17,15 @@
  */
 package fr.openpeople.rdal.model.core.impl;
 
+import fr.openpeople.rdal.model.core.AgregationType;
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -38,6 +41,7 @@ import fr.openpeople.rdal.model.core.ReferencedModelElements;
  * The following features are implemented:
  * <ul>
  *   <li>{@link fr.openpeople.rdal.model.core.impl.ReferencedModelElementsImpl#getModelElementReferences <em>Model Element References</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.impl.ReferencedModelElementsImpl#getAgregationType <em>Agregation Type</em>}</li>
  * </ul>
  * </p>
  *
@@ -53,6 +57,25 @@ public abstract class ReferencedModelElementsImpl extends IdentifiedElementImpl 
 	 * @ordered
 	 */
 	protected EList<ModelElementReference> modelElementReferences;
+
+	/**
+	 * The default value of the '{@link #getAgregationType() <em>Agregation Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAgregationType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final AgregationType AGREGATION_TYPE_EDEFAULT = AgregationType.COMPOSITION;
+	/**
+	 * The cached value of the '{@link #getAgregationType() <em>Agregation Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAgregationType()
+	 * @generated
+	 * @ordered
+	 */
+	protected AgregationType agregationType = AGREGATION_TYPE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -83,6 +106,27 @@ public abstract class ReferencedModelElementsImpl extends IdentifiedElementImpl 
 			modelElementReferences = new EObjectContainmentWithInverseEList<ModelElementReference>(ModelElementReference.class, this, CorePackage.REFERENCED_MODEL_ELEMENTS__MODEL_ELEMENT_REFERENCES, CorePackage.MODEL_ELEMENT_REFERENCE__PARENT);
 		}
 		return modelElementReferences;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AgregationType getAgregationType() {
+		return agregationType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAgregationType(AgregationType newAgregationType) {
+		AgregationType oldAgregationType = agregationType;
+		agregationType = newAgregationType == null ? AGREGATION_TYPE_EDEFAULT : newAgregationType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CorePackage.REFERENCED_MODEL_ELEMENTS__AGREGATION_TYPE, oldAgregationType, agregationType));
 	}
 
 	/**
@@ -124,6 +168,8 @@ public abstract class ReferencedModelElementsImpl extends IdentifiedElementImpl 
 		switch (featureID) {
 			case CorePackage.REFERENCED_MODEL_ELEMENTS__MODEL_ELEMENT_REFERENCES:
 				return getModelElementReferences();
+			case CorePackage.REFERENCED_MODEL_ELEMENTS__AGREGATION_TYPE:
+				return getAgregationType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -141,6 +187,9 @@ public abstract class ReferencedModelElementsImpl extends IdentifiedElementImpl 
 				getModelElementReferences().clear();
 				getModelElementReferences().addAll((Collection<? extends ModelElementReference>)newValue);
 				return;
+			case CorePackage.REFERENCED_MODEL_ELEMENTS__AGREGATION_TYPE:
+				setAgregationType((AgregationType)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -156,6 +205,9 @@ public abstract class ReferencedModelElementsImpl extends IdentifiedElementImpl 
 			case CorePackage.REFERENCED_MODEL_ELEMENTS__MODEL_ELEMENT_REFERENCES:
 				getModelElementReferences().clear();
 				return;
+			case CorePackage.REFERENCED_MODEL_ELEMENTS__AGREGATION_TYPE:
+				setAgregationType(AGREGATION_TYPE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -170,8 +222,26 @@ public abstract class ReferencedModelElementsImpl extends IdentifiedElementImpl 
 		switch (featureID) {
 			case CorePackage.REFERENCED_MODEL_ELEMENTS__MODEL_ELEMENT_REFERENCES:
 				return modelElementReferences != null && !modelElementReferences.isEmpty();
+			case CorePackage.REFERENCED_MODEL_ELEMENTS__AGREGATION_TYPE:
+				return agregationType != AGREGATION_TYPE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (agregationType: ");
+		result.append(agregationType);
+		result.append(')');
+		return result.toString();
 	}
 
 } //ReferencedModelElementsImpl

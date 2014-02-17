@@ -71,6 +71,7 @@ public class StakeHolderItemProvider
 			super.getPropertyDescriptors(object);
 
 			addContractualElementsPropertyDescriptor(object);
+			addRationalesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -89,6 +90,28 @@ public class StakeHolderItemProvider
 				 getString("_UI_StakeHolder_contractualElements_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_StakeHolder_contractualElements_feature", "_UI_StakeHolder_type"),
 				 CorePackage.Literals.STAKE_HOLDER__CONTRACTUAL_ELEMENTS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Rationales feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRationalesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_StakeHolder_rationales_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_StakeHolder_rationales_feature", "_UI_StakeHolder_type"),
+				 CorePackage.Literals.STAKE_HOLDER__RATIONALES,
 				 true,
 				 false,
 				 true,

@@ -74,12 +74,7 @@ public class RDALBuilder extends IncrementalProjectBuilder {
 	
 	private IRequirementsTraceabilityBusinessDelegate getTraceabilityDelegate() 
 	throws CoreException {
-		try {
-			return RadlBusinessDelegateFactory.getInstance().getTraceabilityBusinessDelegate();
-		}
-		catch ( final ResourceAccessException p_ex ) {
-			throw new CoreException( new Status( IStatus.ERROR, RdalIdePlugin.getDefault().getBundle().getSymbolicName(), p_ex.getLocalizedMessage(), p_ex ) );
-		}
+		return null;
 	}
 
 	private class DesignSpecResourceDeltaVisitor extends DesignSpecificationsVisitor implements IResourceDeltaVisitor {

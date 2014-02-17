@@ -323,7 +323,7 @@ public class ReferencedDesignElementsPanel extends Composite {
 	}
 	
 	private void selectReferencedElements() {
-		final ReferencedModelElements currentRefModelElement = requirement.getSatisfiedBy();
+		final ReferencedModelElements currentRefModelElement = requirement.getSatisfiedBy().get(0);
 		final RefUserSelectedModelElements templRefModelElement;
 		
 		if ( currentRefModelElement instanceof RefUserSelectedModelElements ) {
@@ -598,7 +598,7 @@ public class ReferencedDesignElementsPanel extends Composite {
 	}
 	
 	private void displayReferencedModelElements() {
-		final ReferencedModelElements refElements = requirement.getSatisfiedBy();
+		final ReferencedModelElements refElements = requirement.getSatisfiedBy().get(0);
 		
 		final FormalLanguageExpression refExpression;
 

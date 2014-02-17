@@ -156,112 +156,13 @@ public interface CorePackage extends EPackage {
 	int CONTRACTUAL_ELEMENT__DESCRIPTION = IDENTIFIED_ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Satisfaction Level</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTRACTUAL_ELEMENT__SATISFACTION_LEVEL = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Change Uncertainty</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTRACTUAL_ELEMENT__CHANGE_UNCERTAINTY = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Contact Information</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTRACTUAL_ELEMENT__CONTACT_INFORMATION = IDENTIFIED_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Origin Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTRACTUAL_ELEMENT__ORIGIN_DATE = IDENTIFIED_ELEMENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Schedule Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTRACTUAL_ELEMENT__SCHEDULE_DATE = IDENTIFIED_ELEMENT_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Stake Holders</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTRACTUAL_ELEMENT__STAKE_HOLDERS = IDENTIFIED_ELEMENT_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Priority</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTRACTUAL_ELEMENT__PRIORITY = IDENTIFIED_ELEMENT_FEATURE_COUNT + 6;
-
-	/**
-	 * The feature id for the '<em><b>Satisfied By</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTRACTUAL_ELEMENT__SATISFIED_BY = IDENTIFIED_ELEMENT_FEATURE_COUNT + 7;
-
-	/**
-	 * The feature id for the '<em><b>Evolved To</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTRACTUAL_ELEMENT__EVOLVED_TO = IDENTIFIED_ELEMENT_FEATURE_COUNT + 8;
-
-	/**
-	 * The feature id for the '<em><b>Dropped</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTRACTUAL_ELEMENT__DROPPED = IDENTIFIED_ELEMENT_FEATURE_COUNT + 9;
-
-	/**
-	 * The feature id for the '<em><b>Traced To</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTRACTUAL_ELEMENT__TRACED_TO = IDENTIFIED_ELEMENT_FEATURE_COUNT + 10;
-
-	/**
-	 * The feature id for the '<em><b>Rationale</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTRACTUAL_ELEMENT__RATIONALE = IDENTIFIED_ELEMENT_FEATURE_COUNT + 11;
+	int CONTRACTUAL_ELEMENT__CHANGE_UNCERTAINTY = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Sources</b></em>' attribute list.
@@ -270,7 +171,169 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTRACTUAL_ELEMENT__SOURCES = IDENTIFIED_ELEMENT_FEATURE_COUNT + 12;
+	int CONTRACTUAL_ELEMENT__SOURCES = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Origin Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTRACTUAL_ELEMENT__ORIGIN_DATE = IDENTIFIED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Schedule Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTRACTUAL_ELEMENT__SCHEDULE_DATE = IDENTIFIED_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Stakeholders</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTRACTUAL_ELEMENT__STAKEHOLDERS = IDENTIFIED_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Evolved To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTRACTUAL_ELEMENT__EVOLVED_TO = IDENTIFIED_ELEMENT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Traced To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTRACTUAL_ELEMENT__TRACED_TO = IDENTIFIED_ELEMENT_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTRACTUAL_ELEMENT__CATEGORY = IDENTIFIED_ELEMENT_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Satisfied By</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTRACTUAL_ELEMENT__SATISFIED_BY = IDENTIFIED_ELEMENT_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Agents</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTRACTUAL_ELEMENT__AGENTS = IDENTIFIED_ELEMENT_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Derived From</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTRACTUAL_ELEMENT__DERIVED_FROM = IDENTIFIED_ELEMENT_FEATURE_COUNT + 10;
+
+	/**
+	 * The feature id for the '<em><b>Dropped</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTRACTUAL_ELEMENT__DROPPED = IDENTIFIED_ELEMENT_FEATURE_COUNT + 11;
+
+	/**
+	 * The feature id for the '<em><b>Dropping Reason</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTRACTUAL_ELEMENT__DROPPING_REASON = IDENTIFIED_ELEMENT_FEATURE_COUNT + 12;
+
+	/**
+	 * The feature id for the '<em><b>Satisfaction Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTRACTUAL_ELEMENT__SATISFACTION_LEVEL = IDENTIFIED_ELEMENT_FEATURE_COUNT + 13;
+
+	/**
+	 * The feature id for the '<em><b>Rationales</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTRACTUAL_ELEMENT__RATIONALES = IDENTIFIED_ELEMENT_FEATURE_COUNT + 14;
+
+	/**
+	 * The feature id for the '<em><b>Time Criticality</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTRACTUAL_ELEMENT__TIME_CRITICALITY = IDENTIFIED_ELEMENT_FEATURE_COUNT + 15;
+
+	/**
+	 * The feature id for the '<em><b>Contact Information</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTRACTUAL_ELEMENT__CONTACT_INFORMATION = IDENTIFIED_ELEMENT_FEATURE_COUNT + 16;
+
+	/**
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTRACTUAL_ELEMENT__EXPRESSION = IDENTIFIED_ELEMENT_FEATURE_COUNT + 17;
+
+	/**
+	 * The feature id for the '<em><b>Condition</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTRACTUAL_ELEMENT__CONDITION = IDENTIFIED_ELEMENT_FEATURE_COUNT + 18;
+
+	/**
+	 * The feature id for the '<em><b>Modes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTRACTUAL_ELEMENT__MODES = IDENTIFIED_ELEMENT_FEATURE_COUNT + 19;
 
 	/**
 	 * The number of structural features of the '<em>Contractual Element</em>' class.
@@ -279,7 +342,7 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTRACTUAL_ELEMENT_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 13;
+	int CONTRACTUAL_ELEMENT_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 20;
 
 	/**
 	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.impl.VerifiableElementImpl <em>Verifiable Element</em>}' class.
@@ -289,169 +352,7 @@ public interface CorePackage extends EPackage {
 	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getVerifiableElement()
 	 * @generated
 	 */
-	int VERIFIABLE_ELEMENT = 2;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERIFIABLE_ELEMENT__ID = CONTRACTUAL_ELEMENT__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERIFIABLE_ELEMENT__NAME = CONTRACTUAL_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERIFIABLE_ELEMENT__DESCRIPTION = CONTRACTUAL_ELEMENT__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Satisfaction Level</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERIFIABLE_ELEMENT__SATISFACTION_LEVEL = CONTRACTUAL_ELEMENT__SATISFACTION_LEVEL;
-
-	/**
-	 * The feature id for the '<em><b>Change Uncertainty</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERIFIABLE_ELEMENT__CHANGE_UNCERTAINTY = CONTRACTUAL_ELEMENT__CHANGE_UNCERTAINTY;
-
-	/**
-	 * The feature id for the '<em><b>Contact Information</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERIFIABLE_ELEMENT__CONTACT_INFORMATION = CONTRACTUAL_ELEMENT__CONTACT_INFORMATION;
-
-	/**
-	 * The feature id for the '<em><b>Origin Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERIFIABLE_ELEMENT__ORIGIN_DATE = CONTRACTUAL_ELEMENT__ORIGIN_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Schedule Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERIFIABLE_ELEMENT__SCHEDULE_DATE = CONTRACTUAL_ELEMENT__SCHEDULE_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Stake Holders</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERIFIABLE_ELEMENT__STAKE_HOLDERS = CONTRACTUAL_ELEMENT__STAKE_HOLDERS;
-
-	/**
-	 * The feature id for the '<em><b>Priority</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERIFIABLE_ELEMENT__PRIORITY = CONTRACTUAL_ELEMENT__PRIORITY;
-
-	/**
-	 * The feature id for the '<em><b>Satisfied By</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERIFIABLE_ELEMENT__SATISFIED_BY = CONTRACTUAL_ELEMENT__SATISFIED_BY;
-
-	/**
-	 * The feature id for the '<em><b>Evolved To</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERIFIABLE_ELEMENT__EVOLVED_TO = CONTRACTUAL_ELEMENT__EVOLVED_TO;
-
-	/**
-	 * The feature id for the '<em><b>Dropped</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERIFIABLE_ELEMENT__DROPPED = CONTRACTUAL_ELEMENT__DROPPED;
-
-	/**
-	 * The feature id for the '<em><b>Traced To</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERIFIABLE_ELEMENT__TRACED_TO = CONTRACTUAL_ELEMENT__TRACED_TO;
-
-	/**
-	 * The feature id for the '<em><b>Rationale</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERIFIABLE_ELEMENT__RATIONALE = CONTRACTUAL_ELEMENT__RATIONALE;
-
-	/**
-	 * The feature id for the '<em><b>Sources</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERIFIABLE_ELEMENT__SOURCES = CONTRACTUAL_ELEMENT__SOURCES;
-
-	/**
-	 * The feature id for the '<em><b>Verified</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERIFIABLE_ELEMENT__VERIFIED = CONTRACTUAL_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Verifiable Element</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERIFIABLE_ELEMENT_FEATURE_COUNT = CONTRACTUAL_ELEMENT_FEATURE_COUNT + 1;
+	int VERIFIABLE_ELEMENT = 3;
 
 	/**
 	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.impl.SpecificationImpl <em>Specification</em>}' class.
@@ -461,241 +362,7 @@ public interface CorePackage extends EPackage {
 	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getSpecification()
 	 * @generated
 	 */
-	int SPECIFICATION = 3;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFICATION__ID = VERIFIABLE_ELEMENT__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFICATION__NAME = VERIFIABLE_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFICATION__DESCRIPTION = VERIFIABLE_ELEMENT__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Satisfaction Level</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFICATION__SATISFACTION_LEVEL = VERIFIABLE_ELEMENT__SATISFACTION_LEVEL;
-
-	/**
-	 * The feature id for the '<em><b>Change Uncertainty</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFICATION__CHANGE_UNCERTAINTY = VERIFIABLE_ELEMENT__CHANGE_UNCERTAINTY;
-
-	/**
-	 * The feature id for the '<em><b>Contact Information</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFICATION__CONTACT_INFORMATION = VERIFIABLE_ELEMENT__CONTACT_INFORMATION;
-
-	/**
-	 * The feature id for the '<em><b>Origin Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFICATION__ORIGIN_DATE = VERIFIABLE_ELEMENT__ORIGIN_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Schedule Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFICATION__SCHEDULE_DATE = VERIFIABLE_ELEMENT__SCHEDULE_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Stake Holders</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFICATION__STAKE_HOLDERS = VERIFIABLE_ELEMENT__STAKE_HOLDERS;
-
-	/**
-	 * The feature id for the '<em><b>Priority</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFICATION__PRIORITY = VERIFIABLE_ELEMENT__PRIORITY;
-
-	/**
-	 * The feature id for the '<em><b>Satisfied By</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFICATION__SATISFIED_BY = VERIFIABLE_ELEMENT__SATISFIED_BY;
-
-	/**
-	 * The feature id for the '<em><b>Evolved To</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFICATION__EVOLVED_TO = VERIFIABLE_ELEMENT__EVOLVED_TO;
-
-	/**
-	 * The feature id for the '<em><b>Dropped</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFICATION__DROPPED = VERIFIABLE_ELEMENT__DROPPED;
-
-	/**
-	 * The feature id for the '<em><b>Traced To</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFICATION__TRACED_TO = VERIFIABLE_ELEMENT__TRACED_TO;
-
-	/**
-	 * The feature id for the '<em><b>Rationale</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFICATION__RATIONALE = VERIFIABLE_ELEMENT__RATIONALE;
-
-	/**
-	 * The feature id for the '<em><b>Sources</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFICATION__SOURCES = VERIFIABLE_ELEMENT__SOURCES;
-
-	/**
-	 * The feature id for the '<em><b>Verified</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFICATION__VERIFIED = VERIFIABLE_ELEMENT__VERIFIED;
-
-	/**
-	 * The feature id for the '<em><b>Specifies</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFICATION__SPECIFIES = VERIFIABLE_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Actors</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFICATION__ACTORS = VERIFIABLE_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Verification Activities</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFICATION__VERIFICATION_ACTIVITIES = VERIFIABLE_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Requirement Groups</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFICATION__REQUIREMENT_GROUPS = VERIFIABLE_ELEMENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Constraint Languages Specification</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFICATION__CONSTRAINT_LANGUAGES_SPECIFICATION = VERIFIABLE_ELEMENT_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Version</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFICATION__VERSION = VERIFIABLE_ELEMENT_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Syst Overview</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFICATION__SYST_OVERVIEW = VERIFIABLE_ELEMENT_FEATURE_COUNT + 6;
-
-	/**
-	 * The feature id for the '<em><b>Conflicts</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFICATION__CONFLICTS = VERIFIABLE_ELEMENT_FEATURE_COUNT + 7;
-
-	/**
-	 * The number of structural features of the '<em>Specification</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFICATION_FEATURE_COUNT = VERIFIABLE_ELEMENT_FEATURE_COUNT + 8;
+	int SPECIFICATION = 4;
 
 	/**
 	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.impl.AbstractRequirementImpl <em>Abstract Requirement</em>}' class.
@@ -705,7 +372,7 @@ public interface CorePackage extends EPackage {
 	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getAbstractRequirement()
 	 * @generated
 	 */
-	int ABSTRACT_REQUIREMENT = 5;
+	int ABSTRACT_REQUIREMENT = 13;
 
 	/**
 	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.impl.RequirementImpl <em>Requirement</em>}' class.
@@ -715,7 +382,7 @@ public interface CorePackage extends EPackage {
 	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getRequirement()
 	 * @generated
 	 */
-	int REQUIREMENT = 6;
+	int REQUIREMENT = 14;
 
 	/**
 	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.impl.AssumptionImpl <em>Assumption</em>}' class.
@@ -725,7 +392,7 @@ public interface CorePackage extends EPackage {
 	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getAssumption()
 	 * @generated
 	 */
-	int ASSUMPTION = 7;
+	int ASSUMPTION = 15;
 
 	/**
 	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.impl.VerificationActivityImpl <em>Verification Activity</em>}' class.
@@ -735,7 +402,7 @@ public interface CorePackage extends EPackage {
 	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getVerificationActivity()
 	 * @generated
 	 */
-	int VERIFICATION_ACTIVITY = 8;
+	int VERIFICATION_ACTIVITY = 16;
 
 	/**
 	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.impl.StakeHolderImpl <em>Stake Holder</em>}' class.
@@ -745,7 +412,7 @@ public interface CorePackage extends EPackage {
 	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getStakeHolder()
 	 * @generated
 	 */
-	int STAKE_HOLDER = 9;
+	int STAKE_HOLDER = 11;
 
 	/**
 	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.impl.RequirementsGroupImpl <em>Requirements Group</em>}' class.
@@ -755,979 +422,7 @@ public interface CorePackage extends EPackage {
 	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getRequirementsGroup()
 	 * @generated
 	 */
-	int REQUIREMENTS_GROUP = 4;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENTS_GROUP__ID = VERIFIABLE_ELEMENT__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENTS_GROUP__NAME = VERIFIABLE_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENTS_GROUP__DESCRIPTION = VERIFIABLE_ELEMENT__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Satisfaction Level</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENTS_GROUP__SATISFACTION_LEVEL = VERIFIABLE_ELEMENT__SATISFACTION_LEVEL;
-
-	/**
-	 * The feature id for the '<em><b>Change Uncertainty</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENTS_GROUP__CHANGE_UNCERTAINTY = VERIFIABLE_ELEMENT__CHANGE_UNCERTAINTY;
-
-	/**
-	 * The feature id for the '<em><b>Contact Information</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENTS_GROUP__CONTACT_INFORMATION = VERIFIABLE_ELEMENT__CONTACT_INFORMATION;
-
-	/**
-	 * The feature id for the '<em><b>Origin Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENTS_GROUP__ORIGIN_DATE = VERIFIABLE_ELEMENT__ORIGIN_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Schedule Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENTS_GROUP__SCHEDULE_DATE = VERIFIABLE_ELEMENT__SCHEDULE_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Stake Holders</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENTS_GROUP__STAKE_HOLDERS = VERIFIABLE_ELEMENT__STAKE_HOLDERS;
-
-	/**
-	 * The feature id for the '<em><b>Priority</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENTS_GROUP__PRIORITY = VERIFIABLE_ELEMENT__PRIORITY;
-
-	/**
-	 * The feature id for the '<em><b>Satisfied By</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENTS_GROUP__SATISFIED_BY = VERIFIABLE_ELEMENT__SATISFIED_BY;
-
-	/**
-	 * The feature id for the '<em><b>Evolved To</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENTS_GROUP__EVOLVED_TO = VERIFIABLE_ELEMENT__EVOLVED_TO;
-
-	/**
-	 * The feature id for the '<em><b>Dropped</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENTS_GROUP__DROPPED = VERIFIABLE_ELEMENT__DROPPED;
-
-	/**
-	 * The feature id for the '<em><b>Traced To</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENTS_GROUP__TRACED_TO = VERIFIABLE_ELEMENT__TRACED_TO;
-
-	/**
-	 * The feature id for the '<em><b>Rationale</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENTS_GROUP__RATIONALE = VERIFIABLE_ELEMENT__RATIONALE;
-
-	/**
-	 * The feature id for the '<em><b>Sources</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENTS_GROUP__SOURCES = VERIFIABLE_ELEMENT__SOURCES;
-
-	/**
-	 * The feature id for the '<em><b>Verified</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENTS_GROUP__VERIFIED = VERIFIABLE_ELEMENT__VERIFIED;
-
-	/**
-	 * The feature id for the '<em><b>Requirements</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENTS_GROUP__REQUIREMENTS = VERIFIABLE_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Specification</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENTS_GROUP__SPECIFICATION = VERIFIABLE_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Sub Groups</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENTS_GROUP__SUB_GROUPS = VERIFIABLE_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENTS_GROUP__PARENT = VERIFIABLE_ELEMENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of structural features of the '<em>Requirements Group</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENTS_GROUP_FEATURE_COUNT = VERIFIABLE_ELEMENT_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_REQUIREMENT__ID = VERIFIABLE_ELEMENT__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_REQUIREMENT__NAME = VERIFIABLE_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_REQUIREMENT__DESCRIPTION = VERIFIABLE_ELEMENT__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Satisfaction Level</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_REQUIREMENT__SATISFACTION_LEVEL = VERIFIABLE_ELEMENT__SATISFACTION_LEVEL;
-
-	/**
-	 * The feature id for the '<em><b>Change Uncertainty</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_REQUIREMENT__CHANGE_UNCERTAINTY = VERIFIABLE_ELEMENT__CHANGE_UNCERTAINTY;
-
-	/**
-	 * The feature id for the '<em><b>Contact Information</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_REQUIREMENT__CONTACT_INFORMATION = VERIFIABLE_ELEMENT__CONTACT_INFORMATION;
-
-	/**
-	 * The feature id for the '<em><b>Origin Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_REQUIREMENT__ORIGIN_DATE = VERIFIABLE_ELEMENT__ORIGIN_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Schedule Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_REQUIREMENT__SCHEDULE_DATE = VERIFIABLE_ELEMENT__SCHEDULE_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Stake Holders</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_REQUIREMENT__STAKE_HOLDERS = VERIFIABLE_ELEMENT__STAKE_HOLDERS;
-
-	/**
-	 * The feature id for the '<em><b>Priority</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_REQUIREMENT__PRIORITY = VERIFIABLE_ELEMENT__PRIORITY;
-
-	/**
-	 * The feature id for the '<em><b>Satisfied By</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_REQUIREMENT__SATISFIED_BY = VERIFIABLE_ELEMENT__SATISFIED_BY;
-
-	/**
-	 * The feature id for the '<em><b>Evolved To</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_REQUIREMENT__EVOLVED_TO = VERIFIABLE_ELEMENT__EVOLVED_TO;
-
-	/**
-	 * The feature id for the '<em><b>Dropped</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_REQUIREMENT__DROPPED = VERIFIABLE_ELEMENT__DROPPED;
-
-	/**
-	 * The feature id for the '<em><b>Traced To</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_REQUIREMENT__TRACED_TO = VERIFIABLE_ELEMENT__TRACED_TO;
-
-	/**
-	 * The feature id for the '<em><b>Rationale</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_REQUIREMENT__RATIONALE = VERIFIABLE_ELEMENT__RATIONALE;
-
-	/**
-	 * The feature id for the '<em><b>Sources</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_REQUIREMENT__SOURCES = VERIFIABLE_ELEMENT__SOURCES;
-
-	/**
-	 * The feature id for the '<em><b>Verified</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_REQUIREMENT__VERIFIED = VERIFIABLE_ELEMENT__VERIFIED;
-
-	/**
-	 * The feature id for the '<em><b>Contained Requirements</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_REQUIREMENT__CONTAINED_REQUIREMENTS = VERIFIABLE_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_REQUIREMENT__EXPRESSION = VERIFIABLE_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Group</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_REQUIREMENT__GROUP = VERIFIABLE_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Risk</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_REQUIREMENT__RISK = VERIFIABLE_ELEMENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Composition Coverage</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_REQUIREMENT__COMPOSITION_COVERAGE = VERIFIABLE_ELEMENT_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Verified By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_REQUIREMENT__VERIFIED_BY = VERIFIABLE_ELEMENT_FEATURE_COUNT + 5;
-
-	/**
-	 * The number of structural features of the '<em>Abstract Requirement</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_REQUIREMENT_FEATURE_COUNT = VERIFIABLE_ELEMENT_FEATURE_COUNT + 6;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__ID = ABSTRACT_REQUIREMENT__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__NAME = ABSTRACT_REQUIREMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__DESCRIPTION = ABSTRACT_REQUIREMENT__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Satisfaction Level</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__SATISFACTION_LEVEL = ABSTRACT_REQUIREMENT__SATISFACTION_LEVEL;
-
-	/**
-	 * The feature id for the '<em><b>Change Uncertainty</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__CHANGE_UNCERTAINTY = ABSTRACT_REQUIREMENT__CHANGE_UNCERTAINTY;
-
-	/**
-	 * The feature id for the '<em><b>Contact Information</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__CONTACT_INFORMATION = ABSTRACT_REQUIREMENT__CONTACT_INFORMATION;
-
-	/**
-	 * The feature id for the '<em><b>Origin Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__ORIGIN_DATE = ABSTRACT_REQUIREMENT__ORIGIN_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Schedule Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__SCHEDULE_DATE = ABSTRACT_REQUIREMENT__SCHEDULE_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Stake Holders</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__STAKE_HOLDERS = ABSTRACT_REQUIREMENT__STAKE_HOLDERS;
-
-	/**
-	 * The feature id for the '<em><b>Priority</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__PRIORITY = ABSTRACT_REQUIREMENT__PRIORITY;
-
-	/**
-	 * The feature id for the '<em><b>Satisfied By</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__SATISFIED_BY = ABSTRACT_REQUIREMENT__SATISFIED_BY;
-
-	/**
-	 * The feature id for the '<em><b>Evolved To</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__EVOLVED_TO = ABSTRACT_REQUIREMENT__EVOLVED_TO;
-
-	/**
-	 * The feature id for the '<em><b>Dropped</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__DROPPED = ABSTRACT_REQUIREMENT__DROPPED;
-
-	/**
-	 * The feature id for the '<em><b>Traced To</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__TRACED_TO = ABSTRACT_REQUIREMENT__TRACED_TO;
-
-	/**
-	 * The feature id for the '<em><b>Rationale</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__RATIONALE = ABSTRACT_REQUIREMENT__RATIONALE;
-
-	/**
-	 * The feature id for the '<em><b>Sources</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__SOURCES = ABSTRACT_REQUIREMENT__SOURCES;
-
-	/**
-	 * The feature id for the '<em><b>Verified</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__VERIFIED = ABSTRACT_REQUIREMENT__VERIFIED;
-
-	/**
-	 * The feature id for the '<em><b>Contained Requirements</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__CONTAINED_REQUIREMENTS = ABSTRACT_REQUIREMENT__CONTAINED_REQUIREMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__EXPRESSION = ABSTRACT_REQUIREMENT__EXPRESSION;
-
-	/**
-	 * The feature id for the '<em><b>Group</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__GROUP = ABSTRACT_REQUIREMENT__GROUP;
-
-	/**
-	 * The feature id for the '<em><b>Risk</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__RISK = ABSTRACT_REQUIREMENT__RISK;
-
-	/**
-	 * The feature id for the '<em><b>Composition Coverage</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__COMPOSITION_COVERAGE = ABSTRACT_REQUIREMENT__COMPOSITION_COVERAGE;
-
-	/**
-	 * The feature id for the '<em><b>Verified By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__VERIFIED_BY = ABSTRACT_REQUIREMENT__VERIFIED_BY;
-
-	/**
-	 * The feature id for the '<em><b>Derived From</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__DERIVED_FROM = ABSTRACT_REQUIREMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Refined By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__REFINED_BY = ABSTRACT_REQUIREMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Derivations</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__DERIVATIONS = ABSTRACT_REQUIREMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Assumptions</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__ASSUMPTIONS = ABSTRACT_REQUIREMENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__CATEGORY = ABSTRACT_REQUIREMENT_FEATURE_COUNT + 4;
-
-	/**
-	 * The number of structural features of the '<em>Requirement</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT_FEATURE_COUNT = ABSTRACT_REQUIREMENT_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSUMPTION__ID = ABSTRACT_REQUIREMENT__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSUMPTION__NAME = ABSTRACT_REQUIREMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSUMPTION__DESCRIPTION = ABSTRACT_REQUIREMENT__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Satisfaction Level</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSUMPTION__SATISFACTION_LEVEL = ABSTRACT_REQUIREMENT__SATISFACTION_LEVEL;
-
-	/**
-	 * The feature id for the '<em><b>Change Uncertainty</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSUMPTION__CHANGE_UNCERTAINTY = ABSTRACT_REQUIREMENT__CHANGE_UNCERTAINTY;
-
-	/**
-	 * The feature id for the '<em><b>Contact Information</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSUMPTION__CONTACT_INFORMATION = ABSTRACT_REQUIREMENT__CONTACT_INFORMATION;
-
-	/**
-	 * The feature id for the '<em><b>Origin Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSUMPTION__ORIGIN_DATE = ABSTRACT_REQUIREMENT__ORIGIN_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Schedule Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSUMPTION__SCHEDULE_DATE = ABSTRACT_REQUIREMENT__SCHEDULE_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Stake Holders</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSUMPTION__STAKE_HOLDERS = ABSTRACT_REQUIREMENT__STAKE_HOLDERS;
-
-	/**
-	 * The feature id for the '<em><b>Priority</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSUMPTION__PRIORITY = ABSTRACT_REQUIREMENT__PRIORITY;
-
-	/**
-	 * The feature id for the '<em><b>Satisfied By</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSUMPTION__SATISFIED_BY = ABSTRACT_REQUIREMENT__SATISFIED_BY;
-
-	/**
-	 * The feature id for the '<em><b>Evolved To</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSUMPTION__EVOLVED_TO = ABSTRACT_REQUIREMENT__EVOLVED_TO;
-
-	/**
-	 * The feature id for the '<em><b>Dropped</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSUMPTION__DROPPED = ABSTRACT_REQUIREMENT__DROPPED;
-
-	/**
-	 * The feature id for the '<em><b>Traced To</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSUMPTION__TRACED_TO = ABSTRACT_REQUIREMENT__TRACED_TO;
-
-	/**
-	 * The feature id for the '<em><b>Rationale</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSUMPTION__RATIONALE = ABSTRACT_REQUIREMENT__RATIONALE;
-
-	/**
-	 * The feature id for the '<em><b>Sources</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSUMPTION__SOURCES = ABSTRACT_REQUIREMENT__SOURCES;
-
-	/**
-	 * The feature id for the '<em><b>Verified</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSUMPTION__VERIFIED = ABSTRACT_REQUIREMENT__VERIFIED;
-
-	/**
-	 * The feature id for the '<em><b>Contained Requirements</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSUMPTION__CONTAINED_REQUIREMENTS = ABSTRACT_REQUIREMENT__CONTAINED_REQUIREMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSUMPTION__EXPRESSION = ABSTRACT_REQUIREMENT__EXPRESSION;
-
-	/**
-	 * The feature id for the '<em><b>Group</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSUMPTION__GROUP = ABSTRACT_REQUIREMENT__GROUP;
-
-	/**
-	 * The feature id for the '<em><b>Risk</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSUMPTION__RISK = ABSTRACT_REQUIREMENT__RISK;
-
-	/**
-	 * The feature id for the '<em><b>Composition Coverage</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSUMPTION__COMPOSITION_COVERAGE = ABSTRACT_REQUIREMENT__COMPOSITION_COVERAGE;
-
-	/**
-	 * The feature id for the '<em><b>Verified By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSUMPTION__VERIFIED_BY = ABSTRACT_REQUIREMENT__VERIFIED_BY;
-
-	/**
-	 * The feature id for the '<em><b>Requirements</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSUMPTION__REQUIREMENTS = ABSTRACT_REQUIREMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSUMPTION__TYPE = ABSTRACT_REQUIREMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Assumption</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSUMPTION_FEATURE_COUNT = ABSTRACT_REQUIREMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERIFICATION_ACTIVITY__ID = IDENTIFIED_ELEMENT__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERIFICATION_ACTIVITY__NAME = IDENTIFIED_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERIFICATION_ACTIVITY__DESCRIPTION = IDENTIFIED_ELEMENT__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Requirement</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERIFICATION_ACTIVITY__REQUIREMENT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Verification Method</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERIFICATION_ACTIVITY__VERIFICATION_METHOD = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>External Ref</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERIFICATION_ACTIVITY__EXTERNAL_REF = IDENTIFIED_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>Verification Activity</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VERIFICATION_ACTIVITY_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 3;
+	int REQUIREMENTS_GROUP = 12;
 
 	/**
 	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.impl.ActorImpl <em>Actor</em>}' class.
@@ -1737,106 +432,7 @@ public interface CorePackage extends EPackage {
 	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getActor()
 	 * @generated
 	 */
-	int ACTOR = 22;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTOR__ID = IDENTIFIED_ELEMENT__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTOR__NAME = IDENTIFIED_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTOR__DESCRIPTION = IDENTIFIED_ELEMENT__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Interactions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTOR__INTERACTIONS = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Actor</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTOR_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAKE_HOLDER__ID = ACTOR__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAKE_HOLDER__NAME = ACTOR__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAKE_HOLDER__DESCRIPTION = ACTOR__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Interactions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAKE_HOLDER__INTERACTIONS = ACTOR__INTERACTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Contractual Elements</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAKE_HOLDER__CONTRACTUAL_ELEMENTS = ACTOR_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Stake Holder</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAKE_HOLDER_FEATURE_COUNT = ACTOR_FEATURE_COUNT + 1;
+	int ACTOR = 7;
 
 	/**
 	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.impl.ReferencedModelElementsImpl <em>Referenced Model Elements</em>}' class.
@@ -1846,107 +442,7 @@ public interface CorePackage extends EPackage {
 	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getReferencedModelElements()
 	 * @generated
 	 */
-	int REFERENCED_MODEL_ELEMENTS = 12;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFERENCED_MODEL_ELEMENTS__ID = IDENTIFIED_ELEMENT__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFERENCED_MODEL_ELEMENTS__NAME = IDENTIFIED_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFERENCED_MODEL_ELEMENTS__DESCRIPTION = IDENTIFIED_ELEMENT__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Model Element References</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFERENCED_MODEL_ELEMENTS__MODEL_ELEMENT_REFERENCES = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Referenced Model Elements</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFERENCED_MODEL_ELEMENTS_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.impl.ContractReferencedModelElementsImpl <em>Contract Referenced Model Elements</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see fr.openpeople.rdal.model.core.impl.ContractReferencedModelElementsImpl
-	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getContractReferencedModelElements()
-	 * @generated
-	 */
-	int CONTRACT_REFERENCED_MODEL_ELEMENTS = 13;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTRACT_REFERENCED_MODEL_ELEMENTS__ID = REFERENCED_MODEL_ELEMENTS__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTRACT_REFERENCED_MODEL_ELEMENTS__NAME = REFERENCED_MODEL_ELEMENTS__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTRACT_REFERENCED_MODEL_ELEMENTS__DESCRIPTION = REFERENCED_MODEL_ELEMENTS__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Model Element References</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTRACT_REFERENCED_MODEL_ELEMENTS__MODEL_ELEMENT_REFERENCES = REFERENCED_MODEL_ELEMENTS__MODEL_ELEMENT_REFERENCES;
-
-	/**
-	 * The number of structural features of the '<em>Contract Referenced Model Elements</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTRACT_REFERENCED_MODEL_ELEMENTS_FEATURE_COUNT = REFERENCED_MODEL_ELEMENTS_FEATURE_COUNT + 0;
+	int REFERENCED_MODEL_ELEMENTS = 19;
 
 	/**
 	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.impl.RefExpressionCollectedModelElementsImpl <em>Ref Expression Collected Model Elements</em>}' class.
@@ -1956,61 +452,7 @@ public interface CorePackage extends EPackage {
 	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getRefExpressionCollectedModelElements()
 	 * @generated
 	 */
-	int REF_EXPRESSION_COLLECTED_MODEL_ELEMENTS = 10;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REF_EXPRESSION_COLLECTED_MODEL_ELEMENTS__ID = CONTRACT_REFERENCED_MODEL_ELEMENTS__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REF_EXPRESSION_COLLECTED_MODEL_ELEMENTS__NAME = CONTRACT_REFERENCED_MODEL_ELEMENTS__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REF_EXPRESSION_COLLECTED_MODEL_ELEMENTS__DESCRIPTION = CONTRACT_REFERENCED_MODEL_ELEMENTS__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Model Element References</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REF_EXPRESSION_COLLECTED_MODEL_ELEMENTS__MODEL_ELEMENT_REFERENCES = CONTRACT_REFERENCED_MODEL_ELEMENTS__MODEL_ELEMENT_REFERENCES;
-
-	/**
-	 * The feature id for the '<em><b>Query Expression</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REF_EXPRESSION_COLLECTED_MODEL_ELEMENTS__QUERY_EXPRESSION = CONTRACT_REFERENCED_MODEL_ELEMENTS_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Ref Expression Collected Model Elements</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REF_EXPRESSION_COLLECTED_MODEL_ELEMENTS_FEATURE_COUNT = CONTRACT_REFERENCED_MODEL_ELEMENTS_FEATURE_COUNT + 1;
+	int REF_EXPRESSION_COLLECTED_MODEL_ELEMENTS = 17;
 
 	/**
 	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.impl.RefUserSelectedModelElementsImpl <em>Ref User Selected Model Elements</em>}' class.
@@ -2020,52 +462,7 @@ public interface CorePackage extends EPackage {
 	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getRefUserSelectedModelElements()
 	 * @generated
 	 */
-	int REF_USER_SELECTED_MODEL_ELEMENTS = 11;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REF_USER_SELECTED_MODEL_ELEMENTS__ID = CONTRACT_REFERENCED_MODEL_ELEMENTS__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REF_USER_SELECTED_MODEL_ELEMENTS__NAME = CONTRACT_REFERENCED_MODEL_ELEMENTS__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REF_USER_SELECTED_MODEL_ELEMENTS__DESCRIPTION = CONTRACT_REFERENCED_MODEL_ELEMENTS__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Model Element References</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REF_USER_SELECTED_MODEL_ELEMENTS__MODEL_ELEMENT_REFERENCES = CONTRACT_REFERENCED_MODEL_ELEMENTS__MODEL_ELEMENT_REFERENCES;
-
-	/**
-	 * The number of structural features of the '<em>Ref User Selected Model Elements</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REF_USER_SELECTED_MODEL_ELEMENTS_FEATURE_COUNT = CONTRACT_REFERENCED_MODEL_ELEMENTS_FEATURE_COUNT + 0;
+	int REF_USER_SELECTED_MODEL_ELEMENTS = 18;
 
 	/**
 	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.impl.ModelElementReferenceImpl <em>Model Element Reference</em>}' class.
@@ -2075,79 +472,7 @@ public interface CorePackage extends EPackage {
 	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getModelElementReference()
 	 * @generated
 	 */
-	int MODEL_ELEMENT_REFERENCE = 14;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODEL_ELEMENT_REFERENCE__ID = IDENTIFIED_ELEMENT__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODEL_ELEMENT_REFERENCE__NAME = IDENTIFIED_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODEL_ELEMENT_REFERENCE__DESCRIPTION = IDENTIFIED_ELEMENT__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Model Element</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODEL_ELEMENT_REFERENCE__MODEL_ELEMENT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODEL_ELEMENT_REFERENCE__PARENT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Verifies</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODEL_ELEMENT_REFERENCE__VERIFIES = IDENTIFIED_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Reason</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODEL_ELEMENT_REFERENCE__REASON = IDENTIFIED_ELEMENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of structural features of the '<em>Model Element Reference</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODEL_ELEMENT_REFERENCE_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 4;
+	int MODEL_ELEMENT_REFERENCE = 20;
 
 	/**
 	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.impl.TraceImpl <em>Trace</em>}' class.
@@ -2157,61 +482,7 @@ public interface CorePackage extends EPackage {
 	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getTrace()
 	 * @generated
 	 */
-	int TRACE = 15;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRACE__ID = REFERENCED_MODEL_ELEMENTS__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRACE__NAME = REFERENCED_MODEL_ELEMENTS__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRACE__DESCRIPTION = REFERENCED_MODEL_ELEMENTS__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Model Element References</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRACE__MODEL_ELEMENT_REFERENCES = REFERENCED_MODEL_ELEMENTS__MODEL_ELEMENT_REFERENCES;
-
-	/**
-	 * The feature id for the '<em><b>Specifications</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRACE__SPECIFICATIONS = REFERENCED_MODEL_ELEMENTS_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Trace</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRACE_FEATURE_COUNT = REFERENCED_MODEL_ELEMENTS_FEATURE_COUNT + 1;
+	int TRACE = 21;
 
 	/**
 	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.impl.TraceModelElementReferenceImpl <em>Trace Model Element Reference</em>}' class.
@@ -2221,106 +492,7 @@ public interface CorePackage extends EPackage {
 	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getTraceModelElementReference()
 	 * @generated
 	 */
-	int TRACE_MODEL_ELEMENT_REFERENCE = 16;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRACE_MODEL_ELEMENT_REFERENCE__ID = MODEL_ELEMENT_REFERENCE__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRACE_MODEL_ELEMENT_REFERENCE__NAME = MODEL_ELEMENT_REFERENCE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRACE_MODEL_ELEMENT_REFERENCE__DESCRIPTION = MODEL_ELEMENT_REFERENCE__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Model Element</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRACE_MODEL_ELEMENT_REFERENCE__MODEL_ELEMENT = MODEL_ELEMENT_REFERENCE__MODEL_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRACE_MODEL_ELEMENT_REFERENCE__PARENT = MODEL_ELEMENT_REFERENCE__PARENT;
-
-	/**
-	 * The feature id for the '<em><b>Verifies</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRACE_MODEL_ELEMENT_REFERENCE__VERIFIES = MODEL_ELEMENT_REFERENCE__VERIFIES;
-
-	/**
-	 * The feature id for the '<em><b>Reason</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRACE_MODEL_ELEMENT_REFERENCE__REASON = MODEL_ELEMENT_REFERENCE__REASON;
-
-	/**
-	 * The feature id for the '<em><b>Nb Requirements</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRACE_MODEL_ELEMENT_REFERENCE__NB_REQUIREMENTS = MODEL_ELEMENT_REFERENCE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Verification Level</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRACE_MODEL_ELEMENT_REFERENCE__VERIFICATION_LEVEL = MODEL_ELEMENT_REFERENCE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Container</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRACE_MODEL_ELEMENT_REFERENCE__CONTAINER = MODEL_ELEMENT_REFERENCE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>Trace Model Element Reference</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRACE_MODEL_ELEMENT_REFERENCE_FEATURE_COUNT = MODEL_ELEMENT_REFERENCE_FEATURE_COUNT + 3;
+	int TRACE_MODEL_ELEMENT_REFERENCE = 22;
 
 	/**
 	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.impl.RequirementsCoverageDataImpl <em>Requirements Coverage Data</em>}' class.
@@ -2330,61 +502,47 @@ public interface CorePackage extends EPackage {
 	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getRequirementsCoverageData()
 	 * @generated
 	 */
-	int REQUIREMENTS_COVERAGE_DATA = 17;
+	int REQUIREMENTS_COVERAGE_DATA = 23;
 
 	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.impl.VariableImpl <em>Variable</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see fr.openpeople.rdal.model.core.impl.VariableImpl
+	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getVariable()
 	 * @generated
-	 * @ordered
 	 */
-	int REQUIREMENTS_COVERAGE_DATA__ID = IDENTIFIED_ELEMENT__ID;
+	int VARIABLE = 24;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.impl.RefDerivedModelElementsImpl <em>Ref Derived Model Elements</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see fr.openpeople.rdal.model.core.impl.RefDerivedModelElementsImpl
+	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getRefDerivedModelElements()
 	 * @generated
-	 * @ordered
 	 */
-	int REQUIREMENTS_COVERAGE_DATA__NAME = IDENTIFIED_ELEMENT__NAME;
+	int REF_DERIVED_MODEL_ELEMENTS = 25;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.impl.RationaleImpl <em>Rationale</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see fr.openpeople.rdal.model.core.impl.RationaleImpl
+	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getRationale()
 	 * @generated
-	 * @ordered
 	 */
-	int REQUIREMENTS_COVERAGE_DATA__DESCRIPTION = IDENTIFIED_ELEMENT__DESCRIPTION;
+	int RATIONALE = 26;
 
 	/**
-	 * The feature id for the '<em><b>Nb Requirements</b></em>' attribute.
+	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.impl.RequirementsContainerImpl <em>Requirements Container</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see fr.openpeople.rdal.model.core.impl.RequirementsContainerImpl
+	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getRequirementsContainer()
 	 * @generated
-	 * @ordered
 	 */
-	int REQUIREMENTS_COVERAGE_DATA__NB_REQUIREMENTS = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Verification Level</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENTS_COVERAGE_DATA__VERIFICATION_LEVEL = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Requirements Coverage Data</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENTS_COVERAGE_DATA_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 2;
+	int REQUIREMENTS_CONTAINER = 27;
 
 	/**
 	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.impl.GoalImpl <em>Goal</em>}' class.
@@ -2394,178 +552,7 @@ public interface CorePackage extends EPackage {
 	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getGoal()
 	 * @generated
 	 */
-	int GOAL = 18;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOAL__ID = CONTRACTUAL_ELEMENT__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOAL__NAME = CONTRACTUAL_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOAL__DESCRIPTION = CONTRACTUAL_ELEMENT__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Satisfaction Level</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOAL__SATISFACTION_LEVEL = CONTRACTUAL_ELEMENT__SATISFACTION_LEVEL;
-
-	/**
-	 * The feature id for the '<em><b>Change Uncertainty</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOAL__CHANGE_UNCERTAINTY = CONTRACTUAL_ELEMENT__CHANGE_UNCERTAINTY;
-
-	/**
-	 * The feature id for the '<em><b>Contact Information</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOAL__CONTACT_INFORMATION = CONTRACTUAL_ELEMENT__CONTACT_INFORMATION;
-
-	/**
-	 * The feature id for the '<em><b>Origin Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOAL__ORIGIN_DATE = CONTRACTUAL_ELEMENT__ORIGIN_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Schedule Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOAL__SCHEDULE_DATE = CONTRACTUAL_ELEMENT__SCHEDULE_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Stake Holders</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOAL__STAKE_HOLDERS = CONTRACTUAL_ELEMENT__STAKE_HOLDERS;
-
-	/**
-	 * The feature id for the '<em><b>Priority</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOAL__PRIORITY = CONTRACTUAL_ELEMENT__PRIORITY;
-
-	/**
-	 * The feature id for the '<em><b>Satisfied By</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOAL__SATISFIED_BY = CONTRACTUAL_ELEMENT__SATISFIED_BY;
-
-	/**
-	 * The feature id for the '<em><b>Evolved To</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOAL__EVOLVED_TO = CONTRACTUAL_ELEMENT__EVOLVED_TO;
-
-	/**
-	 * The feature id for the '<em><b>Dropped</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOAL__DROPPED = CONTRACTUAL_ELEMENT__DROPPED;
-
-	/**
-	 * The feature id for the '<em><b>Traced To</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOAL__TRACED_TO = CONTRACTUAL_ELEMENT__TRACED_TO;
-
-	/**
-	 * The feature id for the '<em><b>Rationale</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOAL__RATIONALE = CONTRACTUAL_ELEMENT__RATIONALE;
-
-	/**
-	 * The feature id for the '<em><b>Sources</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOAL__SOURCES = CONTRACTUAL_ELEMENT__SOURCES;
-
-	/**
-	 * The feature id for the '<em><b>Achieved By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOAL__ACHIEVED_BY = CONTRACTUAL_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Conflicts</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOAL__CONFLICTS = CONTRACTUAL_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Goal</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOAL_FEATURE_COUNT = CONTRACTUAL_ELEMENT_FEATURE_COUNT + 2;
+	int GOAL = 9;
 
 	/**
 	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.impl.UncertaintyImpl <em>Uncertainty</em>}' class.
@@ -2575,7 +562,7 @@ public interface CorePackage extends EPackage {
 	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getUncertainty()
 	 * @generated
 	 */
-	int UNCERTAINTY = 19;
+	int UNCERTAINTY = 2;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2641,22 +628,13 @@ public interface CorePackage extends EPackage {
 	int UNCERTAINTY__PRECEDENCE = IDENTIFIED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Time Criticality</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNCERTAINTY__TIME_CRITICALITY = IDENTIFIED_ELEMENT_FEATURE_COUNT + 4;
-
-	/**
 	 * The feature id for the '<em><b>Risk Index</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNCERTAINTY__RISK_INDEX = IDENTIFIED_ELEMENT_FEATURE_COUNT + 5;
+	int UNCERTAINTY__RISK_INDEX = IDENTIFIED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Prop Risk Index</b></em>' attribute.
@@ -2665,7 +643,7 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNCERTAINTY__PROP_RISK_INDEX = IDENTIFIED_ELEMENT_FEATURE_COUNT + 6;
+	int UNCERTAINTY__PROP_RISK_INDEX = IDENTIFIED_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Maturity Index</b></em>' attribute.
@@ -2674,7 +652,7 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNCERTAINTY__MATURITY_INDEX = IDENTIFIED_ELEMENT_FEATURE_COUNT + 7;
+	int UNCERTAINTY__MATURITY_INDEX = IDENTIFIED_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>Uncertainty</em>' class.
@@ -2683,7 +661,538 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UNCERTAINTY_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 8;
+	int UNCERTAINTY_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFIABLE_ELEMENT__ID = CONTRACTUAL_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFIABLE_ELEMENT__NAME = CONTRACTUAL_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFIABLE_ELEMENT__DESCRIPTION = CONTRACTUAL_ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Change Uncertainty</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFIABLE_ELEMENT__CHANGE_UNCERTAINTY = CONTRACTUAL_ELEMENT__CHANGE_UNCERTAINTY;
+
+	/**
+	 * The feature id for the '<em><b>Sources</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFIABLE_ELEMENT__SOURCES = CONTRACTUAL_ELEMENT__SOURCES;
+
+	/**
+	 * The feature id for the '<em><b>Origin Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFIABLE_ELEMENT__ORIGIN_DATE = CONTRACTUAL_ELEMENT__ORIGIN_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Schedule Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFIABLE_ELEMENT__SCHEDULE_DATE = CONTRACTUAL_ELEMENT__SCHEDULE_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Stakeholders</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFIABLE_ELEMENT__STAKEHOLDERS = CONTRACTUAL_ELEMENT__STAKEHOLDERS;
+
+	/**
+	 * The feature id for the '<em><b>Evolved To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFIABLE_ELEMENT__EVOLVED_TO = CONTRACTUAL_ELEMENT__EVOLVED_TO;
+
+	/**
+	 * The feature id for the '<em><b>Traced To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFIABLE_ELEMENT__TRACED_TO = CONTRACTUAL_ELEMENT__TRACED_TO;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFIABLE_ELEMENT__CATEGORY = CONTRACTUAL_ELEMENT__CATEGORY;
+
+	/**
+	 * The feature id for the '<em><b>Satisfied By</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFIABLE_ELEMENT__SATISFIED_BY = CONTRACTUAL_ELEMENT__SATISFIED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Agents</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFIABLE_ELEMENT__AGENTS = CONTRACTUAL_ELEMENT__AGENTS;
+
+	/**
+	 * The feature id for the '<em><b>Derived From</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFIABLE_ELEMENT__DERIVED_FROM = CONTRACTUAL_ELEMENT__DERIVED_FROM;
+
+	/**
+	 * The feature id for the '<em><b>Dropped</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFIABLE_ELEMENT__DROPPED = CONTRACTUAL_ELEMENT__DROPPED;
+
+	/**
+	 * The feature id for the '<em><b>Dropping Reason</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFIABLE_ELEMENT__DROPPING_REASON = CONTRACTUAL_ELEMENT__DROPPING_REASON;
+
+	/**
+	 * The feature id for the '<em><b>Satisfaction Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFIABLE_ELEMENT__SATISFACTION_LEVEL = CONTRACTUAL_ELEMENT__SATISFACTION_LEVEL;
+
+	/**
+	 * The feature id for the '<em><b>Rationales</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFIABLE_ELEMENT__RATIONALES = CONTRACTUAL_ELEMENT__RATIONALES;
+
+	/**
+	 * The feature id for the '<em><b>Time Criticality</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFIABLE_ELEMENT__TIME_CRITICALITY = CONTRACTUAL_ELEMENT__TIME_CRITICALITY;
+
+	/**
+	 * The feature id for the '<em><b>Contact Information</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFIABLE_ELEMENT__CONTACT_INFORMATION = CONTRACTUAL_ELEMENT__CONTACT_INFORMATION;
+
+	/**
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFIABLE_ELEMENT__EXPRESSION = CONTRACTUAL_ELEMENT__EXPRESSION;
+
+	/**
+	 * The feature id for the '<em><b>Condition</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFIABLE_ELEMENT__CONDITION = CONTRACTUAL_ELEMENT__CONDITION;
+
+	/**
+	 * The feature id for the '<em><b>Modes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFIABLE_ELEMENT__MODES = CONTRACTUAL_ELEMENT__MODES;
+
+	/**
+	 * The feature id for the '<em><b>Verified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFIABLE_ELEMENT__VERIFIED = CONTRACTUAL_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Verifiable Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFIABLE_ELEMENT_FEATURE_COUNT = CONTRACTUAL_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__ID = VERIFIABLE_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__NAME = VERIFIABLE_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__DESCRIPTION = VERIFIABLE_ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Change Uncertainty</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__CHANGE_UNCERTAINTY = VERIFIABLE_ELEMENT__CHANGE_UNCERTAINTY;
+
+	/**
+	 * The feature id for the '<em><b>Sources</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__SOURCES = VERIFIABLE_ELEMENT__SOURCES;
+
+	/**
+	 * The feature id for the '<em><b>Origin Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__ORIGIN_DATE = VERIFIABLE_ELEMENT__ORIGIN_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Schedule Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__SCHEDULE_DATE = VERIFIABLE_ELEMENT__SCHEDULE_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Stakeholders</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__STAKEHOLDERS = VERIFIABLE_ELEMENT__STAKEHOLDERS;
+
+	/**
+	 * The feature id for the '<em><b>Evolved To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__EVOLVED_TO = VERIFIABLE_ELEMENT__EVOLVED_TO;
+
+	/**
+	 * The feature id for the '<em><b>Traced To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__TRACED_TO = VERIFIABLE_ELEMENT__TRACED_TO;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__CATEGORY = VERIFIABLE_ELEMENT__CATEGORY;
+
+	/**
+	 * The feature id for the '<em><b>Satisfied By</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__SATISFIED_BY = VERIFIABLE_ELEMENT__SATISFIED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Agents</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__AGENTS = VERIFIABLE_ELEMENT__AGENTS;
+
+	/**
+	 * The feature id for the '<em><b>Derived From</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__DERIVED_FROM = VERIFIABLE_ELEMENT__DERIVED_FROM;
+
+	/**
+	 * The feature id for the '<em><b>Dropped</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__DROPPED = VERIFIABLE_ELEMENT__DROPPED;
+
+	/**
+	 * The feature id for the '<em><b>Dropping Reason</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__DROPPING_REASON = VERIFIABLE_ELEMENT__DROPPING_REASON;
+
+	/**
+	 * The feature id for the '<em><b>Satisfaction Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__SATISFACTION_LEVEL = VERIFIABLE_ELEMENT__SATISFACTION_LEVEL;
+
+	/**
+	 * The feature id for the '<em><b>Rationales</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__RATIONALES = VERIFIABLE_ELEMENT__RATIONALES;
+
+	/**
+	 * The feature id for the '<em><b>Time Criticality</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__TIME_CRITICALITY = VERIFIABLE_ELEMENT__TIME_CRITICALITY;
+
+	/**
+	 * The feature id for the '<em><b>Contact Information</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__CONTACT_INFORMATION = VERIFIABLE_ELEMENT__CONTACT_INFORMATION;
+
+	/**
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__EXPRESSION = VERIFIABLE_ELEMENT__EXPRESSION;
+
+	/**
+	 * The feature id for the '<em><b>Condition</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__CONDITION = VERIFIABLE_ELEMENT__CONDITION;
+
+	/**
+	 * The feature id for the '<em><b>Modes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__MODES = VERIFIABLE_ELEMENT__MODES;
+
+	/**
+	 * The feature id for the '<em><b>Verified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__VERIFIED = VERIFIABLE_ELEMENT__VERIFIED;
+
+	/**
+	 * The feature id for the '<em><b>Actors</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__ACTORS = VERIFIABLE_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Syst Overview</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__SYST_OVERVIEW = VERIFIABLE_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Requirement Groups</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__REQUIREMENT_GROUPS = VERIFIABLE_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Verification Activities</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__VERIFICATION_ACTIVITIES = VERIFIABLE_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Conflicts</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__CONFLICTS = VERIFIABLE_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Constraint Languages Specification</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__CONSTRAINT_LANGUAGES_SPECIFICATION = VERIFIABLE_ELEMENT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Specifies</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__SPECIFIES = VERIFIABLE_ELEMENT_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Primary Actors</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__PRIMARY_ACTORS = VERIFIABLE_ELEMENT_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__VERSION = VERIFIABLE_ELEMENT_FEATURE_COUNT + 8;
+
+	/**
+	 * The number of structural features of the '<em>Specification</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION_FEATURE_COUNT = VERIFIABLE_ELEMENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.impl.SystemOverviewImpl <em>System Overview</em>}' class.
@@ -2693,7 +1202,7 @@ public interface CorePackage extends EPackage {
 	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getSystemOverview()
 	 * @generated
 	 */
-	int SYSTEM_OVERVIEW = 20;
+	int SYSTEM_OVERVIEW = 5;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2702,7 +1211,7 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_OVERVIEW__ID = IDENTIFIED_ELEMENT__ID;
+	int SYSTEM_OVERVIEW__ID = CONTRACTUAL_ELEMENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2711,7 +1220,7 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_OVERVIEW__NAME = IDENTIFIED_ELEMENT__NAME;
+	int SYSTEM_OVERVIEW__NAME = CONTRACTUAL_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -2720,43 +1229,187 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_OVERVIEW__DESCRIPTION = IDENTIFIED_ELEMENT__DESCRIPTION;
+	int SYSTEM_OVERVIEW__DESCRIPTION = CONTRACTUAL_ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Contexts</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Change Uncertainty</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_OVERVIEW__CONTEXTS = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
+	int SYSTEM_OVERVIEW__CHANGE_UNCERTAINTY = CONTRACTUAL_ELEMENT__CHANGE_UNCERTAINTY;
 
 	/**
-	 * The feature id for the '<em><b>Actors</b></em>' reference list.
+	 * The feature id for the '<em><b>Sources</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_OVERVIEW__ACTORS = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
+	int SYSTEM_OVERVIEW__SOURCES = CONTRACTUAL_ELEMENT__SOURCES;
 
 	/**
-	 * The feature id for the '<em><b>System To Be</b></em>' reference.
+	 * The feature id for the '<em><b>Origin Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_OVERVIEW__SYSTEM_TO_BE = IDENTIFIED_ELEMENT_FEATURE_COUNT + 2;
+	int SYSTEM_OVERVIEW__ORIGIN_DATE = CONTRACTUAL_ELEMENT__ORIGIN_DATE;
 
 	/**
-	 * The feature id for the '<em><b>Purpose</b></em>' attribute.
+	 * The feature id for the '<em><b>Schedule Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_OVERVIEW__PURPOSE = IDENTIFIED_ELEMENT_FEATURE_COUNT + 3;
+	int SYSTEM_OVERVIEW__SCHEDULE_DATE = CONTRACTUAL_ELEMENT__SCHEDULE_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Stakeholders</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_OVERVIEW__STAKEHOLDERS = CONTRACTUAL_ELEMENT__STAKEHOLDERS;
+
+	/**
+	 * The feature id for the '<em><b>Evolved To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_OVERVIEW__EVOLVED_TO = CONTRACTUAL_ELEMENT__EVOLVED_TO;
+
+	/**
+	 * The feature id for the '<em><b>Traced To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_OVERVIEW__TRACED_TO = CONTRACTUAL_ELEMENT__TRACED_TO;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_OVERVIEW__CATEGORY = CONTRACTUAL_ELEMENT__CATEGORY;
+
+	/**
+	 * The feature id for the '<em><b>Satisfied By</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_OVERVIEW__SATISFIED_BY = CONTRACTUAL_ELEMENT__SATISFIED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Agents</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_OVERVIEW__AGENTS = CONTRACTUAL_ELEMENT__AGENTS;
+
+	/**
+	 * The feature id for the '<em><b>Derived From</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_OVERVIEW__DERIVED_FROM = CONTRACTUAL_ELEMENT__DERIVED_FROM;
+
+	/**
+	 * The feature id for the '<em><b>Dropped</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_OVERVIEW__DROPPED = CONTRACTUAL_ELEMENT__DROPPED;
+
+	/**
+	 * The feature id for the '<em><b>Dropping Reason</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_OVERVIEW__DROPPING_REASON = CONTRACTUAL_ELEMENT__DROPPING_REASON;
+
+	/**
+	 * The feature id for the '<em><b>Satisfaction Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_OVERVIEW__SATISFACTION_LEVEL = CONTRACTUAL_ELEMENT__SATISFACTION_LEVEL;
+
+	/**
+	 * The feature id for the '<em><b>Rationales</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_OVERVIEW__RATIONALES = CONTRACTUAL_ELEMENT__RATIONALES;
+
+	/**
+	 * The feature id for the '<em><b>Time Criticality</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_OVERVIEW__TIME_CRITICALITY = CONTRACTUAL_ELEMENT__TIME_CRITICALITY;
+
+	/**
+	 * The feature id for the '<em><b>Contact Information</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_OVERVIEW__CONTACT_INFORMATION = CONTRACTUAL_ELEMENT__CONTACT_INFORMATION;
+
+	/**
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_OVERVIEW__EXPRESSION = CONTRACTUAL_ELEMENT__EXPRESSION;
+
+	/**
+	 * The feature id for the '<em><b>Condition</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_OVERVIEW__CONDITION = CONTRACTUAL_ELEMENT__CONDITION;
+
+	/**
+	 * The feature id for the '<em><b>Modes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_OVERVIEW__MODES = CONTRACTUAL_ELEMENT__MODES;
 
 	/**
 	 * The feature id for the '<em><b>Goals</b></em>' containment reference list.
@@ -2765,7 +1418,43 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_OVERVIEW__GOALS = IDENTIFIED_ELEMENT_FEATURE_COUNT + 4;
+	int SYSTEM_OVERVIEW__GOALS = CONTRACTUAL_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>System To Be</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_OVERVIEW__SYSTEM_TO_BE = CONTRACTUAL_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Contexts</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_OVERVIEW__CONTEXTS = CONTRACTUAL_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>System Boundary</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_OVERVIEW__SYSTEM_BOUNDARY = CONTRACTUAL_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Purpose</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_OVERVIEW__PURPOSE = CONTRACTUAL_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Capabilities</b></em>' attribute list.
@@ -2774,7 +1463,7 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_OVERVIEW__CAPABILITIES = IDENTIFIED_ELEMENT_FEATURE_COUNT + 5;
+	int SYSTEM_OVERVIEW__CAPABILITIES = CONTRACTUAL_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>System Overview</em>' class.
@@ -2783,7 +1472,7 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_OVERVIEW_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 6;
+	int SYSTEM_OVERVIEW_FEATURE_COUNT = CONTRACTUAL_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.impl.SystemContextImpl <em>System Context</em>}' class.
@@ -2793,7 +1482,7 @@ public interface CorePackage extends EPackage {
 	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getSystemContext()
 	 * @generated
 	 */
-	int SYSTEM_CONTEXT = 21;
+	int SYSTEM_CONTEXT = 6;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2832,13 +1521,121 @@ public interface CorePackage extends EPackage {
 	int SYSTEM_CONTEXT__GLOBAL_SYSTEM = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Actors</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_CONTEXT__ACTORS = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>System Boundary</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_CONTEXT__SYSTEM_BOUNDARY = IDENTIFIED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>System Modes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_CONTEXT__SYSTEM_MODES = IDENTIFIED_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>System Context</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_CONTEXT_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
+	int SYSTEM_CONTEXT_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTOR__ID = IDENTIFIED_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTOR__NAME = IDENTIFIED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTOR__DESCRIPTION = IDENTIFIED_ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Images</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTOR__IMAGES = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Interactions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTOR__INTERACTIONS = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Address</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTOR__ADDRESS = IDENTIFIED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Email</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTOR__EMAIL = IDENTIFIED_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Phone Number</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTOR__PHONE_NUMBER = IDENTIFIED_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of structural features of the '<em>Actor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTOR_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.impl.InteractionImpl <em>Interaction</em>}' class.
@@ -2848,7 +1645,7 @@ public interface CorePackage extends EPackage {
 	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getInteraction()
 	 * @generated
 	 */
-	int INTERACTION = 23;
+	int INTERACTION = 8;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2878,22 +1675,22 @@ public interface CorePackage extends EPackage {
 	int INTERACTION__DESCRIPTION = IDENTIFIED_ELEMENT__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Entity</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERACTION__ENTITY = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Direction</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTERACTION__DIRECTION = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>End</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTERACTION__END = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
+	int INTERACTION__DIRECTION = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Interaction</em>' class.
@@ -2905,6 +1702,240 @@ public interface CorePackage extends EPackage {
 	int INTERACTION_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL__ID = CONTRACTUAL_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL__NAME = CONTRACTUAL_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL__DESCRIPTION = CONTRACTUAL_ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Change Uncertainty</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL__CHANGE_UNCERTAINTY = CONTRACTUAL_ELEMENT__CHANGE_UNCERTAINTY;
+
+	/**
+	 * The feature id for the '<em><b>Sources</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL__SOURCES = CONTRACTUAL_ELEMENT__SOURCES;
+
+	/**
+	 * The feature id for the '<em><b>Origin Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL__ORIGIN_DATE = CONTRACTUAL_ELEMENT__ORIGIN_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Schedule Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL__SCHEDULE_DATE = CONTRACTUAL_ELEMENT__SCHEDULE_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Stakeholders</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL__STAKEHOLDERS = CONTRACTUAL_ELEMENT__STAKEHOLDERS;
+
+	/**
+	 * The feature id for the '<em><b>Evolved To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL__EVOLVED_TO = CONTRACTUAL_ELEMENT__EVOLVED_TO;
+
+	/**
+	 * The feature id for the '<em><b>Traced To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL__TRACED_TO = CONTRACTUAL_ELEMENT__TRACED_TO;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL__CATEGORY = CONTRACTUAL_ELEMENT__CATEGORY;
+
+	/**
+	 * The feature id for the '<em><b>Satisfied By</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL__SATISFIED_BY = CONTRACTUAL_ELEMENT__SATISFIED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Agents</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL__AGENTS = CONTRACTUAL_ELEMENT__AGENTS;
+
+	/**
+	 * The feature id for the '<em><b>Derived From</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL__DERIVED_FROM = CONTRACTUAL_ELEMENT__DERIVED_FROM;
+
+	/**
+	 * The feature id for the '<em><b>Dropped</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL__DROPPED = CONTRACTUAL_ELEMENT__DROPPED;
+
+	/**
+	 * The feature id for the '<em><b>Dropping Reason</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL__DROPPING_REASON = CONTRACTUAL_ELEMENT__DROPPING_REASON;
+
+	/**
+	 * The feature id for the '<em><b>Satisfaction Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL__SATISFACTION_LEVEL = CONTRACTUAL_ELEMENT__SATISFACTION_LEVEL;
+
+	/**
+	 * The feature id for the '<em><b>Rationales</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL__RATIONALES = CONTRACTUAL_ELEMENT__RATIONALES;
+
+	/**
+	 * The feature id for the '<em><b>Time Criticality</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL__TIME_CRITICALITY = CONTRACTUAL_ELEMENT__TIME_CRITICALITY;
+
+	/**
+	 * The feature id for the '<em><b>Contact Information</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL__CONTACT_INFORMATION = CONTRACTUAL_ELEMENT__CONTACT_INFORMATION;
+
+	/**
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL__EXPRESSION = CONTRACTUAL_ELEMENT__EXPRESSION;
+
+	/**
+	 * The feature id for the '<em><b>Condition</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL__CONDITION = CONTRACTUAL_ELEMENT__CONDITION;
+
+	/**
+	 * The feature id for the '<em><b>Modes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL__MODES = CONTRACTUAL_ELEMENT__MODES;
+
+	/**
+	 * The feature id for the '<em><b>Conflicts</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL__CONFLICTS = CONTRACTUAL_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Priority</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL__PRIORITY = CONTRACTUAL_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Goal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL_FEATURE_COUNT = CONTRACTUAL_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
 	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.impl.ConflictImpl <em>Conflict</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2912,16 +1943,34 @@ public interface CorePackage extends EPackage {
 	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getConflict()
 	 * @generated
 	 */
-	int CONFLICT = 24;
+	int CONFLICT = 10;
 
 	/**
-	 * The feature id for the '<em><b>Degree</b></em>' attribute.
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONFLICT__DEGREE = 0;
+	int CONFLICT__ID = IDENTIFIED_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFLICT__NAME = IDENTIFIED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFLICT__DESCRIPTION = IDENTIFIED_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Goals</b></em>' reference list.
@@ -2930,7 +1979,16 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONFLICT__GOALS = 1;
+	int CONFLICT__GOALS = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Degree</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFLICT__DEGREE = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Conflict</em>' class.
@@ -2939,48 +1997,2050 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONFLICT_FEATURE_COUNT = 2;
+	int CONFLICT_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.EnumRiskKind <em>Enum Risk Kind</em>}' enum.
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see fr.openpeople.rdal.model.core.EnumRiskKind
-	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getEnumRiskKind()
 	 * @generated
+	 * @ordered
 	 */
-	int ENUM_RISK_KIND = 25;
+	int STAKE_HOLDER__ID = ACTOR__ID;
 
 	/**
-	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.EnumVerificationMethod <em>Enum Verification Method</em>}' enum.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see fr.openpeople.rdal.model.core.EnumVerificationMethod
-	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getEnumVerificationMethod()
 	 * @generated
+	 * @ordered
 	 */
-	int ENUM_VERIFICATION_METHOD = 26;
+	int STAKE_HOLDER__NAME = ACTOR__NAME;
 
 	/**
-	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.EnumAssumptionType <em>Enum Assumption Type</em>}' enum.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see fr.openpeople.rdal.model.core.EnumAssumptionType
-	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getEnumAssumptionType()
 	 * @generated
+	 * @ordered
 	 */
-	int ENUM_ASSUMPTION_TYPE = 27;
+	int STAKE_HOLDER__DESCRIPTION = ACTOR__DESCRIPTION;
 
 	/**
-	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.EnumFunctionalRequirementType <em>Enum Functional Requirement Type</em>}' enum.
+	 * The feature id for the '<em><b>Images</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see fr.openpeople.rdal.model.core.EnumFunctionalRequirementType
-	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getEnumFunctionalRequirementType()
 	 * @generated
+	 * @ordered
 	 */
-	int ENUM_FUNCTIONAL_REQUIREMENT_TYPE = 28;
+	int STAKE_HOLDER__IMAGES = ACTOR__IMAGES;
 
+	/**
+	 * The feature id for the '<em><b>Interactions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAKE_HOLDER__INTERACTIONS = ACTOR__INTERACTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Address</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAKE_HOLDER__ADDRESS = ACTOR__ADDRESS;
+
+	/**
+	 * The feature id for the '<em><b>Email</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAKE_HOLDER__EMAIL = ACTOR__EMAIL;
+
+	/**
+	 * The feature id for the '<em><b>Phone Number</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAKE_HOLDER__PHONE_NUMBER = ACTOR__PHONE_NUMBER;
+
+	/**
+	 * The feature id for the '<em><b>Contractual Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAKE_HOLDER__CONTRACTUAL_ELEMENTS = ACTOR_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Rationales</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAKE_HOLDER__RATIONALES = ACTOR_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Stake Holder</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAKE_HOLDER_FEATURE_COUNT = ACTOR_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_GROUP__ID = VERIFIABLE_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_GROUP__NAME = VERIFIABLE_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_GROUP__DESCRIPTION = VERIFIABLE_ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Change Uncertainty</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_GROUP__CHANGE_UNCERTAINTY = VERIFIABLE_ELEMENT__CHANGE_UNCERTAINTY;
+
+	/**
+	 * The feature id for the '<em><b>Sources</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_GROUP__SOURCES = VERIFIABLE_ELEMENT__SOURCES;
+
+	/**
+	 * The feature id for the '<em><b>Origin Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_GROUP__ORIGIN_DATE = VERIFIABLE_ELEMENT__ORIGIN_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Schedule Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_GROUP__SCHEDULE_DATE = VERIFIABLE_ELEMENT__SCHEDULE_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Stakeholders</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_GROUP__STAKEHOLDERS = VERIFIABLE_ELEMENT__STAKEHOLDERS;
+
+	/**
+	 * The feature id for the '<em><b>Evolved To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_GROUP__EVOLVED_TO = VERIFIABLE_ELEMENT__EVOLVED_TO;
+
+	/**
+	 * The feature id for the '<em><b>Traced To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_GROUP__TRACED_TO = VERIFIABLE_ELEMENT__TRACED_TO;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_GROUP__CATEGORY = VERIFIABLE_ELEMENT__CATEGORY;
+
+	/**
+	 * The feature id for the '<em><b>Satisfied By</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_GROUP__SATISFIED_BY = VERIFIABLE_ELEMENT__SATISFIED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Agents</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_GROUP__AGENTS = VERIFIABLE_ELEMENT__AGENTS;
+
+	/**
+	 * The feature id for the '<em><b>Derived From</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_GROUP__DERIVED_FROM = VERIFIABLE_ELEMENT__DERIVED_FROM;
+
+	/**
+	 * The feature id for the '<em><b>Dropped</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_GROUP__DROPPED = VERIFIABLE_ELEMENT__DROPPED;
+
+	/**
+	 * The feature id for the '<em><b>Dropping Reason</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_GROUP__DROPPING_REASON = VERIFIABLE_ELEMENT__DROPPING_REASON;
+
+	/**
+	 * The feature id for the '<em><b>Satisfaction Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_GROUP__SATISFACTION_LEVEL = VERIFIABLE_ELEMENT__SATISFACTION_LEVEL;
+
+	/**
+	 * The feature id for the '<em><b>Rationales</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_GROUP__RATIONALES = VERIFIABLE_ELEMENT__RATIONALES;
+
+	/**
+	 * The feature id for the '<em><b>Time Criticality</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_GROUP__TIME_CRITICALITY = VERIFIABLE_ELEMENT__TIME_CRITICALITY;
+
+	/**
+	 * The feature id for the '<em><b>Contact Information</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_GROUP__CONTACT_INFORMATION = VERIFIABLE_ELEMENT__CONTACT_INFORMATION;
+
+	/**
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_GROUP__EXPRESSION = VERIFIABLE_ELEMENT__EXPRESSION;
+
+	/**
+	 * The feature id for the '<em><b>Condition</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_GROUP__CONDITION = VERIFIABLE_ELEMENT__CONDITION;
+
+	/**
+	 * The feature id for the '<em><b>Modes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_GROUP__MODES = VERIFIABLE_ELEMENT__MODES;
+
+	/**
+	 * The feature id for the '<em><b>Verified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_GROUP__VERIFIED = VERIFIABLE_ELEMENT__VERIFIED;
+
+	/**
+	 * The feature id for the '<em><b>Requirements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_GROUP__REQUIREMENTS = VERIFIABLE_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Specification</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_GROUP__SPECIFICATION = VERIFIABLE_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Requirements Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_GROUP_FEATURE_COUNT = VERIFIABLE_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_REQUIREMENT__ID = VERIFIABLE_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_REQUIREMENT__NAME = VERIFIABLE_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_REQUIREMENT__DESCRIPTION = VERIFIABLE_ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Change Uncertainty</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_REQUIREMENT__CHANGE_UNCERTAINTY = VERIFIABLE_ELEMENT__CHANGE_UNCERTAINTY;
+
+	/**
+	 * The feature id for the '<em><b>Sources</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_REQUIREMENT__SOURCES = VERIFIABLE_ELEMENT__SOURCES;
+
+	/**
+	 * The feature id for the '<em><b>Origin Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_REQUIREMENT__ORIGIN_DATE = VERIFIABLE_ELEMENT__ORIGIN_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Schedule Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_REQUIREMENT__SCHEDULE_DATE = VERIFIABLE_ELEMENT__SCHEDULE_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Stakeholders</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_REQUIREMENT__STAKEHOLDERS = VERIFIABLE_ELEMENT__STAKEHOLDERS;
+
+	/**
+	 * The feature id for the '<em><b>Evolved To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_REQUIREMENT__EVOLVED_TO = VERIFIABLE_ELEMENT__EVOLVED_TO;
+
+	/**
+	 * The feature id for the '<em><b>Traced To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_REQUIREMENT__TRACED_TO = VERIFIABLE_ELEMENT__TRACED_TO;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_REQUIREMENT__CATEGORY = VERIFIABLE_ELEMENT__CATEGORY;
+
+	/**
+	 * The feature id for the '<em><b>Satisfied By</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_REQUIREMENT__SATISFIED_BY = VERIFIABLE_ELEMENT__SATISFIED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Agents</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_REQUIREMENT__AGENTS = VERIFIABLE_ELEMENT__AGENTS;
+
+	/**
+	 * The feature id for the '<em><b>Derived From</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_REQUIREMENT__DERIVED_FROM = VERIFIABLE_ELEMENT__DERIVED_FROM;
+
+	/**
+	 * The feature id for the '<em><b>Dropped</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_REQUIREMENT__DROPPED = VERIFIABLE_ELEMENT__DROPPED;
+
+	/**
+	 * The feature id for the '<em><b>Dropping Reason</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_REQUIREMENT__DROPPING_REASON = VERIFIABLE_ELEMENT__DROPPING_REASON;
+
+	/**
+	 * The feature id for the '<em><b>Satisfaction Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_REQUIREMENT__SATISFACTION_LEVEL = VERIFIABLE_ELEMENT__SATISFACTION_LEVEL;
+
+	/**
+	 * The feature id for the '<em><b>Rationales</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_REQUIREMENT__RATIONALES = VERIFIABLE_ELEMENT__RATIONALES;
+
+	/**
+	 * The feature id for the '<em><b>Time Criticality</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_REQUIREMENT__TIME_CRITICALITY = VERIFIABLE_ELEMENT__TIME_CRITICALITY;
+
+	/**
+	 * The feature id for the '<em><b>Contact Information</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_REQUIREMENT__CONTACT_INFORMATION = VERIFIABLE_ELEMENT__CONTACT_INFORMATION;
+
+	/**
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_REQUIREMENT__EXPRESSION = VERIFIABLE_ELEMENT__EXPRESSION;
+
+	/**
+	 * The feature id for the '<em><b>Condition</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_REQUIREMENT__CONDITION = VERIFIABLE_ELEMENT__CONDITION;
+
+	/**
+	 * The feature id for the '<em><b>Modes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_REQUIREMENT__MODES = VERIFIABLE_ELEMENT__MODES;
+
+	/**
+	 * The feature id for the '<em><b>Verified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_REQUIREMENT__VERIFIED = VERIFIABLE_ELEMENT__VERIFIED;
+
+	/**
+	 * The feature id for the '<em><b>Contained Requirements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_REQUIREMENT__CONTAINED_REQUIREMENTS = VERIFIABLE_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Verified By</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_REQUIREMENT__VERIFIED_BY = VERIFIABLE_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_REQUIREMENT__GROUP = VERIFIABLE_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Risk</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_REQUIREMENT__RISK = VERIFIABLE_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Assigned Variable</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_REQUIREMENT__ASSIGNED_VARIABLE = VERIFIABLE_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Condition Variables</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_REQUIREMENT__CONDITION_VARIABLES = VERIFIABLE_ELEMENT_FEATURE_COUNT + 5;
+
+	/**
+	 * The number of structural features of the '<em>Abstract Requirement</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_REQUIREMENT_FEATURE_COUNT = VERIFIABLE_ELEMENT_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__ID = ABSTRACT_REQUIREMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__NAME = ABSTRACT_REQUIREMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__DESCRIPTION = ABSTRACT_REQUIREMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Change Uncertainty</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__CHANGE_UNCERTAINTY = ABSTRACT_REQUIREMENT__CHANGE_UNCERTAINTY;
+
+	/**
+	 * The feature id for the '<em><b>Sources</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__SOURCES = ABSTRACT_REQUIREMENT__SOURCES;
+
+	/**
+	 * The feature id for the '<em><b>Origin Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__ORIGIN_DATE = ABSTRACT_REQUIREMENT__ORIGIN_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Schedule Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__SCHEDULE_DATE = ABSTRACT_REQUIREMENT__SCHEDULE_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Stakeholders</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__STAKEHOLDERS = ABSTRACT_REQUIREMENT__STAKEHOLDERS;
+
+	/**
+	 * The feature id for the '<em><b>Evolved To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__EVOLVED_TO = ABSTRACT_REQUIREMENT__EVOLVED_TO;
+
+	/**
+	 * The feature id for the '<em><b>Traced To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__TRACED_TO = ABSTRACT_REQUIREMENT__TRACED_TO;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__CATEGORY = ABSTRACT_REQUIREMENT__CATEGORY;
+
+	/**
+	 * The feature id for the '<em><b>Satisfied By</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__SATISFIED_BY = ABSTRACT_REQUIREMENT__SATISFIED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Agents</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__AGENTS = ABSTRACT_REQUIREMENT__AGENTS;
+
+	/**
+	 * The feature id for the '<em><b>Derived From</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__DERIVED_FROM = ABSTRACT_REQUIREMENT__DERIVED_FROM;
+
+	/**
+	 * The feature id for the '<em><b>Dropped</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__DROPPED = ABSTRACT_REQUIREMENT__DROPPED;
+
+	/**
+	 * The feature id for the '<em><b>Dropping Reason</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__DROPPING_REASON = ABSTRACT_REQUIREMENT__DROPPING_REASON;
+
+	/**
+	 * The feature id for the '<em><b>Satisfaction Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__SATISFACTION_LEVEL = ABSTRACT_REQUIREMENT__SATISFACTION_LEVEL;
+
+	/**
+	 * The feature id for the '<em><b>Rationales</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__RATIONALES = ABSTRACT_REQUIREMENT__RATIONALES;
+
+	/**
+	 * The feature id for the '<em><b>Time Criticality</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__TIME_CRITICALITY = ABSTRACT_REQUIREMENT__TIME_CRITICALITY;
+
+	/**
+	 * The feature id for the '<em><b>Contact Information</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__CONTACT_INFORMATION = ABSTRACT_REQUIREMENT__CONTACT_INFORMATION;
+
+	/**
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__EXPRESSION = ABSTRACT_REQUIREMENT__EXPRESSION;
+
+	/**
+	 * The feature id for the '<em><b>Condition</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__CONDITION = ABSTRACT_REQUIREMENT__CONDITION;
+
+	/**
+	 * The feature id for the '<em><b>Modes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__MODES = ABSTRACT_REQUIREMENT__MODES;
+
+	/**
+	 * The feature id for the '<em><b>Verified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__VERIFIED = ABSTRACT_REQUIREMENT__VERIFIED;
+
+	/**
+	 * The feature id for the '<em><b>Contained Requirements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__CONTAINED_REQUIREMENTS = ABSTRACT_REQUIREMENT__CONTAINED_REQUIREMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Verified By</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__VERIFIED_BY = ABSTRACT_REQUIREMENT__VERIFIED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__GROUP = ABSTRACT_REQUIREMENT__GROUP;
+
+	/**
+	 * The feature id for the '<em><b>Risk</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__RISK = ABSTRACT_REQUIREMENT__RISK;
+
+	/**
+	 * The feature id for the '<em><b>Assigned Variable</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__ASSIGNED_VARIABLE = ABSTRACT_REQUIREMENT__ASSIGNED_VARIABLE;
+
+	/**
+	 * The feature id for the '<em><b>Condition Variables</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__CONDITION_VARIABLES = ABSTRACT_REQUIREMENT__CONDITION_VARIABLES;
+
+	/**
+	 * The feature id for the '<em><b>Refined BY</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__REFINED_BY = ABSTRACT_REQUIREMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Assumptions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__ASSUMPTIONS = ABSTRACT_REQUIREMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Image Assumption</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__IMAGE_ASSUMPTION = ABSTRACT_REQUIREMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Derivations</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__DERIVATIONS = ABSTRACT_REQUIREMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Sub Requirements</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__SUB_REQUIREMENTS = ABSTRACT_REQUIREMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of structural features of the '<em>Requirement</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT_FEATURE_COUNT = ABSTRACT_REQUIREMENT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSUMPTION__ID = ABSTRACT_REQUIREMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSUMPTION__NAME = ABSTRACT_REQUIREMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSUMPTION__DESCRIPTION = ABSTRACT_REQUIREMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Change Uncertainty</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSUMPTION__CHANGE_UNCERTAINTY = ABSTRACT_REQUIREMENT__CHANGE_UNCERTAINTY;
+
+	/**
+	 * The feature id for the '<em><b>Sources</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSUMPTION__SOURCES = ABSTRACT_REQUIREMENT__SOURCES;
+
+	/**
+	 * The feature id for the '<em><b>Origin Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSUMPTION__ORIGIN_DATE = ABSTRACT_REQUIREMENT__ORIGIN_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Schedule Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSUMPTION__SCHEDULE_DATE = ABSTRACT_REQUIREMENT__SCHEDULE_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Stakeholders</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSUMPTION__STAKEHOLDERS = ABSTRACT_REQUIREMENT__STAKEHOLDERS;
+
+	/**
+	 * The feature id for the '<em><b>Evolved To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSUMPTION__EVOLVED_TO = ABSTRACT_REQUIREMENT__EVOLVED_TO;
+
+	/**
+	 * The feature id for the '<em><b>Traced To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSUMPTION__TRACED_TO = ABSTRACT_REQUIREMENT__TRACED_TO;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSUMPTION__CATEGORY = ABSTRACT_REQUIREMENT__CATEGORY;
+
+	/**
+	 * The feature id for the '<em><b>Satisfied By</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSUMPTION__SATISFIED_BY = ABSTRACT_REQUIREMENT__SATISFIED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Agents</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSUMPTION__AGENTS = ABSTRACT_REQUIREMENT__AGENTS;
+
+	/**
+	 * The feature id for the '<em><b>Derived From</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSUMPTION__DERIVED_FROM = ABSTRACT_REQUIREMENT__DERIVED_FROM;
+
+	/**
+	 * The feature id for the '<em><b>Dropped</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSUMPTION__DROPPED = ABSTRACT_REQUIREMENT__DROPPED;
+
+	/**
+	 * The feature id for the '<em><b>Dropping Reason</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSUMPTION__DROPPING_REASON = ABSTRACT_REQUIREMENT__DROPPING_REASON;
+
+	/**
+	 * The feature id for the '<em><b>Satisfaction Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSUMPTION__SATISFACTION_LEVEL = ABSTRACT_REQUIREMENT__SATISFACTION_LEVEL;
+
+	/**
+	 * The feature id for the '<em><b>Rationales</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSUMPTION__RATIONALES = ABSTRACT_REQUIREMENT__RATIONALES;
+
+	/**
+	 * The feature id for the '<em><b>Time Criticality</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSUMPTION__TIME_CRITICALITY = ABSTRACT_REQUIREMENT__TIME_CRITICALITY;
+
+	/**
+	 * The feature id for the '<em><b>Contact Information</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSUMPTION__CONTACT_INFORMATION = ABSTRACT_REQUIREMENT__CONTACT_INFORMATION;
+
+	/**
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSUMPTION__EXPRESSION = ABSTRACT_REQUIREMENT__EXPRESSION;
+
+	/**
+	 * The feature id for the '<em><b>Condition</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSUMPTION__CONDITION = ABSTRACT_REQUIREMENT__CONDITION;
+
+	/**
+	 * The feature id for the '<em><b>Modes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSUMPTION__MODES = ABSTRACT_REQUIREMENT__MODES;
+
+	/**
+	 * The feature id for the '<em><b>Verified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSUMPTION__VERIFIED = ABSTRACT_REQUIREMENT__VERIFIED;
+
+	/**
+	 * The feature id for the '<em><b>Contained Requirements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSUMPTION__CONTAINED_REQUIREMENTS = ABSTRACT_REQUIREMENT__CONTAINED_REQUIREMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Verified By</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSUMPTION__VERIFIED_BY = ABSTRACT_REQUIREMENT__VERIFIED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSUMPTION__GROUP = ABSTRACT_REQUIREMENT__GROUP;
+
+	/**
+	 * The feature id for the '<em><b>Risk</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSUMPTION__RISK = ABSTRACT_REQUIREMENT__RISK;
+
+	/**
+	 * The feature id for the '<em><b>Assigned Variable</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSUMPTION__ASSIGNED_VARIABLE = ABSTRACT_REQUIREMENT__ASSIGNED_VARIABLE;
+
+	/**
+	 * The feature id for the '<em><b>Condition Variables</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSUMPTION__CONDITION_VARIABLES = ABSTRACT_REQUIREMENT__CONDITION_VARIABLES;
+
+	/**
+	 * The feature id for the '<em><b>Requirements</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSUMPTION__REQUIREMENTS = ABSTRACT_REQUIREMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSUMPTION__TYPE = ABSTRACT_REQUIREMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Image Requirement</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSUMPTION__IMAGE_REQUIREMENT = ABSTRACT_REQUIREMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Assumption</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSUMPTION_FEATURE_COUNT = ABSTRACT_REQUIREMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFICATION_ACTIVITY__ID = IDENTIFIED_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFICATION_ACTIVITY__NAME = IDENTIFIED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFICATION_ACTIVITY__DESCRIPTION = IDENTIFIED_ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Requirement</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFICATION_ACTIVITY__REQUIREMENT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Verification Method</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFICATION_ACTIVITY__VERIFICATION_METHOD = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>External Ref</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFICATION_ACTIVITY__EXTERNAL_REF = IDENTIFIED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Passed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFICATION_ACTIVITY__PASSED = IDENTIFIED_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFICATION_ACTIVITY__EXPRESSION = IDENTIFIED_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of structural features of the '<em>Verification Activity</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERIFICATION_ACTIVITY_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERENCED_MODEL_ELEMENTS__ID = IDENTIFIED_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERENCED_MODEL_ELEMENTS__NAME = IDENTIFIED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERENCED_MODEL_ELEMENTS__DESCRIPTION = IDENTIFIED_ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Model Element References</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERENCED_MODEL_ELEMENTS__MODEL_ELEMENT_REFERENCES = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Agregation Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERENCED_MODEL_ELEMENTS__AGREGATION_TYPE = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Referenced Model Elements</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERENCED_MODEL_ELEMENTS_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REF_EXPRESSION_COLLECTED_MODEL_ELEMENTS__ID = REFERENCED_MODEL_ELEMENTS__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REF_EXPRESSION_COLLECTED_MODEL_ELEMENTS__NAME = REFERENCED_MODEL_ELEMENTS__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REF_EXPRESSION_COLLECTED_MODEL_ELEMENTS__DESCRIPTION = REFERENCED_MODEL_ELEMENTS__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Model Element References</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REF_EXPRESSION_COLLECTED_MODEL_ELEMENTS__MODEL_ELEMENT_REFERENCES = REFERENCED_MODEL_ELEMENTS__MODEL_ELEMENT_REFERENCES;
+
+	/**
+	 * The feature id for the '<em><b>Agregation Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REF_EXPRESSION_COLLECTED_MODEL_ELEMENTS__AGREGATION_TYPE = REFERENCED_MODEL_ELEMENTS__AGREGATION_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Query Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REF_EXPRESSION_COLLECTED_MODEL_ELEMENTS__QUERY_EXPRESSION = REFERENCED_MODEL_ELEMENTS_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Ref Expression Collected Model Elements</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REF_EXPRESSION_COLLECTED_MODEL_ELEMENTS_FEATURE_COUNT = REFERENCED_MODEL_ELEMENTS_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REF_USER_SELECTED_MODEL_ELEMENTS__ID = REFERENCED_MODEL_ELEMENTS__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REF_USER_SELECTED_MODEL_ELEMENTS__NAME = REFERENCED_MODEL_ELEMENTS__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REF_USER_SELECTED_MODEL_ELEMENTS__DESCRIPTION = REFERENCED_MODEL_ELEMENTS__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Model Element References</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REF_USER_SELECTED_MODEL_ELEMENTS__MODEL_ELEMENT_REFERENCES = REFERENCED_MODEL_ELEMENTS__MODEL_ELEMENT_REFERENCES;
+
+	/**
+	 * The feature id for the '<em><b>Agregation Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REF_USER_SELECTED_MODEL_ELEMENTS__AGREGATION_TYPE = REFERENCED_MODEL_ELEMENTS__AGREGATION_TYPE;
+
+	/**
+	 * The number of structural features of the '<em>Ref User Selected Model Elements</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REF_USER_SELECTED_MODEL_ELEMENTS_FEATURE_COUNT = REFERENCED_MODEL_ELEMENTS_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_ELEMENT_REFERENCE__ID = IDENTIFIED_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_ELEMENT_REFERENCE__NAME = IDENTIFIED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_ELEMENT_REFERENCE__DESCRIPTION = IDENTIFIED_ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Model Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_ELEMENT_REFERENCE__MODEL_ELEMENT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_ELEMENT_REFERENCE__PARENT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Weight</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_ELEMENT_REFERENCE__WEIGHT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Verifies</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_ELEMENT_REFERENCE__VERIFIES = IDENTIFIED_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Satisfaction Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_ELEMENT_REFERENCE__SATISFACTION_LEVEL = IDENTIFIED_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Reason</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_ELEMENT_REFERENCE__REASON = IDENTIFIED_ELEMENT_FEATURE_COUNT + 5;
+
+	/**
+	 * The number of structural features of the '<em>Model Element Reference</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_ELEMENT_REFERENCE_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__ID = REFERENCED_MODEL_ELEMENTS__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__NAME = REFERENCED_MODEL_ELEMENTS__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__DESCRIPTION = REFERENCED_MODEL_ELEMENTS__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Model Element References</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__MODEL_ELEMENT_REFERENCES = REFERENCED_MODEL_ELEMENTS__MODEL_ELEMENT_REFERENCES;
+
+	/**
+	 * The feature id for the '<em><b>Agregation Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__AGREGATION_TYPE = REFERENCED_MODEL_ELEMENTS__AGREGATION_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Specifications</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__SPECIFICATIONS = REFERENCED_MODEL_ELEMENTS_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Trace</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE_FEATURE_COUNT = REFERENCED_MODEL_ELEMENTS_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE_MODEL_ELEMENT_REFERENCE__ID = MODEL_ELEMENT_REFERENCE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE_MODEL_ELEMENT_REFERENCE__NAME = MODEL_ELEMENT_REFERENCE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE_MODEL_ELEMENT_REFERENCE__DESCRIPTION = MODEL_ELEMENT_REFERENCE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Model Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE_MODEL_ELEMENT_REFERENCE__MODEL_ELEMENT = MODEL_ELEMENT_REFERENCE__MODEL_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE_MODEL_ELEMENT_REFERENCE__PARENT = MODEL_ELEMENT_REFERENCE__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Weight</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE_MODEL_ELEMENT_REFERENCE__WEIGHT = MODEL_ELEMENT_REFERENCE__WEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Verifies</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE_MODEL_ELEMENT_REFERENCE__VERIFIES = MODEL_ELEMENT_REFERENCE__VERIFIES;
+
+	/**
+	 * The feature id for the '<em><b>Satisfaction Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE_MODEL_ELEMENT_REFERENCE__SATISFACTION_LEVEL = MODEL_ELEMENT_REFERENCE__SATISFACTION_LEVEL;
+
+	/**
+	 * The feature id for the '<em><b>Reason</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE_MODEL_ELEMENT_REFERENCE__REASON = MODEL_ELEMENT_REFERENCE__REASON;
+
+	/**
+	 * The feature id for the '<em><b>Nb Requirements</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE_MODEL_ELEMENT_REFERENCE__NB_REQUIREMENTS = MODEL_ELEMENT_REFERENCE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Verification Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE_MODEL_ELEMENT_REFERENCE__VERIFICATION_LEVEL = MODEL_ELEMENT_REFERENCE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Container</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE_MODEL_ELEMENT_REFERENCE__CONTAINER = MODEL_ELEMENT_REFERENCE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Trace Model Element Reference</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE_MODEL_ELEMENT_REFERENCE_FEATURE_COUNT = MODEL_ELEMENT_REFERENCE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_COVERAGE_DATA__ID = IDENTIFIED_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_COVERAGE_DATA__NAME = IDENTIFIED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_COVERAGE_DATA__DESCRIPTION = IDENTIFIED_ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Nb Requirements</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_COVERAGE_DATA__NB_REQUIREMENTS = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Verification Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_COVERAGE_DATA__VERIFICATION_LEVEL = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Requirements Coverage Data</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_COVERAGE_DATA_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE__ID = IDENTIFIED_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE__NAME = IDENTIFIED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE__DESCRIPTION = IDENTIFIED_ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Feature</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE__FEATURE = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE__TYPE = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Variable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REF_DERIVED_MODEL_ELEMENTS__ID = REFERENCED_MODEL_ELEMENTS__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REF_DERIVED_MODEL_ELEMENTS__NAME = REFERENCED_MODEL_ELEMENTS__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REF_DERIVED_MODEL_ELEMENTS__DESCRIPTION = REFERENCED_MODEL_ELEMENTS__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Model Element References</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REF_DERIVED_MODEL_ELEMENTS__MODEL_ELEMENT_REFERENCES = REFERENCED_MODEL_ELEMENTS__MODEL_ELEMENT_REFERENCES;
+
+	/**
+	 * The feature id for the '<em><b>Agregation Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REF_DERIVED_MODEL_ELEMENTS__AGREGATION_TYPE = REFERENCED_MODEL_ELEMENTS__AGREGATION_TYPE;
+
+	/**
+	 * The number of structural features of the '<em>Ref Derived Model Elements</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REF_DERIVED_MODEL_ELEMENTS_FEATURE_COUNT = REFERENCED_MODEL_ELEMENTS_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RATIONALE__ID = IDENTIFIED_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RATIONALE__NAME = IDENTIFIED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RATIONALE__DESCRIPTION = IDENTIFIED_ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Contract</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RATIONALE__CONTRACT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Rationale</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RATIONALE_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_CONTAINER__ID = IDENTIFIED_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_CONTAINER__NAME = IDENTIFIED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_CONTAINER__DESCRIPTION = IDENTIFIED_ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_CONTAINER__TYPE = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Requirement</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_CONTAINER__REQUIREMENT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Requirements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_CONTAINER__REQUIREMENTS = IDENTIFIED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Requirements Container</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENTS_CONTAINER_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.Direction <em>Direction</em>}' enum.
@@ -2990,7 +4050,67 @@ public interface CorePackage extends EPackage {
 	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getDirection()
 	 * @generated
 	 */
-	int DIRECTION = 29;
+	int DIRECTION = 28;
+
+	/**
+	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.AssumptionType <em>Assumption Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.openpeople.rdal.model.core.AssumptionType
+	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getAssumptionType()
+	 * @generated
+	 */
+	int ASSUMPTION_TYPE = 29;
+
+	/**
+	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.RiskKind <em>Risk Kind</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.openpeople.rdal.model.core.RiskKind
+	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getRiskKind()
+	 * @generated
+	 */
+	int RISK_KIND = 30;
+
+	/**
+	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.VerificationMethod <em>Verification Method</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.openpeople.rdal.model.core.VerificationMethod
+	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getVerificationMethod()
+	 * @generated
+	 */
+	int VERIFICATION_METHOD = 31;
+
+	/**
+	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.AgregationType <em>Agregation Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.openpeople.rdal.model.core.AgregationType
+	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getAgregationType()
+	 * @generated
+	 */
+	int AGREGATION_TYPE = 32;
+
+	/**
+	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.VariableType <em>Variable Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.openpeople.rdal.model.core.VariableType
+	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getVariableType()
+	 * @generated
+	 */
+	int VARIABLE_TYPE = 33;
+
+	/**
+	 * The meta object id for the '{@link fr.openpeople.rdal.model.core.ContainerType <em>Container Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.openpeople.rdal.model.core.ContainerType
+	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getContainerType()
+	 * @generated
+	 */
+	int CONTAINER_TYPE = 34;
 
 	/**
 	 * The meta object id for the '<em>Ratio</em>' data type.
@@ -3000,7 +4120,17 @@ public interface CorePackage extends EPackage {
 	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getRatio()
 	 * @generated
 	 */
-	int RATIO = 30;
+	int RATIO = 35;
+
+	/**
+	 * The meta object id for the '<em>Positive Factor</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.lang.Float
+	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getPositiveFactor()
+	 * @generated
+	 */
+	int POSITIVE_FACTOR = 36;
 
 	/**
 	 * The meta object id for the '<em>Date</em>' data type.
@@ -3010,7 +4140,7 @@ public interface CorePackage extends EPackage {
 	 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getDate()
 	 * @generated
 	 */
-	int DATE = 31;
+	int DATE = 37;
 
 
 	/**
@@ -3078,6 +4208,28 @@ public interface CorePackage extends EPackage {
 	EAttribute getContractualElement_SatisfactionLevel();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link fr.openpeople.rdal.model.core.ContractualElement#getRationales <em>Rationales</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Rationales</em>'.
+	 * @see fr.openpeople.rdal.model.core.ContractualElement#getRationales()
+	 * @see #getContractualElement()
+	 * @generated
+	 */
+	EReference getContractualElement_Rationales();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.openpeople.rdal.model.core.ContractualElement#getTimeCriticality <em>Time Criticality</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Time Criticality</em>'.
+	 * @see fr.openpeople.rdal.model.core.ContractualElement#getTimeCriticality()
+	 * @see #getContractualElement()
+	 * @generated
+	 */
+	EAttribute getContractualElement_TimeCriticality();
+
+	/**
 	 * Returns the meta object for the containment reference '{@link fr.openpeople.rdal.model.core.ContractualElement#getChangeUncertainty <em>Change Uncertainty</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3089,15 +4241,48 @@ public interface CorePackage extends EPackage {
 	EReference getContractualElement_ChangeUncertainty();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link fr.openpeople.rdal.model.core.ContractualElement#getContactInformation <em>Contact Information</em>}'.
+	 * Returns the meta object for the reference list '{@link fr.openpeople.rdal.model.core.ContractualElement#getContactInformation <em>Contact Information</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Contact Information</em>'.
+	 * @return the meta object for the reference list '<em>Contact Information</em>'.
 	 * @see fr.openpeople.rdal.model.core.ContractualElement#getContactInformation()
 	 * @see #getContractualElement()
 	 * @generated
 	 */
-	EAttribute getContractualElement_ContactInformation();
+	EReference getContractualElement_ContactInformation();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link fr.openpeople.rdal.model.core.ContractualElement#getExpression <em>Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Expression</em>'.
+	 * @see fr.openpeople.rdal.model.core.ContractualElement#getExpression()
+	 * @see #getContractualElement()
+	 * @generated
+	 */
+	EReference getContractualElement_Expression();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link fr.openpeople.rdal.model.core.ContractualElement#getCondition <em>Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Condition</em>'.
+	 * @see fr.openpeople.rdal.model.core.ContractualElement#getCondition()
+	 * @see #getContractualElement()
+	 * @generated
+	 */
+	EReference getContractualElement_Condition();
+
+	/**
+	 * Returns the meta object for the reference list '{@link fr.openpeople.rdal.model.core.ContractualElement#getModes <em>Modes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Modes</em>'.
+	 * @see fr.openpeople.rdal.model.core.ContractualElement#getModes()
+	 * @see #getContractualElement()
+	 * @generated
+	 */
+	EReference getContractualElement_Modes();
 
 	/**
 	 * Returns the meta object for the attribute '{@link fr.openpeople.rdal.model.core.ContractualElement#getOriginDate <em>Origin Date</em>}'.
@@ -3122,15 +4307,15 @@ public interface CorePackage extends EPackage {
 	EAttribute getContractualElement_ScheduleDate();
 
 	/**
-	 * Returns the meta object for the attribute '{@link fr.openpeople.rdal.model.core.ContractualElement#getRationale <em>Rationale</em>}'.
+	 * Returns the meta object for the reference list '{@link fr.openpeople.rdal.model.core.ContractualElement#getStakeholders <em>Stakeholders</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Rationale</em>'.
-	 * @see fr.openpeople.rdal.model.core.ContractualElement#getRationale()
+	 * @return the meta object for the reference list '<em>Stakeholders</em>'.
+	 * @see fr.openpeople.rdal.model.core.ContractualElement#getStakeholders()
 	 * @see #getContractualElement()
 	 * @generated
 	 */
-	EAttribute getContractualElement_Rationale();
+	EReference getContractualElement_Stakeholders();
 
 	/**
 	 * Returns the meta object for the attribute list '{@link fr.openpeople.rdal.model.core.ContractualElement#getSources <em>Sources</em>}'.
@@ -3144,32 +4329,10 @@ public interface CorePackage extends EPackage {
 	EAttribute getContractualElement_Sources();
 
 	/**
-	 * Returns the meta object for the reference list '{@link fr.openpeople.rdal.model.core.ContractualElement#getStakeHolders <em>Stake Holders</em>}'.
+	 * Returns the meta object for the containment reference list '{@link fr.openpeople.rdal.model.core.ContractualElement#getSatisfiedBy <em>Satisfied By</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Stake Holders</em>'.
-	 * @see fr.openpeople.rdal.model.core.ContractualElement#getStakeHolders()
-	 * @see #getContractualElement()
-	 * @generated
-	 */
-	EReference getContractualElement_StakeHolders();
-
-	/**
-	 * Returns the meta object for the attribute '{@link fr.openpeople.rdal.model.core.ContractualElement#getPriority <em>Priority</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Priority</em>'.
-	 * @see fr.openpeople.rdal.model.core.ContractualElement#getPriority()
-	 * @see #getContractualElement()
-	 * @generated
-	 */
-	EAttribute getContractualElement_Priority();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link fr.openpeople.rdal.model.core.ContractualElement#getSatisfiedBy <em>Satisfied By</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Satisfied By</em>'.
+	 * @return the meta object for the containment reference list '<em>Satisfied By</em>'.
 	 * @see fr.openpeople.rdal.model.core.ContractualElement#getSatisfiedBy()
 	 * @see #getContractualElement()
 	 * @generated
@@ -3177,10 +4340,32 @@ public interface CorePackage extends EPackage {
 	EReference getContractualElement_SatisfiedBy();
 
 	/**
-	 * Returns the meta object for the reference '{@link fr.openpeople.rdal.model.core.ContractualElement#getEvolvedTo <em>Evolved To</em>}'.
+	 * Returns the meta object for the reference list '{@link fr.openpeople.rdal.model.core.ContractualElement#getAgents <em>Agents</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Evolved To</em>'.
+	 * @return the meta object for the reference list '<em>Agents</em>'.
+	 * @see fr.openpeople.rdal.model.core.ContractualElement#getAgents()
+	 * @see #getContractualElement()
+	 * @generated
+	 */
+	EReference getContractualElement_Agents();
+
+	/**
+	 * Returns the meta object for the reference list '{@link fr.openpeople.rdal.model.core.ContractualElement#getDerivedFrom <em>Derived From</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Derived From</em>'.
+	 * @see fr.openpeople.rdal.model.core.ContractualElement#getDerivedFrom()
+	 * @see #getContractualElement()
+	 * @generated
+	 */
+	EReference getContractualElement_DerivedFrom();
+
+	/**
+	 * Returns the meta object for the reference list '{@link fr.openpeople.rdal.model.core.ContractualElement#getEvolvedTo <em>Evolved To</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Evolved To</em>'.
 	 * @see fr.openpeople.rdal.model.core.ContractualElement#getEvolvedTo()
 	 * @see #getContractualElement()
 	 * @generated
@@ -3199,6 +4384,17 @@ public interface CorePackage extends EPackage {
 	EAttribute getContractualElement_Dropped();
 
 	/**
+	 * Returns the meta object for the attribute '{@link fr.openpeople.rdal.model.core.ContractualElement#getDroppingReason <em>Dropping Reason</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Dropping Reason</em>'.
+	 * @see fr.openpeople.rdal.model.core.ContractualElement#getDroppingReason()
+	 * @see #getContractualElement()
+	 * @generated
+	 */
+	EAttribute getContractualElement_DroppingReason();
+
+	/**
 	 * Returns the meta object for the reference list '{@link fr.openpeople.rdal.model.core.ContractualElement#getTracedTo <em>Traced To</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3208,6 +4404,17 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getContractualElement_TracedTo();
+
+	/**
+	 * Returns the meta object for the reference '{@link fr.openpeople.rdal.model.core.ContractualElement#getCategory <em>Category</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Category</em>'.
+	 * @see fr.openpeople.rdal.model.core.ContractualElement#getCategory()
+	 * @see #getContractualElement()
+	 * @generated
+	 */
+	EReference getContractualElement_Category();
 
 	/**
 	 * Returns the meta object for class '{@link fr.openpeople.rdal.model.core.Specification <em>Specification</em>}'.
@@ -3229,6 +4436,17 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSpecification_Specifies();
+
+	/**
+	 * Returns the meta object for the reference list '{@link fr.openpeople.rdal.model.core.Specification#getPrimaryActors <em>Primary Actors</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Primary Actors</em>'.
+	 * @see fr.openpeople.rdal.model.core.Specification#getPrimaryActors()
+	 * @see #getSpecification()
+	 * @generated
+	 */
+	EReference getSpecification_PrimaryActors();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link fr.openpeople.rdal.model.core.Specification#getActors <em>Actors</em>}'.
@@ -3329,17 +4547,6 @@ public interface CorePackage extends EPackage {
 	EReference getAbstractRequirement_ContainedRequirements();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link fr.openpeople.rdal.model.core.AbstractRequirement#getExpression <em>Expression</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Expression</em>'.
-	 * @see fr.openpeople.rdal.model.core.AbstractRequirement#getExpression()
-	 * @see #getAbstractRequirement()
-	 * @generated
-	 */
-	EReference getAbstractRequirement_Expression();
-
-	/**
 	 * Returns the meta object for the container reference '{@link fr.openpeople.rdal.model.core.AbstractRequirement#getGroup <em>Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3362,15 +4569,26 @@ public interface CorePackage extends EPackage {
 	EAttribute getAbstractRequirement_Risk();
 
 	/**
-	 * Returns the meta object for the attribute '{@link fr.openpeople.rdal.model.core.AbstractRequirement#getCompositionCoverage <em>Composition Coverage</em>}'.
+	 * Returns the meta object for the reference '{@link fr.openpeople.rdal.model.core.AbstractRequirement#getAssignedVariable <em>Assigned Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Composition Coverage</em>'.
-	 * @see fr.openpeople.rdal.model.core.AbstractRequirement#getCompositionCoverage()
+	 * @return the meta object for the reference '<em>Assigned Variable</em>'.
+	 * @see fr.openpeople.rdal.model.core.AbstractRequirement#getAssignedVariable()
 	 * @see #getAbstractRequirement()
 	 * @generated
 	 */
-	EAttribute getAbstractRequirement_CompositionCoverage();
+	EReference getAbstractRequirement_AssignedVariable();
+
+	/**
+	 * Returns the meta object for the reference list '{@link fr.openpeople.rdal.model.core.AbstractRequirement#getConditionVariables <em>Condition Variables</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Condition Variables</em>'.
+	 * @see fr.openpeople.rdal.model.core.AbstractRequirement#getConditionVariables()
+	 * @see #getAbstractRequirement()
+	 * @generated
+	 */
+	EReference getAbstractRequirement_ConditionVariables();
 
 	/**
 	 * Returns the meta object for the reference list '{@link fr.openpeople.rdal.model.core.AbstractRequirement#getVerifiedBy <em>Verified By</em>}'.
@@ -3394,26 +4612,15 @@ public interface CorePackage extends EPackage {
 	EClass getRequirement();
 
 	/**
-	 * Returns the meta object for the reference list '{@link fr.openpeople.rdal.model.core.Requirement#getDerivedFrom <em>Derived From</em>}'.
+	 * Returns the meta object for the reference list '{@link fr.openpeople.rdal.model.core.Requirement#getRefinedBY <em>Refined BY</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Derived From</em>'.
-	 * @see fr.openpeople.rdal.model.core.Requirement#getDerivedFrom()
+	 * @return the meta object for the reference list '<em>Refined BY</em>'.
+	 * @see fr.openpeople.rdal.model.core.Requirement#getRefinedBY()
 	 * @see #getRequirement()
 	 * @generated
 	 */
-	EReference getRequirement_DerivedFrom();
-
-	/**
-	 * Returns the meta object for the reference list '{@link fr.openpeople.rdal.model.core.Requirement#getRefinedBy <em>Refined By</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Refined By</em>'.
-	 * @see fr.openpeople.rdal.model.core.Requirement#getRefinedBy()
-	 * @see #getRequirement()
-	 * @generated
-	 */
-	EReference getRequirement_RefinedBy();
+	EReference getRequirement_RefinedBY();
 
 	/**
 	 * Returns the meta object for the reference list '{@link fr.openpeople.rdal.model.core.Requirement#getAssumptions <em>Assumptions</em>}'.
@@ -3427,15 +4634,15 @@ public interface CorePackage extends EPackage {
 	EReference getRequirement_Assumptions();
 
 	/**
-	 * Returns the meta object for the reference '{@link fr.openpeople.rdal.model.core.Requirement#getCategory <em>Category</em>}'.
+	 * Returns the meta object for the reference '{@link fr.openpeople.rdal.model.core.Requirement#getImageAssumption <em>Image Assumption</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Category</em>'.
-	 * @see fr.openpeople.rdal.model.core.Requirement#getCategory()
+	 * @return the meta object for the reference '<em>Image Assumption</em>'.
+	 * @see fr.openpeople.rdal.model.core.Requirement#getImageAssumption()
 	 * @see #getRequirement()
 	 * @generated
 	 */
-	EReference getRequirement_Category();
+	EReference getRequirement_ImageAssumption();
 
 	/**
 	 * Returns the meta object for class '{@link fr.openpeople.rdal.model.core.Assumption <em>Assumption</em>}'.
@@ -3468,6 +4675,17 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAssumption_Type();
+
+	/**
+	 * Returns the meta object for the reference '{@link fr.openpeople.rdal.model.core.Assumption#getImageRequirement <em>Image Requirement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Image Requirement</em>'.
+	 * @see fr.openpeople.rdal.model.core.Assumption#getImageRequirement()
+	 * @see #getAssumption()
+	 * @generated
+	 */
+	EReference getAssumption_ImageRequirement();
 
 	/**
 	 * Returns the meta object for class '{@link fr.openpeople.rdal.model.core.VerificationActivity <em>Verification Activity</em>}'.
@@ -3513,6 +4731,28 @@ public interface CorePackage extends EPackage {
 	EReference getVerificationActivity_ExternalRef();
 
 	/**
+	 * Returns the meta object for the attribute '{@link fr.openpeople.rdal.model.core.VerificationActivity#isPassed <em>Passed</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Passed</em>'.
+	 * @see fr.openpeople.rdal.model.core.VerificationActivity#isPassed()
+	 * @see #getVerificationActivity()
+	 * @generated
+	 */
+	EAttribute getVerificationActivity_Passed();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link fr.openpeople.rdal.model.core.VerificationActivity#getExpression <em>Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Expression</em>'.
+	 * @see fr.openpeople.rdal.model.core.VerificationActivity#getExpression()
+	 * @see #getVerificationActivity()
+	 * @generated
+	 */
+	EReference getVerificationActivity_Expression();
+
+	/**
 	 * Returns the meta object for the reference list '{@link fr.openpeople.rdal.model.core.Requirement#getDerivations <em>Derivations</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3522,6 +4762,17 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getRequirement_Derivations();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link fr.openpeople.rdal.model.core.Requirement#getSubRequirements <em>Sub Requirements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Sub Requirements</em>'.
+	 * @see fr.openpeople.rdal.model.core.Requirement#getSubRequirements()
+	 * @see #getRequirement()
+	 * @generated
+	 */
+	EReference getRequirement_SubRequirements();
 
 	/**
 	 * Returns the meta object for class '{@link fr.openpeople.rdal.model.core.StakeHolder <em>Stake Holder</em>}'.
@@ -3543,6 +4794,17 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getStakeHolder_ContractualElements();
+
+	/**
+	 * Returns the meta object for the reference list '{@link fr.openpeople.rdal.model.core.StakeHolder#getRationales <em>Rationales</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Rationales</em>'.
+	 * @see fr.openpeople.rdal.model.core.StakeHolder#getRationales()
+	 * @see #getStakeHolder()
+	 * @generated
+	 */
+	EReference getStakeHolder_Rationales();
 
 	/**
 	 * Returns the meta object for class '{@link fr.openpeople.rdal.model.core.RequirementsGroup <em>Requirements Group</em>}'.
@@ -3575,28 +4837,6 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getRequirementsGroup_Specification();
-
-	/**
-	 * Returns the meta object for the reference list '{@link fr.openpeople.rdal.model.core.RequirementsGroup#getSubGroups <em>Sub Groups</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Sub Groups</em>'.
-	 * @see fr.openpeople.rdal.model.core.RequirementsGroup#getSubGroups()
-	 * @see #getRequirementsGroup()
-	 * @generated
-	 */
-	EReference getRequirementsGroup_SubGroups();
-
-	/**
-	 * Returns the meta object for the reference '{@link fr.openpeople.rdal.model.core.RequirementsGroup#getParent <em>Parent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Parent</em>'.
-	 * @see fr.openpeople.rdal.model.core.RequirementsGroup#getParent()
-	 * @see #getRequirementsGroup()
-	 * @generated
-	 */
-	EReference getRequirementsGroup_Parent();
 
 	/**
 	 * Returns the meta object for class '{@link fr.openpeople.rdal.model.core.RefExpressionCollectedModelElements <em>Ref Expression Collected Model Elements</em>}'.
@@ -3651,14 +4891,15 @@ public interface CorePackage extends EPackage {
 	EReference getReferencedModelElements_ModelElementReferences();
 
 	/**
-	 * Returns the meta object for class '{@link fr.openpeople.rdal.model.core.ContractReferencedModelElements <em>Contract Referenced Model Elements</em>}'.
+	 * Returns the meta object for the attribute '{@link fr.openpeople.rdal.model.core.ReferencedModelElements#getAgregationType <em>Agregation Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Contract Referenced Model Elements</em>'.
-	 * @see fr.openpeople.rdal.model.core.ContractReferencedModelElements
+	 * @return the meta object for the attribute '<em>Agregation Type</em>'.
+	 * @see fr.openpeople.rdal.model.core.ReferencedModelElements#getAgregationType()
+	 * @see #getReferencedModelElements()
 	 * @generated
 	 */
-	EClass getContractReferencedModelElements();
+	EAttribute getReferencedModelElements_AgregationType();
 
 	/**
 	 * Returns the meta object for class '{@link fr.openpeople.rdal.model.core.ModelElementReference <em>Model Element Reference</em>}'.
@@ -3693,6 +4934,17 @@ public interface CorePackage extends EPackage {
 	EAttribute getModelElementReference_Verifies();
 
 	/**
+	 * Returns the meta object for the attribute '{@link fr.openpeople.rdal.model.core.ModelElementReference#getSatisfactionLevel <em>Satisfaction Level</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Satisfaction Level</em>'.
+	 * @see fr.openpeople.rdal.model.core.ModelElementReference#getSatisfactionLevel()
+	 * @see #getModelElementReference()
+	 * @generated
+	 */
+	EAttribute getModelElementReference_SatisfactionLevel();
+
+	/**
 	 * Returns the meta object for the attribute '{@link fr.openpeople.rdal.model.core.ModelElementReference#getReason <em>Reason</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3713,6 +4965,17 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getModelElementReference_Parent();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.openpeople.rdal.model.core.ModelElementReference#getWeight <em>Weight</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Weight</em>'.
+	 * @see fr.openpeople.rdal.model.core.ModelElementReference#getWeight()
+	 * @see #getModelElementReference()
+	 * @generated
+	 */
+	EAttribute getModelElementReference_Weight();
 
 	/**
 	 * Returns the meta object for class '{@link fr.openpeople.rdal.model.core.Trace <em>Trace</em>}'.
@@ -3789,6 +5052,112 @@ public interface CorePackage extends EPackage {
 	EAttribute getRequirementsCoverageData_VerificationLevel();
 
 	/**
+	 * Returns the meta object for class '{@link fr.openpeople.rdal.model.core.Variable <em>Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Variable</em>'.
+	 * @see fr.openpeople.rdal.model.core.Variable
+	 * @generated
+	 */
+	EClass getVariable();
+
+	/**
+	 * Returns the meta object for the reference '{@link fr.openpeople.rdal.model.core.Variable#getFeature <em>Feature</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Feature</em>'.
+	 * @see fr.openpeople.rdal.model.core.Variable#getFeature()
+	 * @see #getVariable()
+	 * @generated
+	 */
+	EReference getVariable_Feature();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.openpeople.rdal.model.core.Variable#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see fr.openpeople.rdal.model.core.Variable#getType()
+	 * @see #getVariable()
+	 * @generated
+	 */
+	EAttribute getVariable_Type();
+
+	/**
+	 * Returns the meta object for class '{@link fr.openpeople.rdal.model.core.RefDerivedModelElements <em>Ref Derived Model Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Ref Derived Model Elements</em>'.
+	 * @see fr.openpeople.rdal.model.core.RefDerivedModelElements
+	 * @generated
+	 */
+	EClass getRefDerivedModelElements();
+
+	/**
+	 * Returns the meta object for class '{@link fr.openpeople.rdal.model.core.Rationale <em>Rationale</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Rationale</em>'.
+	 * @see fr.openpeople.rdal.model.core.Rationale
+	 * @generated
+	 */
+	EClass getRationale();
+
+	/**
+	 * Returns the meta object for the container reference '{@link fr.openpeople.rdal.model.core.Rationale#getContract <em>Contract</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Contract</em>'.
+	 * @see fr.openpeople.rdal.model.core.Rationale#getContract()
+	 * @see #getRationale()
+	 * @generated
+	 */
+	EReference getRationale_Contract();
+
+	/**
+	 * Returns the meta object for class '{@link fr.openpeople.rdal.model.core.RequirementsContainer <em>Requirements Container</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Requirements Container</em>'.
+	 * @see fr.openpeople.rdal.model.core.RequirementsContainer
+	 * @generated
+	 */
+	EClass getRequirementsContainer();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.openpeople.rdal.model.core.RequirementsContainer#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see fr.openpeople.rdal.model.core.RequirementsContainer#getType()
+	 * @see #getRequirementsContainer()
+	 * @generated
+	 */
+	EAttribute getRequirementsContainer_Type();
+
+	/**
+	 * Returns the meta object for the reference '{@link fr.openpeople.rdal.model.core.RequirementsContainer#getRequirement <em>Requirement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Requirement</em>'.
+	 * @see fr.openpeople.rdal.model.core.RequirementsContainer#getRequirement()
+	 * @see #getRequirementsContainer()
+	 * @generated
+	 */
+	EReference getRequirementsContainer_Requirement();
+
+	/**
+	 * Returns the meta object for the reference list '{@link fr.openpeople.rdal.model.core.RequirementsContainer#getRequirements <em>Requirements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Requirements</em>'.
+	 * @see fr.openpeople.rdal.model.core.RequirementsContainer#getRequirements()
+	 * @see #getRequirementsContainer()
+	 * @generated
+	 */
+	EReference getRequirementsContainer_Requirements();
+
+	/**
 	 * Returns the meta object for class '{@link fr.openpeople.rdal.model.core.Goal <em>Goal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3797,17 +5166,6 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 */
 	EClass getGoal();
-
-	/**
-	 * Returns the meta object for the reference list '{@link fr.openpeople.rdal.model.core.Goal#getAchievedBy <em>Achieved By</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Achieved By</em>'.
-	 * @see fr.openpeople.rdal.model.core.Goal#getAchievedBy()
-	 * @see #getGoal()
-	 * @generated
-	 */
-	EReference getGoal_AchievedBy();
 
 	/**
 	 * Returns the meta object for the reference list '{@link fr.openpeople.rdal.model.core.Goal#getConflicts <em>Conflicts</em>}'.
@@ -3819,6 +5177,17 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getGoal_Conflicts();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.openpeople.rdal.model.core.Goal#getPriority <em>Priority</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Priority</em>'.
+	 * @see fr.openpeople.rdal.model.core.Goal#getPriority()
+	 * @see #getGoal()
+	 * @generated
+	 */
+	EAttribute getGoal_Priority();
 
 	/**
 	 * Returns the meta object for class '{@link fr.openpeople.rdal.model.core.VerifiableElement <em>Verifiable Element</em>}'.
@@ -3896,17 +5265,6 @@ public interface CorePackage extends EPackage {
 	EAttribute getUncertainty_Precedence();
 
 	/**
-	 * Returns the meta object for the attribute '{@link fr.openpeople.rdal.model.core.Uncertainty#getTimeCriticality <em>Time Criticality</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Time Criticality</em>'.
-	 * @see fr.openpeople.rdal.model.core.Uncertainty#getTimeCriticality()
-	 * @see #getUncertainty()
-	 * @generated
-	 */
-	EAttribute getUncertainty_TimeCriticality();
-
-	/**
 	 * Returns the meta object for the attribute '{@link fr.openpeople.rdal.model.core.Uncertainty#getRiskIndex <em>Risk Index</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3961,15 +5319,15 @@ public interface CorePackage extends EPackage {
 	EReference getSystemOverview_Contexts();
 
 	/**
-	 * Returns the meta object for the reference list '{@link fr.openpeople.rdal.model.core.SystemOverview#getActors <em>Actors</em>}'.
+	 * Returns the meta object for the containment reference list '{@link fr.openpeople.rdal.model.core.SystemOverview#getSystemBoundary <em>System Boundary</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Actors</em>'.
-	 * @see fr.openpeople.rdal.model.core.SystemOverview#getActors()
+	 * @return the meta object for the containment reference list '<em>System Boundary</em>'.
+	 * @see fr.openpeople.rdal.model.core.SystemOverview#getSystemBoundary()
 	 * @see #getSystemOverview()
 	 * @generated
 	 */
-	EReference getSystemOverview_Actors();
+	EReference getSystemOverview_SystemBoundary();
 
 	/**
 	 * Returns the meta object for the reference '{@link fr.openpeople.rdal.model.core.SystemOverview#getSystemToBe <em>System To Be</em>}'.
@@ -4037,6 +5395,39 @@ public interface CorePackage extends EPackage {
 	EReference getSystemContext_GlobalSystem();
 
 	/**
+	 * Returns the meta object for the reference list '{@link fr.openpeople.rdal.model.core.SystemContext#getActors <em>Actors</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Actors</em>'.
+	 * @see fr.openpeople.rdal.model.core.SystemContext#getActors()
+	 * @see #getSystemContext()
+	 * @generated
+	 */
+	EReference getSystemContext_Actors();
+
+	/**
+	 * Returns the meta object for the reference list '{@link fr.openpeople.rdal.model.core.SystemContext#getSystemBoundary <em>System Boundary</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>System Boundary</em>'.
+	 * @see fr.openpeople.rdal.model.core.SystemContext#getSystemBoundary()
+	 * @see #getSystemContext()
+	 * @generated
+	 */
+	EReference getSystemContext_SystemBoundary();
+
+	/**
+	 * Returns the meta object for the reference list '{@link fr.openpeople.rdal.model.core.SystemContext#getSystemModes <em>System Modes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>System Modes</em>'.
+	 * @see fr.openpeople.rdal.model.core.SystemContext#getSystemModes()
+	 * @see #getSystemContext()
+	 * @generated
+	 */
+	EReference getSystemContext_SystemModes();
+
+	/**
 	 * Returns the meta object for class '{@link fr.openpeople.rdal.model.core.Actor <em>Actor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4045,6 +5436,17 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 */
 	EClass getActor();
+
+	/**
+	 * Returns the meta object for the reference list '{@link fr.openpeople.rdal.model.core.Actor#getImages <em>Images</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Images</em>'.
+	 * @see fr.openpeople.rdal.model.core.Actor#getImages()
+	 * @see #getActor()
+	 * @generated
+	 */
+	EReference getActor_Images();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link fr.openpeople.rdal.model.core.Actor#getInteractions <em>Interactions</em>}'.
@@ -4058,6 +5460,39 @@ public interface CorePackage extends EPackage {
 	EReference getActor_Interactions();
 
 	/**
+	 * Returns the meta object for the attribute '{@link fr.openpeople.rdal.model.core.Actor#getAddress <em>Address</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Address</em>'.
+	 * @see fr.openpeople.rdal.model.core.Actor#getAddress()
+	 * @see #getActor()
+	 * @generated
+	 */
+	EAttribute getActor_Address();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.openpeople.rdal.model.core.Actor#getEmail <em>Email</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Email</em>'.
+	 * @see fr.openpeople.rdal.model.core.Actor#getEmail()
+	 * @see #getActor()
+	 * @generated
+	 */
+	EAttribute getActor_Email();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.openpeople.rdal.model.core.Actor#getPhoneNumber <em>Phone Number</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Phone Number</em>'.
+	 * @see fr.openpeople.rdal.model.core.Actor#getPhoneNumber()
+	 * @see #getActor()
+	 * @generated
+	 */
+	EAttribute getActor_PhoneNumber();
+
+	/**
 	 * Returns the meta object for class '{@link fr.openpeople.rdal.model.core.Interaction <em>Interaction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4066,6 +5501,17 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 */
 	EClass getInteraction();
+
+	/**
+	 * Returns the meta object for the reference '{@link fr.openpeople.rdal.model.core.Interaction#getEntity <em>Entity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Entity</em>'.
+	 * @see fr.openpeople.rdal.model.core.Interaction#getEntity()
+	 * @see #getInteraction()
+	 * @generated
+	 */
+	EReference getInteraction_Entity();
 
 	/**
 	 * Returns the meta object for the attribute '{@link fr.openpeople.rdal.model.core.Interaction#getDirection <em>Direction</em>}'.
@@ -4077,17 +5523,6 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getInteraction_Direction();
-
-	/**
-	 * Returns the meta object for the reference '{@link fr.openpeople.rdal.model.core.Interaction#getEnd <em>End</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>End</em>'.
-	 * @see fr.openpeople.rdal.model.core.Interaction#getEnd()
-	 * @see #getInteraction()
-	 * @generated
-	 */
-	EReference getInteraction_End();
 
 	/**
 	 * Returns the meta object for class '{@link fr.openpeople.rdal.model.core.Conflict <em>Conflict</em>}'.
@@ -4122,46 +5557,6 @@ public interface CorePackage extends EPackage {
 	EReference getConflict_Goals();
 
 	/**
-	 * Returns the meta object for enum '{@link fr.openpeople.rdal.model.core.EnumRiskKind <em>Enum Risk Kind</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Enum Risk Kind</em>'.
-	 * @see fr.openpeople.rdal.model.core.EnumRiskKind
-	 * @generated
-	 */
-	EEnum getEnumRiskKind();
-
-	/**
-	 * Returns the meta object for enum '{@link fr.openpeople.rdal.model.core.EnumVerificationMethod <em>Enum Verification Method</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Enum Verification Method</em>'.
-	 * @see fr.openpeople.rdal.model.core.EnumVerificationMethod
-	 * @generated
-	 */
-	EEnum getEnumVerificationMethod();
-
-	/**
-	 * Returns the meta object for enum '{@link fr.openpeople.rdal.model.core.EnumAssumptionType <em>Enum Assumption Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Enum Assumption Type</em>'.
-	 * @see fr.openpeople.rdal.model.core.EnumAssumptionType
-	 * @generated
-	 */
-	EEnum getEnumAssumptionType();
-
-	/**
-	 * Returns the meta object for enum '{@link fr.openpeople.rdal.model.core.EnumFunctionalRequirementType <em>Enum Functional Requirement Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Enum Functional Requirement Type</em>'.
-	 * @see fr.openpeople.rdal.model.core.EnumFunctionalRequirementType
-	 * @generated
-	 */
-	EEnum getEnumFunctionalRequirementType();
-
-	/**
 	 * Returns the meta object for enum '{@link fr.openpeople.rdal.model.core.Direction <em>Direction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4170,6 +5565,66 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getDirection();
+
+	/**
+	 * Returns the meta object for enum '{@link fr.openpeople.rdal.model.core.AssumptionType <em>Assumption Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Assumption Type</em>'.
+	 * @see fr.openpeople.rdal.model.core.AssumptionType
+	 * @generated
+	 */
+	EEnum getAssumptionType();
+
+	/**
+	 * Returns the meta object for enum '{@link fr.openpeople.rdal.model.core.RiskKind <em>Risk Kind</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Risk Kind</em>'.
+	 * @see fr.openpeople.rdal.model.core.RiskKind
+	 * @generated
+	 */
+	EEnum getRiskKind();
+
+	/**
+	 * Returns the meta object for enum '{@link fr.openpeople.rdal.model.core.VerificationMethod <em>Verification Method</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Verification Method</em>'.
+	 * @see fr.openpeople.rdal.model.core.VerificationMethod
+	 * @generated
+	 */
+	EEnum getVerificationMethod();
+
+	/**
+	 * Returns the meta object for enum '{@link fr.openpeople.rdal.model.core.AgregationType <em>Agregation Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Agregation Type</em>'.
+	 * @see fr.openpeople.rdal.model.core.AgregationType
+	 * @generated
+	 */
+	EEnum getAgregationType();
+
+	/**
+	 * Returns the meta object for enum '{@link fr.openpeople.rdal.model.core.VariableType <em>Variable Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Variable Type</em>'.
+	 * @see fr.openpeople.rdal.model.core.VariableType
+	 * @generated
+	 */
+	EEnum getVariableType();
+
+	/**
+	 * Returns the meta object for enum '{@link fr.openpeople.rdal.model.core.ContainerType <em>Container Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Container Type</em>'.
+	 * @see fr.openpeople.rdal.model.core.ContainerType
+	 * @generated
+	 */
+	EEnum getContainerType();
 
 	/**
 	 * Returns the meta object for data type '{@link java.lang.Float <em>Ratio</em>}'.
@@ -4182,6 +5637,17 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getRatio();
+
+	/**
+	 * Returns the meta object for data type '{@link java.lang.Float <em>Positive Factor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Positive Factor</em>'.
+	 * @see java.lang.Float
+	 * @model instanceClass="java.lang.Float"
+	 * @generated
+	 */
+	EDataType getPositiveFactor();
 
 	/**
 	 * Returns the meta object for data type '{@link java.util.Date <em>Date</em>}'.
@@ -4269,6 +5735,22 @@ public interface CorePackage extends EPackage {
 		EAttribute CONTRACTUAL_ELEMENT__SATISFACTION_LEVEL = eINSTANCE.getContractualElement_SatisfactionLevel();
 
 		/**
+		 * The meta object literal for the '<em><b>Rationales</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONTRACTUAL_ELEMENT__RATIONALES = eINSTANCE.getContractualElement_Rationales();
+
+		/**
+		 * The meta object literal for the '<em><b>Time Criticality</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONTRACTUAL_ELEMENT__TIME_CRITICALITY = eINSTANCE.getContractualElement_TimeCriticality();
+
+		/**
 		 * The meta object literal for the '<em><b>Change Uncertainty</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4277,12 +5759,36 @@ public interface CorePackage extends EPackage {
 		EReference CONTRACTUAL_ELEMENT__CHANGE_UNCERTAINTY = eINSTANCE.getContractualElement_ChangeUncertainty();
 
 		/**
-		 * The meta object literal for the '<em><b>Contact Information</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Contact Information</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CONTRACTUAL_ELEMENT__CONTACT_INFORMATION = eINSTANCE.getContractualElement_ContactInformation();
+		EReference CONTRACTUAL_ELEMENT__CONTACT_INFORMATION = eINSTANCE.getContractualElement_ContactInformation();
+
+		/**
+		 * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONTRACTUAL_ELEMENT__EXPRESSION = eINSTANCE.getContractualElement_Expression();
+
+		/**
+		 * The meta object literal for the '<em><b>Condition</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONTRACTUAL_ELEMENT__CONDITION = eINSTANCE.getContractualElement_Condition();
+
+		/**
+		 * The meta object literal for the '<em><b>Modes</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONTRACTUAL_ELEMENT__MODES = eINSTANCE.getContractualElement_Modes();
 
 		/**
 		 * The meta object literal for the '<em><b>Origin Date</b></em>' attribute feature.
@@ -4301,12 +5807,12 @@ public interface CorePackage extends EPackage {
 		EAttribute CONTRACTUAL_ELEMENT__SCHEDULE_DATE = eINSTANCE.getContractualElement_ScheduleDate();
 
 		/**
-		 * The meta object literal for the '<em><b>Rationale</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Stakeholders</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CONTRACTUAL_ELEMENT__RATIONALE = eINSTANCE.getContractualElement_Rationale();
+		EReference CONTRACTUAL_ELEMENT__STAKEHOLDERS = eINSTANCE.getContractualElement_Stakeholders();
 
 		/**
 		 * The meta object literal for the '<em><b>Sources</b></em>' attribute list feature.
@@ -4317,23 +5823,7 @@ public interface CorePackage extends EPackage {
 		EAttribute CONTRACTUAL_ELEMENT__SOURCES = eINSTANCE.getContractualElement_Sources();
 
 		/**
-		 * The meta object literal for the '<em><b>Stake Holders</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONTRACTUAL_ELEMENT__STAKE_HOLDERS = eINSTANCE.getContractualElement_StakeHolders();
-
-		/**
-		 * The meta object literal for the '<em><b>Priority</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CONTRACTUAL_ELEMENT__PRIORITY = eINSTANCE.getContractualElement_Priority();
-
-		/**
-		 * The meta object literal for the '<em><b>Satisfied By</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Satisfied By</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -4341,7 +5831,23 @@ public interface CorePackage extends EPackage {
 		EReference CONTRACTUAL_ELEMENT__SATISFIED_BY = eINSTANCE.getContractualElement_SatisfiedBy();
 
 		/**
-		 * The meta object literal for the '<em><b>Evolved To</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Agents</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONTRACTUAL_ELEMENT__AGENTS = eINSTANCE.getContractualElement_Agents();
+
+		/**
+		 * The meta object literal for the '<em><b>Derived From</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONTRACTUAL_ELEMENT__DERIVED_FROM = eINSTANCE.getContractualElement_DerivedFrom();
+
+		/**
+		 * The meta object literal for the '<em><b>Evolved To</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -4357,12 +5863,28 @@ public interface CorePackage extends EPackage {
 		EAttribute CONTRACTUAL_ELEMENT__DROPPED = eINSTANCE.getContractualElement_Dropped();
 
 		/**
+		 * The meta object literal for the '<em><b>Dropping Reason</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONTRACTUAL_ELEMENT__DROPPING_REASON = eINSTANCE.getContractualElement_DroppingReason();
+
+		/**
 		 * The meta object literal for the '<em><b>Traced To</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference CONTRACTUAL_ELEMENT__TRACED_TO = eINSTANCE.getContractualElement_TracedTo();
+
+		/**
+		 * The meta object literal for the '<em><b>Category</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONTRACTUAL_ELEMENT__CATEGORY = eINSTANCE.getContractualElement_Category();
 
 		/**
 		 * The meta object literal for the '{@link fr.openpeople.rdal.model.core.impl.SpecificationImpl <em>Specification</em>}' class.
@@ -4381,6 +5903,14 @@ public interface CorePackage extends EPackage {
 		 * @generated
 		 */
 		EReference SPECIFICATION__SPECIFIES = eINSTANCE.getSpecification_Specifies();
+
+		/**
+		 * The meta object literal for the '<em><b>Primary Actors</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SPECIFICATION__PRIMARY_ACTORS = eINSTANCE.getSpecification_PrimaryActors();
 
 		/**
 		 * The meta object literal for the '<em><b>Actors</b></em>' containment reference list feature.
@@ -4457,14 +5987,6 @@ public interface CorePackage extends EPackage {
 		EReference ABSTRACT_REQUIREMENT__CONTAINED_REQUIREMENTS = eINSTANCE.getAbstractRequirement_ContainedRequirements();
 
 		/**
-		 * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ABSTRACT_REQUIREMENT__EXPRESSION = eINSTANCE.getAbstractRequirement_Expression();
-
-		/**
 		 * The meta object literal for the '<em><b>Group</b></em>' container reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4481,12 +6003,20 @@ public interface CorePackage extends EPackage {
 		EAttribute ABSTRACT_REQUIREMENT__RISK = eINSTANCE.getAbstractRequirement_Risk();
 
 		/**
-		 * The meta object literal for the '<em><b>Composition Coverage</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Assigned Variable</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ABSTRACT_REQUIREMENT__COMPOSITION_COVERAGE = eINSTANCE.getAbstractRequirement_CompositionCoverage();
+		EReference ABSTRACT_REQUIREMENT__ASSIGNED_VARIABLE = eINSTANCE.getAbstractRequirement_AssignedVariable();
+
+		/**
+		 * The meta object literal for the '<em><b>Condition Variables</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ABSTRACT_REQUIREMENT__CONDITION_VARIABLES = eINSTANCE.getAbstractRequirement_ConditionVariables();
 
 		/**
 		 * The meta object literal for the '<em><b>Verified By</b></em>' reference list feature.
@@ -4507,20 +6037,12 @@ public interface CorePackage extends EPackage {
 		EClass REQUIREMENT = eINSTANCE.getRequirement();
 
 		/**
-		 * The meta object literal for the '<em><b>Derived From</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Refined BY</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference REQUIREMENT__DERIVED_FROM = eINSTANCE.getRequirement_DerivedFrom();
-
-		/**
-		 * The meta object literal for the '<em><b>Refined By</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference REQUIREMENT__REFINED_BY = eINSTANCE.getRequirement_RefinedBy();
+		EReference REQUIREMENT__REFINED_BY = eINSTANCE.getRequirement_RefinedBY();
 
 		/**
 		 * The meta object literal for the '<em><b>Assumptions</b></em>' reference list feature.
@@ -4531,12 +6053,12 @@ public interface CorePackage extends EPackage {
 		EReference REQUIREMENT__ASSUMPTIONS = eINSTANCE.getRequirement_Assumptions();
 
 		/**
-		 * The meta object literal for the '<em><b>Category</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Image Assumption</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference REQUIREMENT__CATEGORY = eINSTANCE.getRequirement_Category();
+		EReference REQUIREMENT__IMAGE_ASSUMPTION = eINSTANCE.getRequirement_ImageAssumption();
 
 		/**
 		 * The meta object literal for the '{@link fr.openpeople.rdal.model.core.impl.AssumptionImpl <em>Assumption</em>}' class.
@@ -4563,6 +6085,14 @@ public interface CorePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ASSUMPTION__TYPE = eINSTANCE.getAssumption_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Image Requirement</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ASSUMPTION__IMAGE_REQUIREMENT = eINSTANCE.getAssumption_ImageRequirement();
 
 		/**
 		 * The meta object literal for the '{@link fr.openpeople.rdal.model.core.impl.VerificationActivityImpl <em>Verification Activity</em>}' class.
@@ -4599,12 +6129,36 @@ public interface CorePackage extends EPackage {
 		EReference VERIFICATION_ACTIVITY__EXTERNAL_REF = eINSTANCE.getVerificationActivity_ExternalRef();
 
 		/**
+		 * The meta object literal for the '<em><b>Passed</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VERIFICATION_ACTIVITY__PASSED = eINSTANCE.getVerificationActivity_Passed();
+
+		/**
+		 * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VERIFICATION_ACTIVITY__EXPRESSION = eINSTANCE.getVerificationActivity_Expression();
+
+		/**
 		 * The meta object literal for the '<em><b>Derivations</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference REQUIREMENT__DERIVATIONS = eINSTANCE.getRequirement_Derivations();
+
+		/**
+		 * The meta object literal for the '<em><b>Sub Requirements</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REQUIREMENT__SUB_REQUIREMENTS = eINSTANCE.getRequirement_SubRequirements();
 
 		/**
 		 * The meta object literal for the '{@link fr.openpeople.rdal.model.core.impl.StakeHolderImpl <em>Stake Holder</em>}' class.
@@ -4623,6 +6177,14 @@ public interface CorePackage extends EPackage {
 		 * @generated
 		 */
 		EReference STAKE_HOLDER__CONTRACTUAL_ELEMENTS = eINSTANCE.getStakeHolder_ContractualElements();
+
+		/**
+		 * The meta object literal for the '<em><b>Rationales</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STAKE_HOLDER__RATIONALES = eINSTANCE.getStakeHolder_Rationales();
 
 		/**
 		 * The meta object literal for the '{@link fr.openpeople.rdal.model.core.impl.RequirementsGroupImpl <em>Requirements Group</em>}' class.
@@ -4649,22 +6211,6 @@ public interface CorePackage extends EPackage {
 		 * @generated
 		 */
 		EReference REQUIREMENTS_GROUP__SPECIFICATION = eINSTANCE.getRequirementsGroup_Specification();
-
-		/**
-		 * The meta object literal for the '<em><b>Sub Groups</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference REQUIREMENTS_GROUP__SUB_GROUPS = eINSTANCE.getRequirementsGroup_SubGroups();
-
-		/**
-		 * The meta object literal for the '<em><b>Parent</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference REQUIREMENTS_GROUP__PARENT = eINSTANCE.getRequirementsGroup_Parent();
 
 		/**
 		 * The meta object literal for the '{@link fr.openpeople.rdal.model.core.impl.RefExpressionCollectedModelElementsImpl <em>Ref Expression Collected Model Elements</em>}' class.
@@ -4713,14 +6259,12 @@ public interface CorePackage extends EPackage {
 		EReference REFERENCED_MODEL_ELEMENTS__MODEL_ELEMENT_REFERENCES = eINSTANCE.getReferencedModelElements_ModelElementReferences();
 
 		/**
-		 * The meta object literal for the '{@link fr.openpeople.rdal.model.core.impl.ContractReferencedModelElementsImpl <em>Contract Referenced Model Elements</em>}' class.
+		 * The meta object literal for the '<em><b>Agregation Type</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see fr.openpeople.rdal.model.core.impl.ContractReferencedModelElementsImpl
-		 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getContractReferencedModelElements()
 		 * @generated
 		 */
-		EClass CONTRACT_REFERENCED_MODEL_ELEMENTS = eINSTANCE.getContractReferencedModelElements();
+		EAttribute REFERENCED_MODEL_ELEMENTS__AGREGATION_TYPE = eINSTANCE.getReferencedModelElements_AgregationType();
 
 		/**
 		 * The meta object literal for the '{@link fr.openpeople.rdal.model.core.impl.ModelElementReferenceImpl <em>Model Element Reference</em>}' class.
@@ -4749,6 +6293,14 @@ public interface CorePackage extends EPackage {
 		EAttribute MODEL_ELEMENT_REFERENCE__VERIFIES = eINSTANCE.getModelElementReference_Verifies();
 
 		/**
+		 * The meta object literal for the '<em><b>Satisfaction Level</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MODEL_ELEMENT_REFERENCE__SATISFACTION_LEVEL = eINSTANCE.getModelElementReference_SatisfactionLevel();
+
+		/**
 		 * The meta object literal for the '<em><b>Reason</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4763,6 +6315,14 @@ public interface CorePackage extends EPackage {
 		 * @generated
 		 */
 		EReference MODEL_ELEMENT_REFERENCE__PARENT = eINSTANCE.getModelElementReference_Parent();
+
+		/**
+		 * The meta object literal for the '<em><b>Weight</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MODEL_ELEMENT_REFERENCE__WEIGHT = eINSTANCE.getModelElementReference_Weight();
 
 		/**
 		 * The meta object literal for the '{@link fr.openpeople.rdal.model.core.impl.TraceImpl <em>Trace</em>}' class.
@@ -4827,6 +6387,94 @@ public interface CorePackage extends EPackage {
 		EAttribute REQUIREMENTS_COVERAGE_DATA__VERIFICATION_LEVEL = eINSTANCE.getRequirementsCoverageData_VerificationLevel();
 
 		/**
+		 * The meta object literal for the '{@link fr.openpeople.rdal.model.core.impl.VariableImpl <em>Variable</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fr.openpeople.rdal.model.core.impl.VariableImpl
+		 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getVariable()
+		 * @generated
+		 */
+		EClass VARIABLE = eINSTANCE.getVariable();
+
+		/**
+		 * The meta object literal for the '<em><b>Feature</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VARIABLE__FEATURE = eINSTANCE.getVariable_Feature();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VARIABLE__TYPE = eINSTANCE.getVariable_Type();
+
+		/**
+		 * The meta object literal for the '{@link fr.openpeople.rdal.model.core.impl.RefDerivedModelElementsImpl <em>Ref Derived Model Elements</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fr.openpeople.rdal.model.core.impl.RefDerivedModelElementsImpl
+		 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getRefDerivedModelElements()
+		 * @generated
+		 */
+		EClass REF_DERIVED_MODEL_ELEMENTS = eINSTANCE.getRefDerivedModelElements();
+
+		/**
+		 * The meta object literal for the '{@link fr.openpeople.rdal.model.core.impl.RationaleImpl <em>Rationale</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fr.openpeople.rdal.model.core.impl.RationaleImpl
+		 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getRationale()
+		 * @generated
+		 */
+		EClass RATIONALE = eINSTANCE.getRationale();
+
+		/**
+		 * The meta object literal for the '<em><b>Contract</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RATIONALE__CONTRACT = eINSTANCE.getRationale_Contract();
+
+		/**
+		 * The meta object literal for the '{@link fr.openpeople.rdal.model.core.impl.RequirementsContainerImpl <em>Requirements Container</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fr.openpeople.rdal.model.core.impl.RequirementsContainerImpl
+		 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getRequirementsContainer()
+		 * @generated
+		 */
+		EClass REQUIREMENTS_CONTAINER = eINSTANCE.getRequirementsContainer();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REQUIREMENTS_CONTAINER__TYPE = eINSTANCE.getRequirementsContainer_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Requirement</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REQUIREMENTS_CONTAINER__REQUIREMENT = eINSTANCE.getRequirementsContainer_Requirement();
+
+		/**
+		 * The meta object literal for the '<em><b>Requirements</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REQUIREMENTS_CONTAINER__REQUIREMENTS = eINSTANCE.getRequirementsContainer_Requirements();
+
+		/**
 		 * The meta object literal for the '{@link fr.openpeople.rdal.model.core.impl.GoalImpl <em>Goal</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4837,20 +6485,20 @@ public interface CorePackage extends EPackage {
 		EClass GOAL = eINSTANCE.getGoal();
 
 		/**
-		 * The meta object literal for the '<em><b>Achieved By</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GOAL__ACHIEVED_BY = eINSTANCE.getGoal_AchievedBy();
-
-		/**
 		 * The meta object literal for the '<em><b>Conflicts</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference GOAL__CONFLICTS = eINSTANCE.getGoal_Conflicts();
+
+		/**
+		 * The meta object literal for the '<em><b>Priority</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GOAL__PRIORITY = eINSTANCE.getGoal_Priority();
 
 		/**
 		 * The meta object literal for the '{@link fr.openpeople.rdal.model.core.impl.VerifiableElementImpl <em>Verifiable Element</em>}' class.
@@ -4913,14 +6561,6 @@ public interface CorePackage extends EPackage {
 		EAttribute UNCERTAINTY__PRECEDENCE = eINSTANCE.getUncertainty_Precedence();
 
 		/**
-		 * The meta object literal for the '<em><b>Time Criticality</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute UNCERTAINTY__TIME_CRITICALITY = eINSTANCE.getUncertainty_TimeCriticality();
-
-		/**
 		 * The meta object literal for the '<em><b>Risk Index</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4963,12 +6603,12 @@ public interface CorePackage extends EPackage {
 		EReference SYSTEM_OVERVIEW__CONTEXTS = eINSTANCE.getSystemOverview_Contexts();
 
 		/**
-		 * The meta object literal for the '<em><b>Actors</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>System Boundary</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SYSTEM_OVERVIEW__ACTORS = eINSTANCE.getSystemOverview_Actors();
+		EReference SYSTEM_OVERVIEW__SYSTEM_BOUNDARY = eINSTANCE.getSystemOverview_SystemBoundary();
 
 		/**
 		 * The meta object literal for the '<em><b>System To Be</b></em>' reference feature.
@@ -5021,6 +6661,30 @@ public interface CorePackage extends EPackage {
 		EReference SYSTEM_CONTEXT__GLOBAL_SYSTEM = eINSTANCE.getSystemContext_GlobalSystem();
 
 		/**
+		 * The meta object literal for the '<em><b>Actors</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SYSTEM_CONTEXT__ACTORS = eINSTANCE.getSystemContext_Actors();
+
+		/**
+		 * The meta object literal for the '<em><b>System Boundary</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SYSTEM_CONTEXT__SYSTEM_BOUNDARY = eINSTANCE.getSystemContext_SystemBoundary();
+
+		/**
+		 * The meta object literal for the '<em><b>System Modes</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SYSTEM_CONTEXT__SYSTEM_MODES = eINSTANCE.getSystemContext_SystemModes();
+
+		/**
 		 * The meta object literal for the '{@link fr.openpeople.rdal.model.core.impl.ActorImpl <em>Actor</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5031,12 +6695,44 @@ public interface CorePackage extends EPackage {
 		EClass ACTOR = eINSTANCE.getActor();
 
 		/**
+		 * The meta object literal for the '<em><b>Images</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ACTOR__IMAGES = eINSTANCE.getActor_Images();
+
+		/**
 		 * The meta object literal for the '<em><b>Interactions</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference ACTOR__INTERACTIONS = eINSTANCE.getActor_Interactions();
+
+		/**
+		 * The meta object literal for the '<em><b>Address</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACTOR__ADDRESS = eINSTANCE.getActor_Address();
+
+		/**
+		 * The meta object literal for the '<em><b>Email</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACTOR__EMAIL = eINSTANCE.getActor_Email();
+
+		/**
+		 * The meta object literal for the '<em><b>Phone Number</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACTOR__PHONE_NUMBER = eINSTANCE.getActor_PhoneNumber();
 
 		/**
 		 * The meta object literal for the '{@link fr.openpeople.rdal.model.core.impl.InteractionImpl <em>Interaction</em>}' class.
@@ -5049,20 +6745,20 @@ public interface CorePackage extends EPackage {
 		EClass INTERACTION = eINSTANCE.getInteraction();
 
 		/**
+		 * The meta object literal for the '<em><b>Entity</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INTERACTION__ENTITY = eINSTANCE.getInteraction_Entity();
+
+		/**
 		 * The meta object literal for the '<em><b>Direction</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute INTERACTION__DIRECTION = eINSTANCE.getInteraction_Direction();
-
-		/**
-		 * The meta object literal for the '<em><b>End</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference INTERACTION__END = eINSTANCE.getInteraction_End();
 
 		/**
 		 * The meta object literal for the '{@link fr.openpeople.rdal.model.core.impl.ConflictImpl <em>Conflict</em>}' class.
@@ -5091,46 +6787,6 @@ public interface CorePackage extends EPackage {
 		EReference CONFLICT__GOALS = eINSTANCE.getConflict_Goals();
 
 		/**
-		 * The meta object literal for the '{@link fr.openpeople.rdal.model.core.EnumRiskKind <em>Enum Risk Kind</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see fr.openpeople.rdal.model.core.EnumRiskKind
-		 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getEnumRiskKind()
-		 * @generated
-		 */
-		EEnum ENUM_RISK_KIND = eINSTANCE.getEnumRiskKind();
-
-		/**
-		 * The meta object literal for the '{@link fr.openpeople.rdal.model.core.EnumVerificationMethod <em>Enum Verification Method</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see fr.openpeople.rdal.model.core.EnumVerificationMethod
-		 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getEnumVerificationMethod()
-		 * @generated
-		 */
-		EEnum ENUM_VERIFICATION_METHOD = eINSTANCE.getEnumVerificationMethod();
-
-		/**
-		 * The meta object literal for the '{@link fr.openpeople.rdal.model.core.EnumAssumptionType <em>Enum Assumption Type</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see fr.openpeople.rdal.model.core.EnumAssumptionType
-		 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getEnumAssumptionType()
-		 * @generated
-		 */
-		EEnum ENUM_ASSUMPTION_TYPE = eINSTANCE.getEnumAssumptionType();
-
-		/**
-		 * The meta object literal for the '{@link fr.openpeople.rdal.model.core.EnumFunctionalRequirementType <em>Enum Functional Requirement Type</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see fr.openpeople.rdal.model.core.EnumFunctionalRequirementType
-		 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getEnumFunctionalRequirementType()
-		 * @generated
-		 */
-		EEnum ENUM_FUNCTIONAL_REQUIREMENT_TYPE = eINSTANCE.getEnumFunctionalRequirementType();
-
-		/**
 		 * The meta object literal for the '{@link fr.openpeople.rdal.model.core.Direction <em>Direction</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5141,6 +6797,66 @@ public interface CorePackage extends EPackage {
 		EEnum DIRECTION = eINSTANCE.getDirection();
 
 		/**
+		 * The meta object literal for the '{@link fr.openpeople.rdal.model.core.AssumptionType <em>Assumption Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fr.openpeople.rdal.model.core.AssumptionType
+		 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getAssumptionType()
+		 * @generated
+		 */
+		EEnum ASSUMPTION_TYPE = eINSTANCE.getAssumptionType();
+
+		/**
+		 * The meta object literal for the '{@link fr.openpeople.rdal.model.core.RiskKind <em>Risk Kind</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fr.openpeople.rdal.model.core.RiskKind
+		 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getRiskKind()
+		 * @generated
+		 */
+		EEnum RISK_KIND = eINSTANCE.getRiskKind();
+
+		/**
+		 * The meta object literal for the '{@link fr.openpeople.rdal.model.core.VerificationMethod <em>Verification Method</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fr.openpeople.rdal.model.core.VerificationMethod
+		 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getVerificationMethod()
+		 * @generated
+		 */
+		EEnum VERIFICATION_METHOD = eINSTANCE.getVerificationMethod();
+
+		/**
+		 * The meta object literal for the '{@link fr.openpeople.rdal.model.core.AgregationType <em>Agregation Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fr.openpeople.rdal.model.core.AgregationType
+		 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getAgregationType()
+		 * @generated
+		 */
+		EEnum AGREGATION_TYPE = eINSTANCE.getAgregationType();
+
+		/**
+		 * The meta object literal for the '{@link fr.openpeople.rdal.model.core.VariableType <em>Variable Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fr.openpeople.rdal.model.core.VariableType
+		 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getVariableType()
+		 * @generated
+		 */
+		EEnum VARIABLE_TYPE = eINSTANCE.getVariableType();
+
+		/**
+		 * The meta object literal for the '{@link fr.openpeople.rdal.model.core.ContainerType <em>Container Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fr.openpeople.rdal.model.core.ContainerType
+		 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getContainerType()
+		 * @generated
+		 */
+		EEnum CONTAINER_TYPE = eINSTANCE.getContainerType();
+
+		/**
 		 * The meta object literal for the '<em>Ratio</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5149,6 +6865,16 @@ public interface CorePackage extends EPackage {
 		 * @generated
 		 */
 		EDataType RATIO = eINSTANCE.getRatio();
+
+		/**
+		 * The meta object literal for the '<em>Positive Factor</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.lang.Float
+		 * @see fr.openpeople.rdal.model.core.impl.CorePackageImpl#getPositiveFactor()
+		 * @generated
+		 */
+		EDataType POSITIVE_FACTOR = eINSTANCE.getPositiveFactor();
 
 		/**
 		 * The meta object literal for the '<em>Date</em>' data type.

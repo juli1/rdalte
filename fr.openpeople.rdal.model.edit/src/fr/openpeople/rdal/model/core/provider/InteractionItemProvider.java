@@ -72,10 +72,32 @@ public class InteractionItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addEntityPropertyDescriptor(object);
 			addDirectionPropertyDescriptor(object);
-			addEndPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Entity feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addEntityPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Interaction_entity_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Interaction_entity_feature", "_UI_Interaction_type"),
+				 CorePackage.Literals.INTERACTION__ENTITY,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -96,28 +118,6 @@ public class InteractionItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the End feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addEndPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Interaction_end_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Interaction_end_feature", "_UI_Interaction_type"),
-				 CorePackage.Literals.INTERACTION__END,
-				 true,
-				 false,
-				 true,
-				 null,
 				 null,
 				 null));
 	}

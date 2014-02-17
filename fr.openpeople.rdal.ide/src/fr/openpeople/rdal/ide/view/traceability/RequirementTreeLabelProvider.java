@@ -26,6 +26,7 @@ import fr.openpeople.rdal.model.core.IdentifiedElement;
 import fr.openpeople.rdal.model.core.ModelElementReference;
 import fr.openpeople.rdal.model.core.Requirement;
 import fr.openpeople.rdal.model.core.RequirementsGroup;
+import fr.openpeople.rdal.model.core.RiskKind;
 import fr.openpeople.rdal.model.core.Specification;
 import fr.openpeople.rdal.model.core.diagram.part.RdalDiagramEditorPlugin;
 
@@ -118,7 +119,7 @@ public class RequirementTreeLabelProvider extends TreeCellLabelProvider {
 
 			case 3:
 	        	if ( p_element instanceof Requirement ) {
-	        		final EnumRiskKind riskKind =  ( (Requirement) p_element ).getRisk();
+	        		final RiskKind riskKind =  ( (Requirement) p_element ).getRisk();
 	        		
 	        		switch ( riskKind ) {
 	        			case LOW:

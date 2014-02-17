@@ -28,6 +28,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link fr.openpeople.rdal.model.core.ReferencedModelElements#getModelElementReferences <em>Model Element References</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.ReferencedModelElements#getAgregationType <em>Agregation Type</em>}</li>
  * </ul>
  * </p>
  *
@@ -54,4 +55,33 @@ public interface ReferencedModelElements extends IdentifiedElement {
 	 * @generated
 	 */
 	EList<ModelElementReference> getModelElementReferences();
+
+	/**
+	 * Returns the value of the '<em><b>Agregation Type</b></em>' attribute.
+	 * The literals are from the enumeration {@link fr.openpeople.rdal.model.core.AgregationType}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Agregation Type</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Agregation Type</em>' attribute.
+	 * @see fr.openpeople.rdal.model.core.AgregationType
+	 * @see #setAgregationType(AgregationType)
+	 * @see fr.openpeople.rdal.model.core.CorePackage#getReferencedModelElements_AgregationType()
+	 * @model required="true"
+	 * @generated
+	 */
+	AgregationType getAgregationType();
+
+	/**
+	 * Sets the value of the '{@link fr.openpeople.rdal.model.core.ReferencedModelElements#getAgregationType <em>Agregation Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Agregation Type</em>' attribute.
+	 * @see fr.openpeople.rdal.model.core.AgregationType
+	 * @see #getAgregationType()
+	 * @generated
+	 */
+	void setAgregationType(AgregationType value);
 } // ReferencedModelElements

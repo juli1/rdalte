@@ -71,6 +71,9 @@ public class SystemContextItemProvider
 			super.getPropertyDescriptors(object);
 
 			addGlobalSystemPropertyDescriptor(object);
+			addActorsPropertyDescriptor(object);
+			addSystemBoundaryPropertyDescriptor(object);
+			addSystemModesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -100,6 +103,72 @@ public class SystemContextItemProvider
 //				 null,
 //				 null,
 //				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Actors feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addActorsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_SystemContext_actors_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SystemContext_actors_feature", "_UI_SystemContext_type"),
+				 CorePackage.Literals.SYSTEM_CONTEXT__ACTORS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the System Boundary feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSystemBoundaryPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_SystemContext_systemBoundary_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SystemContext_systemBoundary_feature", "_UI_SystemContext_type"),
+				 CorePackage.Literals.SYSTEM_CONTEXT__SYSTEM_BOUNDARY,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the System Modes feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSystemModesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_SystemContext_systemModes_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SystemContext_systemModes_feature", "_UI_SystemContext_type"),
+				 CorePackage.Literals.SYSTEM_CONTEXT__SYSTEM_MODES,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**

@@ -29,7 +29,9 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link fr.openpeople.rdal.model.core.ModelElementReference#getModelElement <em>Model Element</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.ModelElementReference#getParent <em>Parent</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.ModelElementReference#getWeight <em>Weight</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.ModelElementReference#getVerifies <em>Verifies</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.ModelElementReference#getSatisfactionLevel <em>Satisfaction Level</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.ModelElementReference#getReason <em>Reason</em>}</li>
  * </ul>
  * </p>
@@ -92,6 +94,32 @@ public interface ModelElementReference extends IdentifiedElement {
 	void setVerifies(Boolean value);
 
 	/**
+	 * Returns the value of the '<em><b>Satisfaction Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Satisfaction Level</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Satisfaction Level</em>' attribute.
+	 * @see #setSatisfactionLevel(Float)
+	 * @see fr.openpeople.rdal.model.core.CorePackage#getModelElementReference_SatisfactionLevel()
+	 * @model dataType="fr.openpeople.rdal.model.core.Ratio"
+	 * @generated
+	 */
+	Float getSatisfactionLevel();
+
+	/**
+	 * Sets the value of the '{@link fr.openpeople.rdal.model.core.ModelElementReference#getSatisfactionLevel <em>Satisfaction Level</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Satisfaction Level</em>' attribute.
+	 * @see #getSatisfactionLevel()
+	 * @generated
+	 */
+	void setSatisfactionLevel(Float value);
+
+	/**
 	 * Returns the value of the '<em><b>Reason</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -144,5 +172,31 @@ public interface ModelElementReference extends IdentifiedElement {
 	 * @generated
 	 */
 	void setParent(ReferencedModelElements value);
+
+	/**
+	 * Returns the value of the '<em><b>Weight</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Weight</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Weight</em>' attribute.
+	 * @see #setWeight(Float)
+	 * @see fr.openpeople.rdal.model.core.CorePackage#getModelElementReference_Weight()
+	 * @model dataType="fr.openpeople.rdal.model.core.Ratio"
+	 * @generated
+	 */
+	Float getWeight();
+
+	/**
+	 * Sets the value of the '{@link fr.openpeople.rdal.model.core.ModelElementReference#getWeight <em>Weight</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Weight</em>' attribute.
+	 * @see #getWeight()
+	 * @generated
+	 */
+	void setWeight(Float value);
 
 } // ModelElementReference

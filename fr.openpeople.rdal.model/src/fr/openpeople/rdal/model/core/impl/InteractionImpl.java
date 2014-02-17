@@ -36,14 +36,24 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link fr.openpeople.rdal.model.core.impl.InteractionImpl#getEntity <em>Entity</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.impl.InteractionImpl#getDirection <em>Direction</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.impl.InteractionImpl#getEnd <em>End</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class InteractionImpl extends IdentifiedElementImpl implements Interaction {
+	/**
+	 * The cached value of the '{@link #getEntity() <em>Entity</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEntity()
+	 * @generated
+	 * @ordered
+	 */
+	protected EObject entity;
+
 	/**
 	 * The default value of the '{@link #getDirection() <em>Direction</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -65,16 +75,6 @@ public class InteractionImpl extends IdentifiedElementImpl implements Interactio
 	protected Direction direction = DIRECTION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getEnd() <em>End</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEnd()
-	 * @generated
-	 * @ordered
-	 */
-	protected EObject end;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -91,6 +91,44 @@ public class InteractionImpl extends IdentifiedElementImpl implements Interactio
 	@Override
 	protected EClass eStaticClass() {
 		return CorePackage.Literals.INTERACTION;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EObject getEntity() {
+		if (entity != null && entity.eIsProxy()) {
+			InternalEObject oldEntity = (InternalEObject)entity;
+			entity = eResolveProxy(oldEntity);
+			if (entity != oldEntity) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CorePackage.INTERACTION__ENTITY, oldEntity, entity));
+			}
+		}
+		return entity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EObject basicGetEntity() {
+		return entity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEntity(EObject newEntity) {
+		EObject oldEntity = entity;
+		entity = newEntity;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CorePackage.INTERACTION__ENTITY, oldEntity, entity));
 	}
 
 	/**
@@ -119,52 +157,14 @@ public class InteractionImpl extends IdentifiedElementImpl implements Interactio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObject getEnd() {
-		if (end != null && end.eIsProxy()) {
-			InternalEObject oldEnd = (InternalEObject)end;
-			end = eResolveProxy(oldEnd);
-			if (end != oldEnd) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CorePackage.INTERACTION__END, oldEnd, end));
-			}
-		}
-		return end;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EObject basicGetEnd() {
-		return end;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setEnd(EObject newEnd) {
-		EObject oldEnd = end;
-		end = newEnd;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CorePackage.INTERACTION__END, oldEnd, end));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case CorePackage.INTERACTION__ENTITY:
+				if (resolve) return getEntity();
+				return basicGetEntity();
 			case CorePackage.INTERACTION__DIRECTION:
 				return getDirection();
-			case CorePackage.INTERACTION__END:
-				if (resolve) return getEnd();
-				return basicGetEnd();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -177,11 +177,11 @@ public class InteractionImpl extends IdentifiedElementImpl implements Interactio
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case CorePackage.INTERACTION__ENTITY:
+				setEntity((EObject)newValue);
+				return;
 			case CorePackage.INTERACTION__DIRECTION:
 				setDirection((Direction)newValue);
-				return;
-			case CorePackage.INTERACTION__END:
-				setEnd((EObject)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -195,11 +195,11 @@ public class InteractionImpl extends IdentifiedElementImpl implements Interactio
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case CorePackage.INTERACTION__ENTITY:
+				setEntity((EObject)null);
+				return;
 			case CorePackage.INTERACTION__DIRECTION:
 				setDirection(DIRECTION_EDEFAULT);
-				return;
-			case CorePackage.INTERACTION__END:
-				setEnd((EObject)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -213,10 +213,10 @@ public class InteractionImpl extends IdentifiedElementImpl implements Interactio
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case CorePackage.INTERACTION__ENTITY:
+				return entity != null;
 			case CorePackage.INTERACTION__DIRECTION:
 				return direction != DIRECTION_EDEFAULT;
-			case CorePackage.INTERACTION__END:
-				return end != null;
 		}
 		return super.eIsSet(featureID);
 	}

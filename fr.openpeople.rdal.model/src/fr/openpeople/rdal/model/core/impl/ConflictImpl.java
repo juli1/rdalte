@@ -44,14 +44,24 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link fr.openpeople.rdal.model.core.impl.ConflictImpl#getDegree <em>Degree</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.impl.ConflictImpl#getGoals <em>Goals</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.impl.ConflictImpl#getDegree <em>Degree</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ConflictImpl extends EObjectImpl implements Conflict {
+public class ConflictImpl extends IdentifiedElementImpl implements Conflict {
+	/**
+	 * The cached value of the '{@link #getGoals() <em>Goals</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGoals()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Goal> goals;
+
 	/**
 	 * The default value of the '{@link #getDegree() <em>Degree</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -71,16 +81,6 @@ public class ConflictImpl extends EObjectImpl implements Conflict {
 	 * @ordered
 	 */
 	protected Float degree = DEGREE_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getGoals() <em>Goals</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getGoals()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Goal> goals;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -171,10 +171,10 @@ public class ConflictImpl extends EObjectImpl implements Conflict {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CorePackage.CONFLICT__DEGREE:
-				return getDegree();
 			case CorePackage.CONFLICT__GOALS:
 				return getGoals();
+			case CorePackage.CONFLICT__DEGREE:
+				return getDegree();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -188,12 +188,12 @@ public class ConflictImpl extends EObjectImpl implements Conflict {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CorePackage.CONFLICT__DEGREE:
-				setDegree((Float)newValue);
-				return;
 			case CorePackage.CONFLICT__GOALS:
 				getGoals().clear();
 				getGoals().addAll((Collection<? extends Goal>)newValue);
+				return;
+			case CorePackage.CONFLICT__DEGREE:
+				setDegree((Float)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -207,11 +207,11 @@ public class ConflictImpl extends EObjectImpl implements Conflict {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CorePackage.CONFLICT__DEGREE:
-				setDegree(DEGREE_EDEFAULT);
-				return;
 			case CorePackage.CONFLICT__GOALS:
 				getGoals().clear();
+				return;
+			case CorePackage.CONFLICT__DEGREE:
+				setDegree(DEGREE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -225,10 +225,10 @@ public class ConflictImpl extends EObjectImpl implements Conflict {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CorePackage.CONFLICT__DEGREE:
-				return DEGREE_EDEFAULT == null ? degree != null : !DEGREE_EDEFAULT.equals(degree);
 			case CorePackage.CONFLICT__GOALS:
 				return goals != null && !goals.isEmpty();
+			case CorePackage.CONFLICT__DEGREE:
+				return DEGREE_EDEFAULT == null ? degree != null : !DEGREE_EDEFAULT.equals(degree);
 		}
 		return super.eIsSet(featureID);
 	}

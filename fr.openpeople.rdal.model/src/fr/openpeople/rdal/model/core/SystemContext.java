@@ -17,6 +17,7 @@
  */
 package fr.openpeople.rdal.model.core;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -28,6 +29,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link fr.openpeople.rdal.model.core.SystemContext#getGlobalSystem <em>Global System</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.SystemContext#getActors <em>Actors</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.SystemContext#getSystemBoundary <em>System Boundary</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.SystemContext#getSystemModes <em>System Modes</em>}</li>
  * </ul>
  * </p>
  *
@@ -61,5 +65,53 @@ public interface SystemContext extends IdentifiedElement {
 	 * @generated
 	 */
 	void setGlobalSystem(EObject value);
+
+	/**
+	 * Returns the value of the '<em><b>Actors</b></em>' reference list.
+	 * The list contents are of type {@link fr.openpeople.rdal.model.core.Actor}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Actors</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Actors</em>' reference list.
+	 * @see fr.openpeople.rdal.model.core.CorePackage#getSystemContext_Actors()
+	 * @model
+	 * @generated
+	 */
+	EList<Actor> getActors();
+
+	/**
+	 * Returns the value of the '<em><b>System Boundary</b></em>' reference list.
+	 * The list contents are of type {@link fr.openpeople.rdal.model.core.Variable}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>System Boundary</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>System Boundary</em>' reference list.
+	 * @see fr.openpeople.rdal.model.core.CorePackage#getSystemContext_SystemBoundary()
+	 * @model required="true"
+	 * @generated
+	 */
+	EList<Variable> getSystemBoundary();
+
+	/**
+	 * Returns the value of the '<em><b>System Modes</b></em>' reference list.
+	 * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>System Modes</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>System Modes</em>' reference list.
+	 * @see fr.openpeople.rdal.model.core.CorePackage#getSystemContext_SystemModes()
+	 * @model
+	 * @generated
+	 */
+	EList<EObject> getSystemModes();
 
 } // SystemContext

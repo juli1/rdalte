@@ -18,11 +18,13 @@
 package fr.openpeople.rdal.model.core.provider;
 
 
+import fr.openpeople.rdal.model.core.CoreFactory;
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -31,6 +33,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
+import org.eclipse.emf.edit.provider.ViewerNotification;
 import fr.openpeople.rdal.model.core.CorePackage;
 import fr.openpeople.rdal.model.core.Requirement;
 
@@ -69,50 +72,27 @@ public class RequirementItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addDerivedFromPropertyDescriptor(object);
-			addRefinedByPropertyDescriptor(object);
-			addDerivationsPropertyDescriptor(object);
+			addRefinedBYPropertyDescriptor(object);
 			addAssumptionsPropertyDescriptor(object);
-			addCategoryPropertyDescriptor(object);
+			addImageAssumptionPropertyDescriptor(object);
+			addDerivationsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Derived From feature.
+	 * This adds a property descriptor for the Refined BY feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDerivedFromPropertyDescriptor(Object object) {
+	protected void addRefinedBYPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Requirement_derivedFrom_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Requirement_derivedFrom_feature", "_UI_Requirement_type"),
-				 CorePackage.Literals.REQUIREMENT__DERIVED_FROM,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Refined By feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addRefinedByPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Requirement_refinedBy_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Requirement_refinedBy_feature", "_UI_Requirement_type"),
+				 getString("_UI_Requirement_refinedBY_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Requirement_refinedBY_feature", "_UI_Requirement_type"),
 				 CorePackage.Literals.REQUIREMENT__REFINED_BY,
 				 true,
 				 false,
@@ -122,7 +102,7 @@ public class RequirementItemProvider
 				 null));
 	}
 
-//	/**
+	//	/**
 //	 * This adds a property descriptor for the Traced To feature.
 //	 * <!-- begin-user-doc -->
 //	 * <!-- end-user-doc -->
@@ -171,6 +151,36 @@ public class RequirementItemProvider
 	}
 
 	/**
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+		if (childrenFeatures == null) {
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(CorePackage.Literals.REQUIREMENT__SUB_REQUIREMENTS);
+		}
+		return childrenFeatures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EStructuralFeature getChildFeature(Object object, Object child) {
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
+
+		return super.getChildFeature(object, child);
+	}
+
+	/**
 	 * This adds a property descriptor for the Assumptions feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -193,19 +203,19 @@ public class RequirementItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Category feature.
+	 * This adds a property descriptor for the Image Assumption feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addCategoryPropertyDescriptor(Object object) {
+	protected void addImageAssumptionPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Requirement_category_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Requirement_category_feature", "_UI_Requirement_type"),
-				 CorePackage.Literals.REQUIREMENT__CATEGORY,
+				 getString("_UI_Requirement_imageAssumption_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Requirement_imageAssumption_feature", "_UI_Requirement_type"),
+				 CorePackage.Literals.REQUIREMENT__IMAGE_ASSUMPTION,
 				 true,
 				 false,
 				 true,
@@ -249,6 +259,12 @@ public class RequirementItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(Requirement.class)) {
+			case CorePackage.REQUIREMENT__SUB_REQUIREMENTS:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 
@@ -262,6 +278,34 @@ public class RequirementItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CorePackage.Literals.REQUIREMENT__SUB_REQUIREMENTS,
+				 CoreFactory.eINSTANCE.createRequirementsContainer()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == CorePackage.Literals.CONTRACTUAL_ELEMENT__EXPRESSION ||
+			childFeature == CorePackage.Literals.CONTRACTUAL_ELEMENT__CONDITION;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

@@ -11,7 +11,11 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: fr.openpeople.rdal.model.core.provider
 Require-Bundle: org.eclipse.core.runtime,
  fr.openpeople.rdal.model;visibility:=reexport,
- org.eclipse.emf.edit;visibility:=reexport
+ org.eclipse.emf.edit;visibility:=reexport,
+ fr.labsticc.framework.constraints.model;visibility:=reexport,
+ fr.labsticc.framework.constraints.model.edit;visibility:=reexport,
+ fr.labsticc.framework.settings.model;visibility:=reexport,
+ fr.labsticc.framework.settings.model.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Import-Package: fr.labsticc.framework.constraints.model.constraints,
  fr.labsticc.framework.constraints.model.constraints.provider,

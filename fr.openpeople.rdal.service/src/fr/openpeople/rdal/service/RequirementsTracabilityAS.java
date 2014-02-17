@@ -114,18 +114,18 @@ public class RequirementsTracabilityAS {
 		if ( p_parentNode instanceof AbstractRequirement ) {
 			final Collection<ModelElementReference> satElements = new EMFURIEqualsList<ModelElementReference>();
 			final AbstractRequirement requirement = (AbstractRequirement) p_parentNode;
-			Collection<ModelElementReference> actualElements = requirement.getSatisfiedBy().getModelElementReferences();
-
-			// Return the evaluated results if computed
-			if ( actualElements.isEmpty() ) {
-				actualElements = requirementDelegate.modelElementReferences( requirement );
-			}
-			
-			for ( final ModelElementReference refElement : actualElements ) {
-				if ( designElements.contains( refElement.getModelElement() ) ) {
-					satElements.add( refElement );
-				}
-			}
+//			Collection<ModelElementReference> actualElements = requirement.getSatisfiedBy().getModelElementReferences();
+//
+//			// Return the evaluated results if computed
+//			if ( actualElements.isEmpty() ) {
+//				actualElements = requirementDelegate.modelElementReferences( requirement );
+//			}
+//			
+//			for ( final ModelElementReference refElement : actualElements ) {
+//				if ( designElements.contains( refElement.getModelElement() ) ) {
+//					satElements.add( refElement );
+//				}
+//			}
 			
 			return satElements;
 		}
@@ -257,48 +257,48 @@ public class RequirementsTracabilityAS {
 		final Trace trace = CoreFactory.eINSTANCE.createTrace();
 		
 		for ( final AbstractRequirement req : requirementsSwitch.getProcessedObjects() ) {
-			for ( final ModelElementReference modelRef : req.getSatisfiedBy().getModelElementReferences() ) {
-				final EObject modelElement = modelRef.getModelElement();
-				TraceModelElementReference existingRef = trace.modelElementReference( modelElement );
-				
-				if ( existingRef == null ) {
-					existingRef = CoreFactory.eINSTANCE.createTraceModelElementReference();
-					existingRef.setDescription( "Traceability reference : " + modelRef.getDescription() );
-					existingRef.setReason( modelRef.getReason() );
-					existingRef.setName( modelRef.getName() );
-					existingRef.setModelElement( modelElement );
-					
-					// For natural language expressed requirements, the verifies of each reference may not have
-					// been set by the designer. We assume it is not verified.
-					if ( modelRef.getVerifies() != null && modelRef.getVerifies() ) {
-						existingRef.setVerificationLevel( (float) 1.0 );
-					}
-					else {
-						existingRef.setVerificationLevel( (float) 0.0 );
-					}
-
-					existingRef.setNbRequirements( 1 );
-					trace.getModelElementReferences().add( existingRef );
-				}
-				else {
-					final TraceModelElementReference traceElem = CoreFactory.eINSTANCE.createTraceModelElementReference();
-					traceElem.setNbRequirements( 1 );
-					
-					// For natural language expressed requirements, the verifies of each reference may not have
-					// been set by the designer. We assume it is not verified.
-					if ( modelRef.getVerifies() != null && modelRef.getVerifies() ) {
-						traceElem.setVerificationLevel( (float) 1.0 );
-					}
-					else {
-						traceElem.setVerificationLevel( (float) 0.0 );
-					}
-
-					traceElem.setDescription( modelRef.getDescription() );
-					traceElem.setId( modelRef.getId() );
-					traceElem.setName( modelRef.getName() );
-					existingRef.merge( traceElem );
-				}
-			}
+//			for ( final ModelElementReference modelRef : req.getSatisfiedBy().getModelElementReferences() ) {
+//				final EObject modelElement = modelRef.getModelElement();
+//				TraceModelElementReference existingRef = trace.modelElementReference( modelElement );
+//				
+//				if ( existingRef == null ) {
+//					existingRef = CoreFactory.eINSTANCE.createTraceModelElementReference();
+//					existingRef.setDescription( "Traceability reference : " + modelRef.getDescription() );
+//					existingRef.setReason( modelRef.getReason() );
+//					existingRef.setName( modelRef.getName() );
+//					existingRef.setModelElement( modelElement );
+//					
+//					// For natural language expressed requirements, the verifies of each reference may not have
+//					// been set by the designer. We assume it is not verified.
+//					if ( modelRef.getVerifies() != null && modelRef.getVerifies() ) {
+//						existingRef.setVerificationLevel( (float) 1.0 );
+//					}
+//					else {
+//						existingRef.setVerificationLevel( (float) 0.0 );
+//					}
+//
+//					existingRef.setNbRequirements( 1 );
+//					trace.getModelElementReferences().add( existingRef );
+//				}
+//				else {
+//					final TraceModelElementReference traceElem = CoreFactory.eINSTANCE.createTraceModelElementReference();
+//					traceElem.setNbRequirements( 1 );
+//					
+//					// For natural language expressed requirements, the verifies of each reference may not have
+//					// been set by the designer. We assume it is not verified.
+//					if ( modelRef.getVerifies() != null && modelRef.getVerifies() ) {
+//						traceElem.setVerificationLevel( (float) 1.0 );
+//					}
+//					else {
+//						traceElem.setVerificationLevel( (float) 0.0 );
+//					}
+//
+//					traceElem.setDescription( modelRef.getDescription() );
+//					traceElem.setId( modelRef.getId() );
+//					traceElem.setName( modelRef.getName() );
+//					existingRef.merge( traceElem );
+//				}
+//			}
 				
 			processedSpecifications.add( req.getGroup().getSpecification() );
 		}

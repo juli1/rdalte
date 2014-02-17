@@ -323,7 +323,7 @@ public class ReferencedModelElementsPanel extends Composite {
 	}
 	
 	private void selectReferencedElements() {
-		final ReferencedModelElements currentRefModelElement = requirement.getSatisfiedBy();
+		final ReferencedModelElements currentRefModelElement = requirement.getSatisfiedBy().get(0);
 		final RefUserSelectedModelElements templRefModelElement;
 		
 		if ( currentRefModelElement instanceof RefUserSelectedModelElements ) {
@@ -598,7 +598,7 @@ public class ReferencedModelElementsPanel extends Composite {
 	}
 	
 	private void displayReferencedModelElements() {
-		final ReferencedModelElements refElements = requirement.getSatisfiedBy();
+		final ReferencedModelElements refElements = requirement.getSatisfiedBy().get(0);
 		
 		final FormalLanguageExpression refExpression;
 
@@ -606,7 +606,7 @@ public class ReferencedModelElementsPanel extends Composite {
 //			for ( final ModelElementReference ref : ( (RefModelElementsCollection) refElements ).getModelElementReferences() ) {
 //				elements.add( ref.getModelElement() );
 //			}
-			
+//			
 			refExpression = null;
 		}
 		else if ( refElements instanceof RefExpressionCollectedModelElements ) {

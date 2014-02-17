@@ -35,7 +35,6 @@ import fr.openpeople.rdal.model.core.Uncertainty;
  *   <li>{@link fr.openpeople.rdal.model.core.impl.UncertaintyImpl#getCostsImpact <em>Costs Impact</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.impl.UncertaintyImpl#getScheduleImpact <em>Schedule Impact</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.impl.UncertaintyImpl#getPrecedence <em>Precedence</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.impl.UncertaintyImpl#getTimeCriticality <em>Time Criticality</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.impl.UncertaintyImpl#getRiskIndex <em>Risk Index</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.impl.UncertaintyImpl#getPropRiskIndex <em>Prop Risk Index</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.impl.UncertaintyImpl#getMaturityIndex <em>Maturity Index</em>}</li>
@@ -124,26 +123,6 @@ public class UncertaintyImpl extends IdentifiedElementImpl implements Uncertaint
 	 * @ordered
 	 */
 	protected Float precedence = PRECEDENCE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getTimeCriticality() <em>Time Criticality</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTimeCriticality()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Float TIME_CRITICALITY_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getTimeCriticality() <em>Time Criticality</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTimeCriticality()
-	 * @generated
-	 * @ordered
-	 */
-	protected Float timeCriticality = TIME_CRITICALITY_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getRiskIndex() <em>Risk Index</em>}' attribute.
@@ -283,27 +262,6 @@ public class UncertaintyImpl extends IdentifiedElementImpl implements Uncertaint
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Float getTimeCriticality() {
-		return timeCriticality;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTimeCriticality(Float newTimeCriticality) {
-		Float oldTimeCriticality = timeCriticality;
-		timeCriticality = newTimeCriticality;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CorePackage.UNCERTAINTY__TIME_CRITICALITY, oldTimeCriticality, timeCriticality));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Float getRiskIndex() {
 		// TODO: implement this method to return the 'Risk Index' attribute
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -381,8 +339,6 @@ public class UncertaintyImpl extends IdentifiedElementImpl implements Uncertaint
 				return getScheduleImpact();
 			case CorePackage.UNCERTAINTY__PRECEDENCE:
 				return getPrecedence();
-			case CorePackage.UNCERTAINTY__TIME_CRITICALITY:
-				return getTimeCriticality();
 			case CorePackage.UNCERTAINTY__RISK_INDEX:
 				return getRiskIndex();
 			case CorePackage.UNCERTAINTY__PROP_RISK_INDEX:
@@ -412,9 +368,6 @@ public class UncertaintyImpl extends IdentifiedElementImpl implements Uncertaint
 				return;
 			case CorePackage.UNCERTAINTY__PRECEDENCE:
 				setPrecedence((Float)newValue);
-				return;
-			case CorePackage.UNCERTAINTY__TIME_CRITICALITY:
-				setTimeCriticality((Float)newValue);
 				return;
 			case CorePackage.UNCERTAINTY__RISK_INDEX:
 				setRiskIndex((Float)newValue);
@@ -449,9 +402,6 @@ public class UncertaintyImpl extends IdentifiedElementImpl implements Uncertaint
 			case CorePackage.UNCERTAINTY__PRECEDENCE:
 				setPrecedence(PRECEDENCE_EDEFAULT);
 				return;
-			case CorePackage.UNCERTAINTY__TIME_CRITICALITY:
-				setTimeCriticality(TIME_CRITICALITY_EDEFAULT);
-				return;
 			case CorePackage.UNCERTAINTY__RISK_INDEX:
 				setRiskIndex(RISK_INDEX_EDEFAULT);
 				return;
@@ -481,8 +431,6 @@ public class UncertaintyImpl extends IdentifiedElementImpl implements Uncertaint
 				return SCHEDULE_IMPACT_EDEFAULT == null ? scheduleImpact != null : !SCHEDULE_IMPACT_EDEFAULT.equals(scheduleImpact);
 			case CorePackage.UNCERTAINTY__PRECEDENCE:
 				return PRECEDENCE_EDEFAULT == null ? precedence != null : !PRECEDENCE_EDEFAULT.equals(precedence);
-			case CorePackage.UNCERTAINTY__TIME_CRITICALITY:
-				return TIME_CRITICALITY_EDEFAULT == null ? timeCriticality != null : !TIME_CRITICALITY_EDEFAULT.equals(timeCriticality);
 			case CorePackage.UNCERTAINTY__RISK_INDEX:
 				return RISK_INDEX_EDEFAULT == null ? getRiskIndex() != null : !RISK_INDEX_EDEFAULT.equals(getRiskIndex());
 			case CorePackage.UNCERTAINTY__PROP_RISK_INDEX:
@@ -511,8 +459,6 @@ public class UncertaintyImpl extends IdentifiedElementImpl implements Uncertaint
 		result.append(scheduleImpact);
 		result.append(", precedence: ");
 		result.append(precedence);
-		result.append(", timeCriticality: ");
-		result.append(timeCriticality);
 		result.append(')');
 		return result.toString();
 	}

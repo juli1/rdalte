@@ -30,7 +30,6 @@ package fr.openpeople.rdal.model.core;
  *   <li>{@link fr.openpeople.rdal.model.core.Uncertainty#getCostsImpact <em>Costs Impact</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.Uncertainty#getScheduleImpact <em>Schedule Impact</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.Uncertainty#getPrecedence <em>Precedence</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.Uncertainty#getTimeCriticality <em>Time Criticality</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.Uncertainty#getRiskIndex <em>Risk Index</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.Uncertainty#getPropRiskIndex <em>Prop Risk Index</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.Uncertainty#getMaturityIndex <em>Maturity Index</em>}</li>
@@ -53,7 +52,7 @@ public interface Uncertainty extends IdentifiedElement {
 	 * @return the value of the '<em>Volatility</em>' attribute.
 	 * @see #setVolatility(Float)
 	 * @see fr.openpeople.rdal.model.core.CorePackage#getUncertainty_Volatility()
-	 * @model dataType="fr.openpeople.rdal.model.core.Ratio"
+	 * @model dataType="fr.openpeople.rdal.model.core.Ratio" required="true"
 	 * @generated
 	 */
 	Float getVolatility();
@@ -79,7 +78,7 @@ public interface Uncertainty extends IdentifiedElement {
 	 * @return the value of the '<em>Costs Impact</em>' attribute.
 	 * @see #setCostsImpact(Float)
 	 * @see fr.openpeople.rdal.model.core.CorePackage#getUncertainty_CostsImpact()
-	 * @model dataType="fr.openpeople.rdal.model.core.Ratio"
+	 * @model dataType="fr.openpeople.rdal.model.core.PositiveFactor" required="true"
 	 * @generated
 	 */
 	Float getCostsImpact();
@@ -105,7 +104,7 @@ public interface Uncertainty extends IdentifiedElement {
 	 * @return the value of the '<em>Schedule Impact</em>' attribute.
 	 * @see #setScheduleImpact(Float)
 	 * @see fr.openpeople.rdal.model.core.CorePackage#getUncertainty_ScheduleImpact()
-	 * @model dataType="fr.openpeople.rdal.model.core.Ratio"
+	 * @model dataType="fr.openpeople.rdal.model.core.PositiveFactor" required="true"
 	 * @generated
 	 */
 	Float getScheduleImpact();
@@ -131,7 +130,7 @@ public interface Uncertainty extends IdentifiedElement {
 	 * @return the value of the '<em>Precedence</em>' attribute.
 	 * @see #setPrecedence(Float)
 	 * @see fr.openpeople.rdal.model.core.CorePackage#getUncertainty_Precedence()
-	 * @model dataType="fr.openpeople.rdal.model.core.Ratio"
+	 * @model dataType="fr.openpeople.rdal.model.core.Ratio" required="true"
 	 * @generated
 	 */
 	Float getPrecedence();
@@ -145,32 +144,6 @@ public interface Uncertainty extends IdentifiedElement {
 	 * @generated
 	 */
 	void setPrecedence(Float value);
-
-	/**
-	 * Returns the value of the '<em><b>Time Criticality</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Time Criticality</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Time Criticality</em>' attribute.
-	 * @see #setTimeCriticality(Float)
-	 * @see fr.openpeople.rdal.model.core.CorePackage#getUncertainty_TimeCriticality()
-	 * @model dataType="fr.openpeople.rdal.model.core.Ratio"
-	 * @generated
-	 */
-	Float getTimeCriticality();
-
-	/**
-	 * Sets the value of the '{@link fr.openpeople.rdal.model.core.Uncertainty#getTimeCriticality <em>Time Criticality</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Time Criticality</em>' attribute.
-	 * @see #getTimeCriticality()
-	 * @generated
-	 */
-	void setTimeCriticality(Float value);
 
 	/**
 	 * Returns the value of the '<em><b>Risk Index</b></em>' attribute.

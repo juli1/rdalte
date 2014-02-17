@@ -48,30 +48,21 @@ import fr.openpeople.rdal.model.core.VerificationActivity;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link fr.openpeople.rdal.model.core.impl.SpecificationImpl#getSpecifies <em>Specifies</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.impl.SpecificationImpl#getActors <em>Actors</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.impl.SpecificationImpl#getVerificationActivities <em>Verification Activities</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.impl.SpecificationImpl#getRequirementGroups <em>Requirement Groups</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.impl.SpecificationImpl#getConstraintLanguagesSpecification <em>Constraint Languages Specification</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.impl.SpecificationImpl#getVersion <em>Version</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.impl.SpecificationImpl#getSystOverview <em>Syst Overview</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.impl.SpecificationImpl#getRequirementGroups <em>Requirement Groups</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.impl.SpecificationImpl#getVerificationActivities <em>Verification Activities</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.impl.SpecificationImpl#getConflicts <em>Conflicts</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.impl.SpecificationImpl#getConstraintLanguagesSpecification <em>Constraint Languages Specification</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.impl.SpecificationImpl#getSpecifies <em>Specifies</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.impl.SpecificationImpl#getPrimaryActors <em>Primary Actors</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.impl.SpecificationImpl#getVersion <em>Version</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class SpecificationImpl extends VerifiableElementImpl implements Specification {
-	/**
-	 * The cached value of the '{@link #getSpecifies() <em>Specifies</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSpecifies()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<EObject> specifies;
-
 	/**
 	 * The cached value of the '{@link #getActors() <em>Actors</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -83,14 +74,14 @@ public class SpecificationImpl extends VerifiableElementImpl implements Specific
 	protected EList<Actor> actors;
 
 	/**
-	 * The cached value of the '{@link #getVerificationActivities() <em>Verification Activities</em>}' containment reference list.
+	 * The cached value of the '{@link #getSystOverview() <em>Syst Overview</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVerificationActivities()
+	 * @see #getSystOverview()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VerificationActivity> verificationActivities;
+	protected SystemOverview systOverview;
 
 	/**
 	 * The cached value of the '{@link #getRequirementGroups() <em>Requirement Groups</em>}' containment reference list.
@@ -103,6 +94,26 @@ public class SpecificationImpl extends VerifiableElementImpl implements Specific
 	protected EList<RequirementsGroup> requirementGroups;
 
 	/**
+	 * The cached value of the '{@link #getVerificationActivities() <em>Verification Activities</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVerificationActivities()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<VerificationActivity> verificationActivities;
+
+	/**
+	 * The cached value of the '{@link #getConflicts() <em>Conflicts</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getConflicts()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Conflict> conflicts;
+
+	/**
 	 * The cached value of the '{@link #getConstraintLanguagesSpecification() <em>Constraint Languages Specification</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -111,6 +122,26 @@ public class SpecificationImpl extends VerifiableElementImpl implements Specific
 	 * @ordered
 	 */
 	protected ConstraintLanguagesSpecification constraintLanguagesSpecification;
+
+	/**
+	 * The cached value of the '{@link #getSpecifies() <em>Specifies</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSpecifies()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<EObject> specifies;
+
+	/**
+	 * The cached value of the '{@link #getPrimaryActors() <em>Primary Actors</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrimaryActors()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<EObject> primaryActors;
 
 	/**
 	 * The default value of the '{@link #getVersion() <em>Version</em>}' attribute.
@@ -131,26 +162,6 @@ public class SpecificationImpl extends VerifiableElementImpl implements Specific
 	 * @ordered
 	 */
 	protected String version = VERSION_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getSystOverview() <em>Syst Overview</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSystOverview()
-	 * @generated
-	 * @ordered
-	 */
-	protected SystemOverview systOverview;
-
-	/**
-	 * The cached value of the '{@link #getConflicts() <em>Conflicts</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getConflicts()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Conflict> conflicts;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -181,6 +192,18 @@ public class SpecificationImpl extends VerifiableElementImpl implements Specific
 			specifies = new EObjectResolvingEList<EObject>(EObject.class, this, CorePackage.SPECIFICATION__SPECIFIES);
 		}
 		return specifies;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<EObject> getPrimaryActors() {
+		if (primaryActors == null) {
+			primaryActors = new EObjectResolvingEList<EObject>(EObject.class, this, CorePackage.SPECIFICATION__PRIMARY_ACTORS);
+		}
+		return primaryActors;
 	}
 
 	/**
@@ -403,12 +426,12 @@ public class SpecificationImpl extends VerifiableElementImpl implements Specific
 		switch (featureID) {
 			case CorePackage.SPECIFICATION__ACTORS:
 				return ((InternalEList<?>)getActors()).basicRemove(otherEnd, msgs);
-			case CorePackage.SPECIFICATION__VERIFICATION_ACTIVITIES:
-				return ((InternalEList<?>)getVerificationActivities()).basicRemove(otherEnd, msgs);
-			case CorePackage.SPECIFICATION__REQUIREMENT_GROUPS:
-				return ((InternalEList<?>)getRequirementGroups()).basicRemove(otherEnd, msgs);
 			case CorePackage.SPECIFICATION__SYST_OVERVIEW:
 				return basicSetSystOverview(null, msgs);
+			case CorePackage.SPECIFICATION__REQUIREMENT_GROUPS:
+				return ((InternalEList<?>)getRequirementGroups()).basicRemove(otherEnd, msgs);
+			case CorePackage.SPECIFICATION__VERIFICATION_ACTIVITIES:
+				return ((InternalEList<?>)getVerificationActivities()).basicRemove(otherEnd, msgs);
 			case CorePackage.SPECIFICATION__CONFLICTS:
 				return ((InternalEList<?>)getConflicts()).basicRemove(otherEnd, msgs);
 		}
@@ -423,23 +446,25 @@ public class SpecificationImpl extends VerifiableElementImpl implements Specific
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CorePackage.SPECIFICATION__SPECIFIES:
-				return getSpecifies();
 			case CorePackage.SPECIFICATION__ACTORS:
 				return getActors();
-			case CorePackage.SPECIFICATION__VERIFICATION_ACTIVITIES:
-				return getVerificationActivities();
+			case CorePackage.SPECIFICATION__SYST_OVERVIEW:
+				return getSystOverview();
 			case CorePackage.SPECIFICATION__REQUIREMENT_GROUPS:
 				return getRequirementGroups();
+			case CorePackage.SPECIFICATION__VERIFICATION_ACTIVITIES:
+				return getVerificationActivities();
+			case CorePackage.SPECIFICATION__CONFLICTS:
+				return getConflicts();
 			case CorePackage.SPECIFICATION__CONSTRAINT_LANGUAGES_SPECIFICATION:
 				if (resolve) return getConstraintLanguagesSpecification();
 				return basicGetConstraintLanguagesSpecification();
+			case CorePackage.SPECIFICATION__SPECIFIES:
+				return getSpecifies();
+			case CorePackage.SPECIFICATION__PRIMARY_ACTORS:
+				return getPrimaryActors();
 			case CorePackage.SPECIFICATION__VERSION:
 				return getVersion();
-			case CorePackage.SPECIFICATION__SYST_OVERVIEW:
-				return getSystOverview();
-			case CorePackage.SPECIFICATION__CONFLICTS:
-				return getConflicts();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -453,34 +478,38 @@ public class SpecificationImpl extends VerifiableElementImpl implements Specific
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CorePackage.SPECIFICATION__SPECIFIES:
-				getSpecifies().clear();
-				getSpecifies().addAll((Collection<? extends EObject>)newValue);
-				return;
 			case CorePackage.SPECIFICATION__ACTORS:
 				getActors().clear();
 				getActors().addAll((Collection<? extends Actor>)newValue);
 				return;
-			case CorePackage.SPECIFICATION__VERIFICATION_ACTIVITIES:
-				getVerificationActivities().clear();
-				getVerificationActivities().addAll((Collection<? extends VerificationActivity>)newValue);
+			case CorePackage.SPECIFICATION__SYST_OVERVIEW:
+				setSystOverview((SystemOverview)newValue);
 				return;
 			case CorePackage.SPECIFICATION__REQUIREMENT_GROUPS:
 				getRequirementGroups().clear();
 				getRequirementGroups().addAll((Collection<? extends RequirementsGroup>)newValue);
 				return;
-			case CorePackage.SPECIFICATION__CONSTRAINT_LANGUAGES_SPECIFICATION:
-				setConstraintLanguagesSpecification((ConstraintLanguagesSpecification)newValue);
-				return;
-			case CorePackage.SPECIFICATION__VERSION:
-				setVersion((String)newValue);
-				return;
-			case CorePackage.SPECIFICATION__SYST_OVERVIEW:
-				setSystOverview((SystemOverview)newValue);
+			case CorePackage.SPECIFICATION__VERIFICATION_ACTIVITIES:
+				getVerificationActivities().clear();
+				getVerificationActivities().addAll((Collection<? extends VerificationActivity>)newValue);
 				return;
 			case CorePackage.SPECIFICATION__CONFLICTS:
 				getConflicts().clear();
 				getConflicts().addAll((Collection<? extends Conflict>)newValue);
+				return;
+			case CorePackage.SPECIFICATION__CONSTRAINT_LANGUAGES_SPECIFICATION:
+				setConstraintLanguagesSpecification((ConstraintLanguagesSpecification)newValue);
+				return;
+			case CorePackage.SPECIFICATION__SPECIFIES:
+				getSpecifies().clear();
+				getSpecifies().addAll((Collection<? extends EObject>)newValue);
+				return;
+			case CorePackage.SPECIFICATION__PRIMARY_ACTORS:
+				getPrimaryActors().clear();
+				getPrimaryActors().addAll((Collection<? extends EObject>)newValue);
+				return;
+			case CorePackage.SPECIFICATION__VERSION:
+				setVersion((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -494,29 +523,32 @@ public class SpecificationImpl extends VerifiableElementImpl implements Specific
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CorePackage.SPECIFICATION__SPECIFIES:
-				getSpecifies().clear();
-				return;
 			case CorePackage.SPECIFICATION__ACTORS:
 				getActors().clear();
-				return;
-			case CorePackage.SPECIFICATION__VERIFICATION_ACTIVITIES:
-				getVerificationActivities().clear();
-				return;
-			case CorePackage.SPECIFICATION__REQUIREMENT_GROUPS:
-				getRequirementGroups().clear();
-				return;
-			case CorePackage.SPECIFICATION__CONSTRAINT_LANGUAGES_SPECIFICATION:
-				setConstraintLanguagesSpecification((ConstraintLanguagesSpecification)null);
-				return;
-			case CorePackage.SPECIFICATION__VERSION:
-				setVersion(VERSION_EDEFAULT);
 				return;
 			case CorePackage.SPECIFICATION__SYST_OVERVIEW:
 				setSystOverview((SystemOverview)null);
 				return;
+			case CorePackage.SPECIFICATION__REQUIREMENT_GROUPS:
+				getRequirementGroups().clear();
+				return;
+			case CorePackage.SPECIFICATION__VERIFICATION_ACTIVITIES:
+				getVerificationActivities().clear();
+				return;
 			case CorePackage.SPECIFICATION__CONFLICTS:
 				getConflicts().clear();
+				return;
+			case CorePackage.SPECIFICATION__CONSTRAINT_LANGUAGES_SPECIFICATION:
+				setConstraintLanguagesSpecification((ConstraintLanguagesSpecification)null);
+				return;
+			case CorePackage.SPECIFICATION__SPECIFIES:
+				getSpecifies().clear();
+				return;
+			case CorePackage.SPECIFICATION__PRIMARY_ACTORS:
+				getPrimaryActors().clear();
+				return;
+			case CorePackage.SPECIFICATION__VERSION:
+				setVersion(VERSION_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -530,22 +562,24 @@ public class SpecificationImpl extends VerifiableElementImpl implements Specific
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CorePackage.SPECIFICATION__SPECIFIES:
-				return specifies != null && !specifies.isEmpty();
 			case CorePackage.SPECIFICATION__ACTORS:
 				return actors != null && !actors.isEmpty();
-			case CorePackage.SPECIFICATION__VERIFICATION_ACTIVITIES:
-				return verificationActivities != null && !verificationActivities.isEmpty();
-			case CorePackage.SPECIFICATION__REQUIREMENT_GROUPS:
-				return requirementGroups != null && !requirementGroups.isEmpty();
-			case CorePackage.SPECIFICATION__CONSTRAINT_LANGUAGES_SPECIFICATION:
-				return constraintLanguagesSpecification != null;
-			case CorePackage.SPECIFICATION__VERSION:
-				return VERSION_EDEFAULT == null ? version != null : !VERSION_EDEFAULT.equals(version);
 			case CorePackage.SPECIFICATION__SYST_OVERVIEW:
 				return systOverview != null;
+			case CorePackage.SPECIFICATION__REQUIREMENT_GROUPS:
+				return requirementGroups != null && !requirementGroups.isEmpty();
+			case CorePackage.SPECIFICATION__VERIFICATION_ACTIVITIES:
+				return verificationActivities != null && !verificationActivities.isEmpty();
 			case CorePackage.SPECIFICATION__CONFLICTS:
 				return conflicts != null && !conflicts.isEmpty();
+			case CorePackage.SPECIFICATION__CONSTRAINT_LANGUAGES_SPECIFICATION:
+				return constraintLanguagesSpecification != null;
+			case CorePackage.SPECIFICATION__SPECIFIES:
+				return specifies != null && !specifies.isEmpty();
+			case CorePackage.SPECIFICATION__PRIMARY_ACTORS:
+				return primaryActors != null && !primaryActors.isEmpty();
+			case CorePackage.SPECIFICATION__VERSION:
+				return VERSION_EDEFAULT == null ? version != null : !VERSION_EDEFAULT.equals(version);
 		}
 		return super.eIsSet(featureID);
 	}

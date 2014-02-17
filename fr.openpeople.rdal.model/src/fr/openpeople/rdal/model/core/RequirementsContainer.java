@@ -12,9 +12,9 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link fr.openpeople.rdal.model.core.RequirementsContainer#getContainedRequirements <em>Contained Requirements</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.RequirementsContainer#getType <em>Type</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.RequirementsContainer#getRequirement <em>Requirement</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.RequirementsContainer#getRequirements <em>Requirements</em>}</li>
  * </ul>
  * </p>
  *
@@ -23,22 +23,6 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface RequirementsContainer extends IdentifiedElement {
-	/**
-	 * Returns the value of the '<em><b>Contained Requirements</b></em>' reference list.
-	 * The list contents are of type {@link fr.openpeople.rdal.model.core.AbstractRequirement}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Contained Requirements</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Contained Requirements</em>' reference list.
-	 * @see fr.openpeople.rdal.model.core.CorePackage#getRequirementsContainer_ContainedRequirements()
-	 * @model
-	 * @generated
-	 */
-	EList<AbstractRequirement> getContainedRequirements();
-
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
 	 * The default value is <code>"And"</code>.
@@ -78,12 +62,12 @@ public interface RequirementsContainer extends IdentifiedElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Requirement</em>' reference.
-	 * @see #setRequirement(AbstractRequirement)
+	 * @see #setRequirement(Requirement)
 	 * @see fr.openpeople.rdal.model.core.CorePackage#getRequirementsContainer_Requirement()
 	 * @model
 	 * @generated
 	 */
-	AbstractRequirement getRequirement();
+	Requirement getRequirement();
 
 	/**
 	 * Sets the value of the '{@link fr.openpeople.rdal.model.core.RequirementsContainer#getRequirement <em>Requirement</em>}' reference.
@@ -93,6 +77,22 @@ public interface RequirementsContainer extends IdentifiedElement {
 	 * @see #getRequirement()
 	 * @generated
 	 */
-	void setRequirement(AbstractRequirement value);
+	void setRequirement(Requirement value);
+
+	/**
+	 * Returns the value of the '<em><b>Requirements</b></em>' reference list.
+	 * The list contents are of type {@link fr.openpeople.rdal.model.core.Requirement}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Requirements</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Requirements</em>' reference list.
+	 * @see fr.openpeople.rdal.model.core.CorePackage#getRequirementsContainer_Requirements()
+	 * @model
+	 * @generated
+	 */
+	EList<Requirement> getRequirements();
 
 } // RequirementsContainer

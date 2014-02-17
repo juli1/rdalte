@@ -29,6 +29,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link fr.openpeople.rdal.model.core.StakeHolder#getContractualElements <em>Contractual Elements</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.StakeHolder#getRationales <em>Rationales</em>}</li>
  * </ul>
  * </p>
  *
@@ -41,7 +42,7 @@ public interface StakeHolder extends Actor {
 	/**
 	 * Returns the value of the '<em><b>Contractual Elements</b></em>' reference list.
 	 * The list contents are of type {@link fr.openpeople.rdal.model.core.ContractualElement}.
-	 * It is bidirectional and its opposite is '{@link fr.openpeople.rdal.model.core.ContractualElement#getStakeHolders <em>Stake Holders</em>}'.
+	 * It is bidirectional and its opposite is '{@link fr.openpeople.rdal.model.core.ContractualElement#getStakeholders <em>Stakeholders</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Contractual Elements</em>' reference list isn't clear,
@@ -50,9 +51,25 @@ public interface StakeHolder extends Actor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Contractual Elements</em>' reference list.
 	 * @see fr.openpeople.rdal.model.core.CorePackage#getStakeHolder_ContractualElements()
-	 * @see fr.openpeople.rdal.model.core.ContractualElement#getStakeHolders
-	 * @model opposite="stakeHolders"
+	 * @see fr.openpeople.rdal.model.core.ContractualElement#getStakeholders
+	 * @model opposite="stakeholders" required="true"
 	 * @generated
 	 */
 	EList<ContractualElement> getContractualElements();
+
+	/**
+	 * Returns the value of the '<em><b>Rationales</b></em>' reference list.
+	 * The list contents are of type {@link fr.openpeople.rdal.model.core.Rationale}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Rationales</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Rationales</em>' reference list.
+	 * @see fr.openpeople.rdal.model.core.CorePackage#getStakeHolder_Rationales()
+	 * @model
+	 * @generated
+	 */
+	EList<Rationale> getRationales();
 } // StakeHolder

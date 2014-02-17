@@ -36,7 +36,7 @@ import fr.labsticc.framework.constraints.model.constraints.FormalLanguageExpress
  * @model
  * @generated
  */
-public interface RefExpressionCollectedModelElements extends ContractReferencedModelElements {
+public interface RefExpressionCollectedModelElements extends ReferencedModelElements {
 	/**
 	 * Returns the value of the '<em><b>Query Expression</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

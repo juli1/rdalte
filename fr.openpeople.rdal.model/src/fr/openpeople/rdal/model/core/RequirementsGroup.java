@@ -29,8 +29,6 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link fr.openpeople.rdal.model.core.RequirementsGroup#getRequirements <em>Requirements</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.RequirementsGroup#getSpecification <em>Specification</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.RequirementsGroup#getSubGroups <em>Sub Groups</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.RequirementsGroup#getParent <em>Parent</em>}</li>
  * </ul>
  * </p>
  *
@@ -84,51 +82,5 @@ public interface RequirementsGroup extends VerifiableElement {
 	 * @generated
 	 */
 	void setSpecification(Specification value);
-
-	/**
-	 * Returns the value of the '<em><b>Sub Groups</b></em>' reference list.
-	 * The list contents are of type {@link fr.openpeople.rdal.model.core.RequirementsGroup}.
-	 * It is bidirectional and its opposite is '{@link fr.openpeople.rdal.model.core.RequirementsGroup#getParent <em>Parent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Sub Groups</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Sub Groups</em>' reference list.
-	 * @see fr.openpeople.rdal.model.core.CorePackage#getRequirementsGroup_SubGroups()
-	 * @see fr.openpeople.rdal.model.core.RequirementsGroup#getParent
-	 * @model opposite="parent"
-	 * @generated
-	 */
-	EList<RequirementsGroup> getSubGroups();
-
-	/**
-	 * Returns the value of the '<em><b>Parent</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link fr.openpeople.rdal.model.core.RequirementsGroup#getSubGroups <em>Sub Groups</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Parent</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Parent</em>' reference.
-	 * @see #setParent(RequirementsGroup)
-	 * @see fr.openpeople.rdal.model.core.CorePackage#getRequirementsGroup_Parent()
-	 * @see fr.openpeople.rdal.model.core.RequirementsGroup#getSubGroups
-	 * @model opposite="subGroups"
-	 * @generated
-	 */
-	RequirementsGroup getParent();
-
-	/**
-	 * Sets the value of the '{@link fr.openpeople.rdal.model.core.RequirementsGroup#getParent <em>Parent</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Parent</em>' reference.
-	 * @see #getParent()
-	 * @generated
-	 */
-	void setParent(RequirementsGroup value);
 
 } // RequirementsGroup

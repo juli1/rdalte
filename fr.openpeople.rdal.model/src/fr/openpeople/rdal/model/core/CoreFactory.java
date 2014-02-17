@@ -145,6 +145,42 @@ public interface CoreFactory extends EFactory {
 	RequirementsCoverageData createRequirementsCoverageData();
 
 	/**
+	 * Returns a new object of class '<em>Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Variable</em>'.
+	 * @generated
+	 */
+	Variable createVariable();
+
+	/**
+	 * Returns a new object of class '<em>Ref Derived Model Elements</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Ref Derived Model Elements</em>'.
+	 * @generated
+	 */
+	RefDerivedModelElements createRefDerivedModelElements();
+
+	/**
+	 * Returns a new object of class '<em>Rationale</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Rationale</em>'.
+	 * @generated
+	 */
+	Rationale createRationale();
+
+	/**
+	 * Returns a new object of class '<em>Requirements Container</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Requirements Container</em>'.
+	 * @generated
+	 */
+	RequirementsContainer createRequirementsContainer();
+
+	/**
 	 * Returns a new object of class '<em>Goal</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -152,15 +188,6 @@ public interface CoreFactory extends EFactory {
 	 * @generated
 	 */
 	Goal createGoal();
-
-	/**
-	 * Returns a new object of class '<em>Verifiable Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Verifiable Element</em>'.
-	 * @generated
-	 */
-	VerifiableElement createVerifiableElement();
 
 	/**
 	 * Returns a new object of class '<em>Uncertainty</em>'.

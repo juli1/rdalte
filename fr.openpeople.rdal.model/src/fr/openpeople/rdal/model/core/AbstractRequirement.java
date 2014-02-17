@@ -30,11 +30,11 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link fr.openpeople.rdal.model.core.AbstractRequirement#getContainedRequirements <em>Contained Requirements</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.AbstractRequirement#getExpression <em>Expression</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.AbstractRequirement#getVerifiedBy <em>Verified By</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.AbstractRequirement#getGroup <em>Group</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.AbstractRequirement#getRisk <em>Risk</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.AbstractRequirement#getCompositionCoverage <em>Composition Coverage</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.AbstractRequirement#getVerifiedBy <em>Verified By</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.AbstractRequirement#getAssignedVariable <em>Assigned Variable</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.AbstractRequirement#getConditionVariables <em>Condition Variables</em>}</li>
  * </ul>
  * </p>
  *
@@ -58,59 +58,6 @@ public interface AbstractRequirement extends VerifiableElement {
 	 * @generated
 	 */
 	EList<AbstractRequirement> getContainedRequirements();
-
-	/**
-	 * Returns the value of the '<em><b>Expression</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Expression</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Expression</em>' containment reference.
-	 * @see #isSetExpression()
-	 * @see #unsetExpression()
-	 * @see #setExpression(Expression)
-	 * @see fr.openpeople.rdal.model.core.CorePackage#getAbstractRequirement_Expression()
-	 * @model containment="true" unsettable="true" required="true"
-	 * @generated
-	 */
-	Expression getExpression();
-
-	/**
-	 * Sets the value of the '{@link fr.openpeople.rdal.model.core.AbstractRequirement#getExpression <em>Expression</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Expression</em>' containment reference.
-	 * @see #isSetExpression()
-	 * @see #unsetExpression()
-	 * @see #getExpression()
-	 * @generated
-	 */
-	void setExpression(Expression value);
-
-	/**
-	 * Unsets the value of the '{@link fr.openpeople.rdal.model.core.AbstractRequirement#getExpression <em>Expression</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isSetExpression()
-	 * @see #getExpression()
-	 * @see #setExpression(Expression)
-	 * @generated
-	 */
-	void unsetExpression();
-
-	/**
-	 * Returns whether the value of the '{@link fr.openpeople.rdal.model.core.AbstractRequirement#getExpression <em>Expression</em>}' containment reference is set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Expression</em>' containment reference is set.
-	 * @see #unsetExpression()
-	 * @see #getExpression()
-	 * @see #setExpression(Expression)
-	 * @generated
-	 */
-	boolean isSetExpression();
 
 	/**
 	 * Returns the value of the '<em><b>Group</b></em>' container reference.
@@ -142,8 +89,8 @@ public interface AbstractRequirement extends VerifiableElement {
 
 	/**
 	 * Returns the value of the '<em><b>Risk</b></em>' attribute.
-	 * The default value is <code>"medium"</code>.
-	 * The literals are from the enumeration {@link fr.openpeople.rdal.model.core.EnumRiskKind}.
+	 * The default value is <code>"Medium"</code>.
+	 * The literals are from the enumeration {@link fr.openpeople.rdal.model.core.RiskKind}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Risk</em>' attribute isn't clear,
@@ -151,50 +98,66 @@ public interface AbstractRequirement extends VerifiableElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Risk</em>' attribute.
-	 * @see fr.openpeople.rdal.model.core.EnumRiskKind
-	 * @see #setRisk(EnumRiskKind)
+	 * @see fr.openpeople.rdal.model.core.RiskKind
+	 * @see #setRisk(RiskKind)
 	 * @see fr.openpeople.rdal.model.core.CorePackage#getAbstractRequirement_Risk()
-	 * @model default="medium"
+	 * @model default="Medium"
 	 * @generated
 	 */
-	EnumRiskKind getRisk();
+	RiskKind getRisk();
 
 	/**
 	 * Sets the value of the '{@link fr.openpeople.rdal.model.core.AbstractRequirement#getRisk <em>Risk</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Risk</em>' attribute.
-	 * @see fr.openpeople.rdal.model.core.EnumRiskKind
+	 * @see fr.openpeople.rdal.model.core.RiskKind
 	 * @see #getRisk()
 	 * @generated
 	 */
-	void setRisk(EnumRiskKind value);
+	void setRisk(RiskKind value);
 
 	/**
-	 * Returns the value of the '<em><b>Composition Coverage</b></em>' attribute.
+	 * Returns the value of the '<em><b>Assigned Variable</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Composition Coverage</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Assigned Variable</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Composition Coverage</em>' attribute.
-	 * @see #setCompositionCoverage(Float)
-	 * @see fr.openpeople.rdal.model.core.CorePackage#getAbstractRequirement_CompositionCoverage()
-	 * @model dataType="fr.openpeople.rdal.model.core.Ratio"
+	 * @return the value of the '<em>Assigned Variable</em>' reference.
+	 * @see #setAssignedVariable(Variable)
+	 * @see fr.openpeople.rdal.model.core.CorePackage#getAbstractRequirement_AssignedVariable()
+	 * @model
 	 * @generated
 	 */
-	Float getCompositionCoverage();
+	Variable getAssignedVariable();
 
 	/**
-	 * Sets the value of the '{@link fr.openpeople.rdal.model.core.AbstractRequirement#getCompositionCoverage <em>Composition Coverage</em>}' attribute.
+	 * Sets the value of the '{@link fr.openpeople.rdal.model.core.AbstractRequirement#getAssignedVariable <em>Assigned Variable</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Composition Coverage</em>' attribute.
-	 * @see #getCompositionCoverage()
+	 * @param value the new value of the '<em>Assigned Variable</em>' reference.
+	 * @see #getAssignedVariable()
 	 * @generated
 	 */
-	void setCompositionCoverage(Float value);
+	void setAssignedVariable(Variable value);
+
+	/**
+	 * Returns the value of the '<em><b>Condition Variables</b></em>' reference list.
+	 * The list contents are of type {@link fr.openpeople.rdal.model.core.Variable}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Condition Variables</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Condition Variables</em>' reference list.
+	 * @see fr.openpeople.rdal.model.core.CorePackage#getAbstractRequirement_ConditionVariables()
+	 * @model
+	 * @generated
+	 */
+	EList<Variable> getConditionVariables();
 
 	/**
 	 * Returns the value of the '<em><b>Verified By</b></em>' reference list.

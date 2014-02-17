@@ -74,9 +74,10 @@ public class AbstractRequirementItemProvider
 			super.getPropertyDescriptors(object);
 
 			addContainedRequirementsPropertyDescriptor(object);
-			addRiskPropertyDescriptor(object);
-			addCompositionCoveragePropertyDescriptor(object);
 			addVerifiedByPropertyDescriptor(object);
+			addRiskPropertyDescriptor(object);
+			addAssignedVariablePropertyDescriptor(object);
+			addConditionVariablesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -148,23 +149,45 @@ public class AbstractRequirementItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Composition Coverage feature.
+	 * This adds a property descriptor for the Assigned Variable feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addCompositionCoveragePropertyDescriptor(Object object) {
+	protected void addAssignedVariablePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_AbstractRequirement_compositionCoverage_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractRequirement_compositionCoverage_feature", "_UI_AbstractRequirement_type"),
-				 CorePackage.Literals.ABSTRACT_REQUIREMENT__COMPOSITION_COVERAGE,
+				 getString("_UI_AbstractRequirement_assignedVariable_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractRequirement_assignedVariable_feature", "_UI_AbstractRequirement_type"),
+				 CorePackage.Literals.ABSTRACT_REQUIREMENT__ASSIGNED_VARIABLE,
 				 true,
 				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Condition Variables feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addConditionVariablesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_AbstractRequirement_conditionVariables_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractRequirement_conditionVariables_feature", "_UI_AbstractRequirement_type"),
+				 CorePackage.Literals.ABSTRACT_REQUIREMENT__CONDITION_VARIABLES,
+				 true,
 				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 true,
+				 null,
 				 null,
 				 null));
 	}
@@ -189,36 +212,6 @@ public class AbstractRequirementItemProvider
 				 null,
 				 null,
 				 null));
-	}
-
-	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(CorePackage.Literals.ABSTRACT_REQUIREMENT__EXPRESSION);
-		}
-		return childrenFeatures;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
 	}
 
 	/**
@@ -248,11 +241,7 @@ public class AbstractRequirementItemProvider
 
 		switch (notification.getFeatureID(AbstractRequirement.class)) {
 			case CorePackage.ABSTRACT_REQUIREMENT__RISK:
-			case CorePackage.ABSTRACT_REQUIREMENT__COMPOSITION_COVERAGE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-			case CorePackage.ABSTRACT_REQUIREMENT__EXPRESSION:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
 		super.notifyChanged(notification);
@@ -268,16 +257,29 @@ public class AbstractRequirementItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+	}
 
-		newChildDescriptors.add
-			(createChildParameter
-				(CorePackage.Literals.ABSTRACT_REQUIREMENT__EXPRESSION,
-				 ConstraintsFactory.eINSTANCE.createFormalLanguageExpression()));
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
 
-		newChildDescriptors.add
-			(createChildParameter
-				(CorePackage.Literals.ABSTRACT_REQUIREMENT__EXPRESSION,
-				 ConstraintsFactory.eINSTANCE.createNaturalLanguageExpression()));
+		boolean qualify =
+			childFeature == CorePackage.Literals.CONTRACTUAL_ELEMENT__EXPRESSION ||
+			childFeature == CorePackage.Literals.CONTRACTUAL_ELEMENT__CONDITION;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

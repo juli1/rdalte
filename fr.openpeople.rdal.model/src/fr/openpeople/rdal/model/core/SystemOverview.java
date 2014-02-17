@@ -29,11 +29,11 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link fr.openpeople.rdal.model.core.SystemOverview#getContexts <em>Contexts</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.SystemOverview#getActors <em>Actors</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.SystemOverview#getSystemToBe <em>System To Be</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.SystemOverview#getPurpose <em>Purpose</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.SystemOverview#getGoals <em>Goals</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.SystemOverview#getSystemToBe <em>System To Be</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.SystemOverview#getContexts <em>Contexts</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.SystemOverview#getSystemBoundary <em>System Boundary</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.SystemOverview#getPurpose <em>Purpose</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.SystemOverview#getCapabilities <em>Capabilities</em>}</li>
  * </ul>
  * </p>
@@ -42,7 +42,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface SystemOverview extends IdentifiedElement {
+public interface SystemOverview extends ContractualElement {
 	/**
 	 * Returns the value of the '<em><b>Contexts</b></em>' containment reference list.
 	 * The list contents are of type {@link fr.openpeople.rdal.model.core.SystemContext}.
@@ -54,26 +54,26 @@ public interface SystemOverview extends IdentifiedElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Contexts</em>' containment reference list.
 	 * @see fr.openpeople.rdal.model.core.CorePackage#getSystemOverview_Contexts()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<SystemContext> getContexts();
 
 	/**
-	 * Returns the value of the '<em><b>Actors</b></em>' reference list.
-	 * The list contents are of type {@link fr.openpeople.rdal.model.core.Actor}.
+	 * Returns the value of the '<em><b>System Boundary</b></em>' containment reference list.
+	 * The list contents are of type {@link fr.openpeople.rdal.model.core.Variable}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Actors</em>' reference list isn't clear,
+	 * If the meaning of the '<em>System Boundary</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Actors</em>' reference list.
-	 * @see fr.openpeople.rdal.model.core.CorePackage#getSystemOverview_Actors()
-	 * @model
+	 * @return the value of the '<em>System Boundary</em>' containment reference list.
+	 * @see fr.openpeople.rdal.model.core.CorePackage#getSystemOverview_SystemBoundary()
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<Actor> getActors();
+	EList<Variable> getSystemBoundary();
 
 	/**
 	 * Returns the value of the '<em><b>System To Be</b></em>' reference.

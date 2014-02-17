@@ -63,10 +63,7 @@ public class RequirementsEditorPageFactory implements IPageFactory<EObject> {
 			return "EMPTY_PAGE";
 		}
 		
-		// We want the same page for any element that can satisfy a requirement or can contain elements that can satisfy requirements.
-		if ( delegateFactory.getTraceabilityBusinessDelegate().isDesignElementSatisfiableInclContainers( p_modelObject ) ) {
-			return traceabilityKey;
-		}
+		
 
 		return  p_modelObject.eClass();
 	}
@@ -91,17 +88,12 @@ public class RequirementsEditorPageFactory implements IPageFactory<EObject> {
 	private  IViewPartPage<EObject> createRequirementTracabilityViewPage( 	final Composite p_parent,
 																			final IExceptionHandler p_exceptionHandler ) 
 	throws ResourceAccessException {
-		return new RequirementTraceabilityViewPage( p_parent, 
-													delegateFactory.getTraceabilityBusinessDelegate(),
-													p_exceptionHandler );
+		return null;
 	}
 	
 	private IViewPartPage<AbstractRequirement> createRequirementViewPage(	final Composite p_parent,
 																			final IExceptionHandler p_exceptionHandler ) 
 	throws ResourceAccessException {
-		return new RequirementViewPage( p_parent, 
-										delegateFactory.getRequirementBusinessDelegate(),
-										ConstraintsIDEPlugin.getDefault().getViewersConfiguration(),
-										p_exceptionHandler );
+		return null;
 	}
 }

@@ -17,6 +17,7 @@
  */
 package fr.openpeople.rdal.model.core;
 
+import fr.labsticc.framework.constraints.model.constraints.Expression;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -32,6 +33,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link fr.openpeople.rdal.model.core.VerificationActivity#getRequirement <em>Requirement</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.VerificationActivity#getVerificationMethod <em>Verification Method</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.VerificationActivity#getExternalRef <em>External Ref</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.VerificationActivity#isPassed <em>Passed</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.VerificationActivity#getExpression <em>Expression</em>}</li>
  * </ul>
  * </p>
  *
@@ -71,7 +74,7 @@ public interface VerificationActivity extends IdentifiedElement {
 	/**
 	 * Returns the value of the '<em><b>Verification Method</b></em>' attribute.
 	 * The default value is <code>"Test"</code>.
-	 * The literals are from the enumeration {@link fr.openpeople.rdal.model.core.EnumVerificationMethod}.
+	 * The literals are from the enumeration {@link fr.openpeople.rdal.model.core.VerificationMethod}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Verification Method</em>' attribute isn't clear,
@@ -79,24 +82,24 @@ public interface VerificationActivity extends IdentifiedElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Verification Method</em>' attribute.
-	 * @see fr.openpeople.rdal.model.core.EnumVerificationMethod
-	 * @see #setVerificationMethod(EnumVerificationMethod)
+	 * @see fr.openpeople.rdal.model.core.VerificationMethod
+	 * @see #setVerificationMethod(VerificationMethod)
 	 * @see fr.openpeople.rdal.model.core.CorePackage#getVerificationActivity_VerificationMethod()
 	 * @model default="Test"
 	 * @generated
 	 */
-	EnumVerificationMethod getVerificationMethod();
+	VerificationMethod getVerificationMethod();
 
 	/**
 	 * Sets the value of the '{@link fr.openpeople.rdal.model.core.VerificationActivity#getVerificationMethod <em>Verification Method</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Verification Method</em>' attribute.
-	 * @see fr.openpeople.rdal.model.core.EnumVerificationMethod
+	 * @see fr.openpeople.rdal.model.core.VerificationMethod
 	 * @see #getVerificationMethod()
 	 * @generated
 	 */
-	void setVerificationMethod(EnumVerificationMethod value);
+	void setVerificationMethod(VerificationMethod value);
 
 	/**
 	 * Returns the value of the '<em><b>External Ref</b></em>' reference list.
@@ -113,5 +116,57 @@ public interface VerificationActivity extends IdentifiedElement {
 	 * @generated
 	 */
 	EList<EObject> getExternalRef();
+
+	/**
+	 * Returns the value of the '<em><b>Passed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Passed</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Passed</em>' attribute.
+	 * @see #setPassed(boolean)
+	 * @see fr.openpeople.rdal.model.core.CorePackage#getVerificationActivity_Passed()
+	 * @model required="true"
+	 * @generated
+	 */
+	boolean isPassed();
+
+	/**
+	 * Sets the value of the '{@link fr.openpeople.rdal.model.core.VerificationActivity#isPassed <em>Passed</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Passed</em>' attribute.
+	 * @see #isPassed()
+	 * @generated
+	 */
+	void setPassed(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Expression</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Expression</em>' containment reference.
+	 * @see #setExpression(Expression)
+	 * @see fr.openpeople.rdal.model.core.CorePackage#getVerificationActivity_Expression()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	Expression getExpression();
+
+	/**
+	 * Sets the value of the '{@link fr.openpeople.rdal.model.core.VerificationActivity#getExpression <em>Expression</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Expression</em>' containment reference.
+	 * @see #getExpression()
+	 * @generated
+	 */
+	void setExpression(Expression value);
 
 } // VerificationActivity

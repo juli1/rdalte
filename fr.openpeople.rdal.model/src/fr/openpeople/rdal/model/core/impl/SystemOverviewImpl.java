@@ -23,6 +23,7 @@ import fr.openpeople.rdal.model.core.Goal;
 import fr.openpeople.rdal.model.core.SystemContext;
 import fr.openpeople.rdal.model.core.SystemOverview;
 
+import fr.openpeople.rdal.model.core.Variable;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -48,18 +49,38 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link fr.openpeople.rdal.model.core.impl.SystemOverviewImpl#getContexts <em>Contexts</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.impl.SystemOverviewImpl#getActors <em>Actors</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.impl.SystemOverviewImpl#getSystemToBe <em>System To Be</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.impl.SystemOverviewImpl#getPurpose <em>Purpose</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.impl.SystemOverviewImpl#getGoals <em>Goals</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.impl.SystemOverviewImpl#getSystemToBe <em>System To Be</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.impl.SystemOverviewImpl#getContexts <em>Contexts</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.impl.SystemOverviewImpl#getSystemBoundary <em>System Boundary</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.impl.SystemOverviewImpl#getPurpose <em>Purpose</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.impl.SystemOverviewImpl#getCapabilities <em>Capabilities</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class SystemOverviewImpl extends IdentifiedElementImpl implements SystemOverview {
+public class SystemOverviewImpl extends ContractualElementImpl implements SystemOverview {
+	/**
+	 * The cached value of the '{@link #getGoals() <em>Goals</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGoals()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Goal> goals;
+
+	/**
+	 * The cached value of the '{@link #getSystemToBe() <em>System To Be</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSystemToBe()
+	 * @generated
+	 * @ordered
+	 */
+	protected EObject systemToBe;
+
 	/**
 	 * The cached value of the '{@link #getContexts() <em>Contexts</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -71,24 +92,14 @@ public class SystemOverviewImpl extends IdentifiedElementImpl implements SystemO
 	protected EList<SystemContext> contexts;
 
 	/**
-	 * The cached value of the '{@link #getActors() <em>Actors</em>}' reference list.
+	 * The cached value of the '{@link #getSystemBoundary() <em>System Boundary</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getActors()
+	 * @see #getSystemBoundary()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Actor> actors;
-
-	/**
-	 * The cached value of the '{@link #getSystemToBe() <em>System To Be</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSystemToBe()
-	 * @generated
-	 * @ordered
-	 */
-	protected EObject systemToBe;
+	protected EList<Variable> systemBoundary;
 
 	/**
 	 * The default value of the '{@link #getPurpose() <em>Purpose</em>}' attribute.
@@ -109,16 +120,6 @@ public class SystemOverviewImpl extends IdentifiedElementImpl implements SystemO
 	 * @ordered
 	 */
 	protected String purpose = PURPOSE_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getGoals() <em>Goals</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getGoals()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Goal> goals;
 
 	/**
 	 * The cached value of the '{@link #getCapabilities() <em>Capabilities</em>}' attribute list.
@@ -166,11 +167,11 @@ public class SystemOverviewImpl extends IdentifiedElementImpl implements SystemO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Actor> getActors() {
-		if (actors == null) {
-			actors = new EObjectResolvingEList<Actor>(Actor.class, this, CorePackage.SYSTEM_OVERVIEW__ACTORS);
+	public EList<Variable> getSystemBoundary() {
+		if (systemBoundary == null) {
+			systemBoundary = new EObjectContainmentEList<Variable>(Variable.class, this, CorePackage.SYSTEM_OVERVIEW__SYSTEM_BOUNDARY);
 		}
-		return actors;
+		return systemBoundary;
 	}
 
 	/**
@@ -264,10 +265,12 @@ public class SystemOverviewImpl extends IdentifiedElementImpl implements SystemO
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case CorePackage.SYSTEM_OVERVIEW__CONTEXTS:
-				return ((InternalEList<?>)getContexts()).basicRemove(otherEnd, msgs);
 			case CorePackage.SYSTEM_OVERVIEW__GOALS:
 				return ((InternalEList<?>)getGoals()).basicRemove(otherEnd, msgs);
+			case CorePackage.SYSTEM_OVERVIEW__CONTEXTS:
+				return ((InternalEList<?>)getContexts()).basicRemove(otherEnd, msgs);
+			case CorePackage.SYSTEM_OVERVIEW__SYSTEM_BOUNDARY:
+				return ((InternalEList<?>)getSystemBoundary()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -280,17 +283,17 @@ public class SystemOverviewImpl extends IdentifiedElementImpl implements SystemO
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CorePackage.SYSTEM_OVERVIEW__CONTEXTS:
-				return getContexts();
-			case CorePackage.SYSTEM_OVERVIEW__ACTORS:
-				return getActors();
+			case CorePackage.SYSTEM_OVERVIEW__GOALS:
+				return getGoals();
 			case CorePackage.SYSTEM_OVERVIEW__SYSTEM_TO_BE:
 				if (resolve) return getSystemToBe();
 				return basicGetSystemToBe();
+			case CorePackage.SYSTEM_OVERVIEW__CONTEXTS:
+				return getContexts();
+			case CorePackage.SYSTEM_OVERVIEW__SYSTEM_BOUNDARY:
+				return getSystemBoundary();
 			case CorePackage.SYSTEM_OVERVIEW__PURPOSE:
 				return getPurpose();
-			case CorePackage.SYSTEM_OVERVIEW__GOALS:
-				return getGoals();
 			case CorePackage.SYSTEM_OVERVIEW__CAPABILITIES:
 				return getCapabilities();
 		}
@@ -306,23 +309,23 @@ public class SystemOverviewImpl extends IdentifiedElementImpl implements SystemO
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CorePackage.SYSTEM_OVERVIEW__CONTEXTS:
-				getContexts().clear();
-				getContexts().addAll((Collection<? extends SystemContext>)newValue);
-				return;
-			case CorePackage.SYSTEM_OVERVIEW__ACTORS:
-				getActors().clear();
-				getActors().addAll((Collection<? extends Actor>)newValue);
+			case CorePackage.SYSTEM_OVERVIEW__GOALS:
+				getGoals().clear();
+				getGoals().addAll((Collection<? extends Goal>)newValue);
 				return;
 			case CorePackage.SYSTEM_OVERVIEW__SYSTEM_TO_BE:
 				setSystemToBe((EObject)newValue);
 				return;
+			case CorePackage.SYSTEM_OVERVIEW__CONTEXTS:
+				getContexts().clear();
+				getContexts().addAll((Collection<? extends SystemContext>)newValue);
+				return;
+			case CorePackage.SYSTEM_OVERVIEW__SYSTEM_BOUNDARY:
+				getSystemBoundary().clear();
+				getSystemBoundary().addAll((Collection<? extends Variable>)newValue);
+				return;
 			case CorePackage.SYSTEM_OVERVIEW__PURPOSE:
 				setPurpose((String)newValue);
-				return;
-			case CorePackage.SYSTEM_OVERVIEW__GOALS:
-				getGoals().clear();
-				getGoals().addAll((Collection<? extends Goal>)newValue);
 				return;
 			case CorePackage.SYSTEM_OVERVIEW__CAPABILITIES:
 				getCapabilities().clear();
@@ -340,20 +343,20 @@ public class SystemOverviewImpl extends IdentifiedElementImpl implements SystemO
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CorePackage.SYSTEM_OVERVIEW__CONTEXTS:
-				getContexts().clear();
-				return;
-			case CorePackage.SYSTEM_OVERVIEW__ACTORS:
-				getActors().clear();
+			case CorePackage.SYSTEM_OVERVIEW__GOALS:
+				getGoals().clear();
 				return;
 			case CorePackage.SYSTEM_OVERVIEW__SYSTEM_TO_BE:
 				setSystemToBe((EObject)null);
 				return;
+			case CorePackage.SYSTEM_OVERVIEW__CONTEXTS:
+				getContexts().clear();
+				return;
+			case CorePackage.SYSTEM_OVERVIEW__SYSTEM_BOUNDARY:
+				getSystemBoundary().clear();
+				return;
 			case CorePackage.SYSTEM_OVERVIEW__PURPOSE:
 				setPurpose(PURPOSE_EDEFAULT);
-				return;
-			case CorePackage.SYSTEM_OVERVIEW__GOALS:
-				getGoals().clear();
 				return;
 			case CorePackage.SYSTEM_OVERVIEW__CAPABILITIES:
 				getCapabilities().clear();
@@ -370,16 +373,16 @@ public class SystemOverviewImpl extends IdentifiedElementImpl implements SystemO
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CorePackage.SYSTEM_OVERVIEW__CONTEXTS:
-				return contexts != null && !contexts.isEmpty();
-			case CorePackage.SYSTEM_OVERVIEW__ACTORS:
-				return actors != null && !actors.isEmpty();
-			case CorePackage.SYSTEM_OVERVIEW__SYSTEM_TO_BE:
-				return systemToBe != null;
-			case CorePackage.SYSTEM_OVERVIEW__PURPOSE:
-				return PURPOSE_EDEFAULT == null ? purpose != null : !PURPOSE_EDEFAULT.equals(purpose);
 			case CorePackage.SYSTEM_OVERVIEW__GOALS:
 				return goals != null && !goals.isEmpty();
+			case CorePackage.SYSTEM_OVERVIEW__SYSTEM_TO_BE:
+				return systemToBe != null;
+			case CorePackage.SYSTEM_OVERVIEW__CONTEXTS:
+				return contexts != null && !contexts.isEmpty();
+			case CorePackage.SYSTEM_OVERVIEW__SYSTEM_BOUNDARY:
+				return systemBoundary != null && !systemBoundary.isEmpty();
+			case CorePackage.SYSTEM_OVERVIEW__PURPOSE:
+				return PURPOSE_EDEFAULT == null ? purpose != null : !PURPOSE_EDEFAULT.equals(purpose);
 			case CorePackage.SYSTEM_OVERVIEW__CAPABILITIES:
 				return capabilities != null && !capabilities.isEmpty();
 		}

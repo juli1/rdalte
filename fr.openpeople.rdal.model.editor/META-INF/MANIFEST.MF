@@ -12,8 +12,11 @@ Export-Package: fr.openpeople.rdal.model.core.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
  fr.openpeople.rdal.model.edit;visibility:=reexport,
+ org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.eclipse.emf.edit.ui;visibility:=reexport,
- org.eclipse.ui.ide;visibility:=reexport
+ org.eclipse.ui.ide;visibility:=reexport,
+ fr.labsticc.framework.constraints.model.edit;visibility:=reexport,
+ fr.labsticc.framework.settings.model.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Import-Package: fr.labsticc.framework.constraints.model.constraints.provider,
  fr.labsticc.framework.constraints.model.constraints.util,

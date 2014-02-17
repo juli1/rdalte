@@ -29,8 +29,8 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link fr.openpeople.rdal.model.core.Conflict#getDegree <em>Degree</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.Conflict#getGoals <em>Goals</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.Conflict#getDegree <em>Degree</em>}</li>
  * </ul>
  * </p>
  *
@@ -38,7 +38,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Conflict extends EObject {
+public interface Conflict extends IdentifiedElement {
 	/**
 	 * Returns the value of the '<em><b>Degree</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -50,7 +50,7 @@ public interface Conflict extends EObject {
 	 * @return the value of the '<em>Degree</em>' attribute.
 	 * @see #setDegree(Float)
 	 * @see fr.openpeople.rdal.model.core.CorePackage#getConflict_Degree()
-	 * @model dataType="fr.openpeople.rdal.model.core.Ratio"
+	 * @model dataType="fr.openpeople.rdal.model.core.Ratio" required="true"
 	 * @generated
 	 */
 	Float getDegree();

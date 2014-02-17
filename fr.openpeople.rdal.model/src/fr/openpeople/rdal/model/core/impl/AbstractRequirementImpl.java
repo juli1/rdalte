@@ -34,7 +34,10 @@ import fr.labsticc.framework.constraints.model.constraints.Expression;
 import fr.openpeople.rdal.model.core.AbstractRequirement;
 import fr.openpeople.rdal.model.core.CorePackage;
 import fr.openpeople.rdal.model.core.EnumRiskKind;
+import fr.openpeople.rdal.model.core.RequirementsContainer;
 import fr.openpeople.rdal.model.core.RequirementsGroup;
+import fr.openpeople.rdal.model.core.RiskKind;
+import fr.openpeople.rdal.model.core.Variable;
 import fr.openpeople.rdal.model.core.VerificationActivity;
 
 /**
@@ -45,11 +48,11 @@ import fr.openpeople.rdal.model.core.VerificationActivity;
  * The following features are implemented:
  * <ul>
  *   <li>{@link fr.openpeople.rdal.model.core.impl.AbstractRequirementImpl#getContainedRequirements <em>Contained Requirements</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.impl.AbstractRequirementImpl#getExpression <em>Expression</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.impl.AbstractRequirementImpl#getVerifiedBy <em>Verified By</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.impl.AbstractRequirementImpl#getGroup <em>Group</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.impl.AbstractRequirementImpl#getRisk <em>Risk</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.impl.AbstractRequirementImpl#getCompositionCoverage <em>Composition Coverage</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.impl.AbstractRequirementImpl#getVerifiedBy <em>Verified By</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.impl.AbstractRequirementImpl#getAssignedVariable <em>Assigned Variable</em>}</li>
+ *   <li>{@link fr.openpeople.rdal.model.core.impl.AbstractRequirementImpl#getConditionVariables <em>Condition Variables</em>}</li>
  * </ul>
  * </p>
  *
@@ -67,23 +70,14 @@ public abstract class AbstractRequirementImpl extends VerifiableElementImpl impl
 	protected EList<AbstractRequirement> containedRequirements;
 
 	/**
-	 * The cached value of the '{@link #getExpression() <em>Expression</em>}' containment reference.
+	 * The cached value of the '{@link #getVerifiedBy() <em>Verified By</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getExpression()
+	 * @see #getVerifiedBy()
 	 * @generated
 	 * @ordered
 	 */
-	protected Expression expression;
-
-	/**
-	 * This is true if the Expression containment reference has been set.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean expressionESet;
+	protected EList<VerificationActivity> verifiedBy;
 
 	/**
 	 * The default value of the '{@link #getRisk() <em>Risk</em>}' attribute.
@@ -93,7 +87,7 @@ public abstract class AbstractRequirementImpl extends VerifiableElementImpl impl
 	 * @generated
 	 * @ordered
 	 */
-	protected static final EnumRiskKind RISK_EDEFAULT = EnumRiskKind.HIGH;
+	protected static final RiskKind RISK_EDEFAULT = RiskKind.MEDIUM;
 
 	/**
 	 * The cached value of the '{@link #getRisk() <em>Risk</em>}' attribute.
@@ -103,37 +97,27 @@ public abstract class AbstractRequirementImpl extends VerifiableElementImpl impl
 	 * @generated
 	 * @ordered
 	 */
-	protected EnumRiskKind risk = RISK_EDEFAULT;
+	protected RiskKind risk = RISK_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getCompositionCoverage() <em>Composition Coverage</em>}' attribute.
+	 * The cached value of the '{@link #getAssignedVariable() <em>Assigned Variable</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCompositionCoverage()
+	 * @see #getAssignedVariable()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Float COMPOSITION_COVERAGE_EDEFAULT = null;
+	protected Variable assignedVariable;
 
 	/**
-	 * The cached value of the '{@link #getCompositionCoverage() <em>Composition Coverage</em>}' attribute.
+	 * The cached value of the '{@link #getConditionVariables() <em>Condition Variables</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCompositionCoverage()
+	 * @see #getConditionVariables()
 	 * @generated
 	 * @ordered
 	 */
-	protected Float compositionCoverage = COMPOSITION_COVERAGE_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getVerifiedBy() <em>Verified By</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getVerifiedBy()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<VerificationActivity> verifiedBy;
+	protected EList<Variable> conditionVariables;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -171,104 +155,9 @@ public abstract class AbstractRequirementImpl extends VerifiableElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Expression getExpression() {
-		return expression;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetExpression(Expression newExpression, NotificationChain msgs) {
-		Expression oldExpression = expression;
-		expression = newExpression;
-		boolean oldExpressionESet = expressionESet;
-		expressionESet = true;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CorePackage.ABSTRACT_REQUIREMENT__EXPRESSION, oldExpression, newExpression, !oldExpressionESet);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setExpression(Expression newExpression) {
-		if (newExpression != expression) {
-			NotificationChain msgs = null;
-			if (expression != null)
-				msgs = ((InternalEObject)expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CorePackage.ABSTRACT_REQUIREMENT__EXPRESSION, null, msgs);
-			if (newExpression != null)
-				msgs = ((InternalEObject)newExpression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CorePackage.ABSTRACT_REQUIREMENT__EXPRESSION, null, msgs);
-			msgs = basicSetExpression(newExpression, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else {
-			boolean oldExpressionESet = expressionESet;
-			expressionESet = true;
-			if (eNotificationRequired())
-				eNotify(new ENotificationImpl(this, Notification.SET, CorePackage.ABSTRACT_REQUIREMENT__EXPRESSION, newExpression, newExpression, !oldExpressionESet));
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicUnsetExpression(NotificationChain msgs) {
-		Expression oldExpression = expression;
-		expression = null;
-		boolean oldExpressionESet = expressionESet;
-		expressionESet = false;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.UNSET, CorePackage.ABSTRACT_REQUIREMENT__EXPRESSION, oldExpression, null, oldExpressionESet);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void unsetExpression() {
-		if (expression != null) {
-			NotificationChain msgs = null;
-			msgs = ((InternalEObject)expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CorePackage.ABSTRACT_REQUIREMENT__EXPRESSION, null, msgs);
-			msgs = basicUnsetExpression(msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else {
-			boolean oldExpressionESet = expressionESet;
-			expressionESet = false;
-			if (eNotificationRequired())
-				eNotify(new ENotificationImpl(this, Notification.UNSET, CorePackage.ABSTRACT_REQUIREMENT__EXPRESSION, null, null, oldExpressionESet));
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetExpression() {
-		return expressionESet;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public RequirementsGroup getGroup() {
 		if (eContainerFeatureID() != CorePackage.ABSTRACT_REQUIREMENT__GROUP) return null;
-		return (RequirementsGroup)eContainer();
+		return (RequirementsGroup)eInternalContainer();
 	}
 
 	/**
@@ -307,7 +196,7 @@ public abstract class AbstractRequirementImpl extends VerifiableElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EnumRiskKind getRisk() {
+	public RiskKind getRisk() {
 		return risk;
 	}
 
@@ -316,8 +205,8 @@ public abstract class AbstractRequirementImpl extends VerifiableElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRisk(EnumRiskKind newRisk) {
-		EnumRiskKind oldRisk = risk;
+	public void setRisk(RiskKind newRisk) {
+		RiskKind oldRisk = risk;
 		risk = newRisk == null ? RISK_EDEFAULT : newRisk;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CorePackage.ABSTRACT_REQUIREMENT__RISK, oldRisk, risk));
@@ -328,8 +217,16 @@ public abstract class AbstractRequirementImpl extends VerifiableElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Float getCompositionCoverage() {
-		return compositionCoverage;
+	public Variable getAssignedVariable() {
+		if (assignedVariable != null && assignedVariable.eIsProxy()) {
+			InternalEObject oldAssignedVariable = (InternalEObject)assignedVariable;
+			assignedVariable = (Variable)eResolveProxy(oldAssignedVariable);
+			if (assignedVariable != oldAssignedVariable) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CorePackage.ABSTRACT_REQUIREMENT__ASSIGNED_VARIABLE, oldAssignedVariable, assignedVariable));
+			}
+		}
+		return assignedVariable;
 	}
 
 	/**
@@ -337,11 +234,32 @@ public abstract class AbstractRequirementImpl extends VerifiableElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCompositionCoverage(Float newCompositionCoverage) {
-		Float oldCompositionCoverage = compositionCoverage;
-		compositionCoverage = newCompositionCoverage;
+	public Variable basicGetAssignedVariable() {
+		return assignedVariable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAssignedVariable(Variable newAssignedVariable) {
+		Variable oldAssignedVariable = assignedVariable;
+		assignedVariable = newAssignedVariable;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CorePackage.ABSTRACT_REQUIREMENT__COMPOSITION_COVERAGE, oldCompositionCoverage, compositionCoverage));
+			eNotify(new ENotificationImpl(this, Notification.SET, CorePackage.ABSTRACT_REQUIREMENT__ASSIGNED_VARIABLE, oldAssignedVariable, assignedVariable));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Variable> getConditionVariables() {
+		if (conditionVariables == null) {
+			conditionVariables = new EObjectResolvingEList<Variable>(Variable.class, this, CorePackage.ABSTRACT_REQUIREMENT__CONDITION_VARIABLES);
+		}
+		return conditionVariables;
 	}
 
 	/**
@@ -365,12 +283,12 @@ public abstract class AbstractRequirementImpl extends VerifiableElementImpl impl
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case CorePackage.ABSTRACT_REQUIREMENT__VERIFIED_BY:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getVerifiedBy()).basicAdd(otherEnd, msgs);
 			case CorePackage.ABSTRACT_REQUIREMENT__GROUP:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetGroup((RequirementsGroup)otherEnd, msgs);
-			case CorePackage.ABSTRACT_REQUIREMENT__VERIFIED_BY:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getVerifiedBy()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -383,12 +301,10 @@ public abstract class AbstractRequirementImpl extends VerifiableElementImpl impl
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case CorePackage.ABSTRACT_REQUIREMENT__EXPRESSION:
-				return basicUnsetExpression(msgs);
-			case CorePackage.ABSTRACT_REQUIREMENT__GROUP:
-				return basicSetGroup(null, msgs);
 			case CorePackage.ABSTRACT_REQUIREMENT__VERIFIED_BY:
 				return ((InternalEList<?>)getVerifiedBy()).basicRemove(otherEnd, msgs);
+			case CorePackage.ABSTRACT_REQUIREMENT__GROUP:
+				return basicSetGroup(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -417,16 +333,17 @@ public abstract class AbstractRequirementImpl extends VerifiableElementImpl impl
 		switch (featureID) {
 			case CorePackage.ABSTRACT_REQUIREMENT__CONTAINED_REQUIREMENTS:
 				return getContainedRequirements();
-			case CorePackage.ABSTRACT_REQUIREMENT__EXPRESSION:
-				return getExpression();
+			case CorePackage.ABSTRACT_REQUIREMENT__VERIFIED_BY:
+				return getVerifiedBy();
 			case CorePackage.ABSTRACT_REQUIREMENT__GROUP:
 				return getGroup();
 			case CorePackage.ABSTRACT_REQUIREMENT__RISK:
 				return getRisk();
-			case CorePackage.ABSTRACT_REQUIREMENT__COMPOSITION_COVERAGE:
-				return getCompositionCoverage();
-			case CorePackage.ABSTRACT_REQUIREMENT__VERIFIED_BY:
-				return getVerifiedBy();
+			case CorePackage.ABSTRACT_REQUIREMENT__ASSIGNED_VARIABLE:
+				if (resolve) return getAssignedVariable();
+				return basicGetAssignedVariable();
+			case CorePackage.ABSTRACT_REQUIREMENT__CONDITION_VARIABLES:
+				return getConditionVariables();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -444,21 +361,22 @@ public abstract class AbstractRequirementImpl extends VerifiableElementImpl impl
 				getContainedRequirements().clear();
 				getContainedRequirements().addAll((Collection<? extends AbstractRequirement>)newValue);
 				return;
-			case CorePackage.ABSTRACT_REQUIREMENT__EXPRESSION:
-				setExpression((Expression)newValue);
+			case CorePackage.ABSTRACT_REQUIREMENT__VERIFIED_BY:
+				getVerifiedBy().clear();
+				getVerifiedBy().addAll((Collection<? extends VerificationActivity>)newValue);
 				return;
 			case CorePackage.ABSTRACT_REQUIREMENT__GROUP:
 				setGroup((RequirementsGroup)newValue);
 				return;
 			case CorePackage.ABSTRACT_REQUIREMENT__RISK:
-				setRisk((EnumRiskKind)newValue);
+				setRisk((RiskKind)newValue);
 				return;
-			case CorePackage.ABSTRACT_REQUIREMENT__COMPOSITION_COVERAGE:
-				setCompositionCoverage((Float)newValue);
+			case CorePackage.ABSTRACT_REQUIREMENT__ASSIGNED_VARIABLE:
+				setAssignedVariable((Variable)newValue);
 				return;
-			case CorePackage.ABSTRACT_REQUIREMENT__VERIFIED_BY:
-				getVerifiedBy().clear();
-				getVerifiedBy().addAll((Collection<? extends VerificationActivity>)newValue);
+			case CorePackage.ABSTRACT_REQUIREMENT__CONDITION_VARIABLES:
+				getConditionVariables().clear();
+				getConditionVariables().addAll((Collection<? extends Variable>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -475,8 +393,8 @@ public abstract class AbstractRequirementImpl extends VerifiableElementImpl impl
 			case CorePackage.ABSTRACT_REQUIREMENT__CONTAINED_REQUIREMENTS:
 				getContainedRequirements().clear();
 				return;
-			case CorePackage.ABSTRACT_REQUIREMENT__EXPRESSION:
-				unsetExpression();
+			case CorePackage.ABSTRACT_REQUIREMENT__VERIFIED_BY:
+				getVerifiedBy().clear();
 				return;
 			case CorePackage.ABSTRACT_REQUIREMENT__GROUP:
 				setGroup((RequirementsGroup)null);
@@ -484,11 +402,11 @@ public abstract class AbstractRequirementImpl extends VerifiableElementImpl impl
 			case CorePackage.ABSTRACT_REQUIREMENT__RISK:
 				setRisk(RISK_EDEFAULT);
 				return;
-			case CorePackage.ABSTRACT_REQUIREMENT__COMPOSITION_COVERAGE:
-				setCompositionCoverage(COMPOSITION_COVERAGE_EDEFAULT);
+			case CorePackage.ABSTRACT_REQUIREMENT__ASSIGNED_VARIABLE:
+				setAssignedVariable((Variable)null);
 				return;
-			case CorePackage.ABSTRACT_REQUIREMENT__VERIFIED_BY:
-				getVerifiedBy().clear();
+			case CorePackage.ABSTRACT_REQUIREMENT__CONDITION_VARIABLES:
+				getConditionVariables().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -504,16 +422,16 @@ public abstract class AbstractRequirementImpl extends VerifiableElementImpl impl
 		switch (featureID) {
 			case CorePackage.ABSTRACT_REQUIREMENT__CONTAINED_REQUIREMENTS:
 				return containedRequirements != null && !containedRequirements.isEmpty();
-			case CorePackage.ABSTRACT_REQUIREMENT__EXPRESSION:
-				return isSetExpression();
+			case CorePackage.ABSTRACT_REQUIREMENT__VERIFIED_BY:
+				return verifiedBy != null && !verifiedBy.isEmpty();
 			case CorePackage.ABSTRACT_REQUIREMENT__GROUP:
 				return getGroup() != null;
 			case CorePackage.ABSTRACT_REQUIREMENT__RISK:
 				return risk != RISK_EDEFAULT;
-			case CorePackage.ABSTRACT_REQUIREMENT__COMPOSITION_COVERAGE:
-				return COMPOSITION_COVERAGE_EDEFAULT == null ? compositionCoverage != null : !COMPOSITION_COVERAGE_EDEFAULT.equals(compositionCoverage);
-			case CorePackage.ABSTRACT_REQUIREMENT__VERIFIED_BY:
-				return verifiedBy != null && !verifiedBy.isEmpty();
+			case CorePackage.ABSTRACT_REQUIREMENT__ASSIGNED_VARIABLE:
+				return assignedVariable != null;
+			case CorePackage.ABSTRACT_REQUIREMENT__CONDITION_VARIABLES:
+				return conditionVariables != null && !conditionVariables.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -530,8 +448,6 @@ public abstract class AbstractRequirementImpl extends VerifiableElementImpl impl
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (risk: ");
 		result.append(risk);
-		result.append(", compositionCoverage: ");
-		result.append(compositionCoverage);
 		result.append(')');
 		return result.toString();
 	}

@@ -47,7 +47,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * @generated
  */
 public class SystemOverviewItemProvider
-	extends IdentifiedElementItemProvider
+	extends ContractualElementItemProvider
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
@@ -75,34 +75,11 @@ public class SystemOverviewItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addActorsPropertyDescriptor(object);
 			addSystemToBePropertyDescriptor(object);
 			addPurposePropertyDescriptor(object);
 			addCapabilitiesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Actors feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addActorsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_SystemOverview_actors_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SystemOverview_actors_feature", "_UI_SystemOverview_type"),
-				 CorePackage.Literals.SYSTEM_OVERVIEW__ACTORS,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**
@@ -188,8 +165,9 @@ public class SystemOverviewItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(CorePackage.Literals.SYSTEM_OVERVIEW__CONTEXTS);
 			childrenFeatures.add(CorePackage.Literals.SYSTEM_OVERVIEW__GOALS);
+			childrenFeatures.add(CorePackage.Literals.SYSTEM_OVERVIEW__CONTEXTS);
+			childrenFeatures.add(CorePackage.Literals.SYSTEM_OVERVIEW__SYSTEM_BOUNDARY);
 		}
 		return childrenFeatures;
 	}
@@ -248,8 +226,9 @@ public class SystemOverviewItemProvider
 			case CorePackage.SYSTEM_OVERVIEW__CAPABILITIES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case CorePackage.SYSTEM_OVERVIEW__CONTEXTS:
 			case CorePackage.SYSTEM_OVERVIEW__GOALS:
+			case CorePackage.SYSTEM_OVERVIEW__CONTEXTS:
+			case CorePackage.SYSTEM_OVERVIEW__SYSTEM_BOUNDARY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -269,13 +248,41 @@ public class SystemOverviewItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
+				(CorePackage.Literals.SYSTEM_OVERVIEW__GOALS,
+				 CoreFactory.eINSTANCE.createGoal()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(CorePackage.Literals.SYSTEM_OVERVIEW__CONTEXTS,
 				 CoreFactory.eINSTANCE.createSystemContext()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CorePackage.Literals.SYSTEM_OVERVIEW__GOALS,
-				 CoreFactory.eINSTANCE.createGoal()));
+				(CorePackage.Literals.SYSTEM_OVERVIEW__SYSTEM_BOUNDARY,
+				 CoreFactory.eINSTANCE.createVariable()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == CorePackage.Literals.CONTRACTUAL_ELEMENT__EXPRESSION ||
+			childFeature == CorePackage.Literals.CONTRACTUAL_ELEMENT__CONDITION;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

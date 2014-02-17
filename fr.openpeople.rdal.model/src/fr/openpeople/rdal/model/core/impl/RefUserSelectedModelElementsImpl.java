@@ -31,7 +31,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class RefUserSelectedModelElementsImpl extends ContractReferencedModelElementsImpl implements RefUserSelectedModelElements {
+public class RefUserSelectedModelElementsImpl extends ReferencedModelElementsImpl implements RefUserSelectedModelElements {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

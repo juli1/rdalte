@@ -27,8 +27,8 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link fr.openpeople.rdal.model.core.Interaction#getEntity <em>Entity</em>}</li>
  *   <li>{@link fr.openpeople.rdal.model.core.Interaction#getDirection <em>Direction</em>}</li>
- *   <li>{@link fr.openpeople.rdal.model.core.Interaction#getEnd <em>End</em>}</li>
  * </ul>
  * </p>
  *
@@ -37,6 +37,32 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Interaction extends IdentifiedElement {
+	/**
+	 * Returns the value of the '<em><b>Entity</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Entity</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Entity</em>' reference.
+	 * @see #setEntity(EObject)
+	 * @see fr.openpeople.rdal.model.core.CorePackage#getInteraction_Entity()
+	 * @model required="true"
+	 * @generated
+	 */
+	EObject getEntity();
+
+	/**
+	 * Sets the value of the '{@link fr.openpeople.rdal.model.core.Interaction#getEntity <em>Entity</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Entity</em>' reference.
+	 * @see #getEntity()
+	 * @generated
+	 */
+	void setEntity(EObject value);
+
 	/**
 	 * Returns the value of the '<em><b>Direction</b></em>' attribute.
 	 * The literals are from the enumeration {@link fr.openpeople.rdal.model.core.Direction}.
@@ -65,31 +91,5 @@ public interface Interaction extends IdentifiedElement {
 	 * @generated
 	 */
 	void setDirection(Direction value);
-
-	/**
-	 * Returns the value of the '<em><b>End</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>End</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>End</em>' reference.
-	 * @see #setEnd(EObject)
-	 * @see fr.openpeople.rdal.model.core.CorePackage#getInteraction_End()
-	 * @model required="true"
-	 * @generated
-	 */
-	EObject getEnd();
-
-	/**
-	 * Sets the value of the '{@link fr.openpeople.rdal.model.core.Interaction#getEnd <em>End</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>End</em>' reference.
-	 * @see #getEnd()
-	 * @generated
-	 */
-	void setEnd(EObject value);
 
 } // Interaction

@@ -47,7 +47,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * @generated
  */
 public class ConflictItemProvider
-	extends ItemProviderAdapter
+	extends IdentifiedElementItemProvider
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
@@ -75,8 +75,8 @@ public class ConflictItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addDegreePropertyDescriptor(object);
 			addGoalsPropertyDescriptor(object);
+			addDegreePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -144,8 +144,7 @@ public class ConflictItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		Float labelValue = ((Conflict)object).getDegree();
-		String label = labelValue == null ? null : labelValue.toString();
+		String label = ((Conflict)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Conflict_type") :
 			getString("_UI_Conflict_type") + " " + label;
@@ -180,17 +179,6 @@ public class ConflictItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return RdalEditPlugin.INSTANCE;
 	}
 
 }
